@@ -1,0 +1,7 @@
+body { font-family:"Microsoft JhengHei",sans-serif; margin:0; background:#f8f9fa; color:#333; }
+header { background:#222; color:#fff; padding:1.5rem; text-align:center; position:relative; }
+nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+main { max-width:900px; margin:2rem auto; padding:1.5rem; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+h2 { border-bottom:2px solid #eee; padding-bottom:0.5rem; }
+#lang-toggle { position:absolute; top:15px; right:15px; background:#fff; color:#222; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; font-size:14px; }
+footer { text-align:center; padding:1rem; background:#222; color:#fff; margin-top:2rem; }

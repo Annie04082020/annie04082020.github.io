@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黃安華 (Annie) | 網頁履歷</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body data-theme="light">
 
     <nav class="navbar">
-        <a href="#" class="logo">黃安華 (Annie)</a>
+        <a href="#" class="logo"><span class="highlight-yellow">黃安華 (Annie)</span></a>
         <div class="nav-links">
             <a href="#about">關於我</a>
             <a href="#skills">技能</a>
             <a href="#experiences">經歷</a>
             <a href="#projects">專案</a>
-            <a href="#awards">獎項</a>
+            <a href="#awards">獎項與活動</a>
             <div class="controls">
                 <button id="theme-toggle" class="nav-btn">
                     <span class="icon-moon">🌙</span>
                     <span class="icon-sun">☀️</span>
                 </button>
-                <a href="index.html" class="nav-btn" style="text-decoration:none;">EN</a>
+                <a href="../en/index.html" class="nav-btn" style="text-decoration:none;">EN</a>
             </div>
         </div>
     </nav>
@@ -31,7 +38,7 @@
     <header class="hero" id="about">
         <div class="hero-container">
             <div class="hero-title">
-                <h1>黃安華 (Annie)</h1>
+                <h1><span class="highlight-yellow">黃安華 (Annie)</span></h1>
                 <p class="subtitle">電機工程 | 程式設計 | 視覺設計 | 音樂 | 語言學習 | 跆拳道</p>
 
                 <div class="hero-contact">
@@ -39,15 +46,12 @@
                     <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
                     <a href="https://www.linkedin.com/in/annie-huang-8375331a7/" target="_blank">🔗
                         linkedin.com/in/annie-huang</a>
-                    <!-- <a href="https://drive.google.com/file/d/1KgDQrJPf-aZk-drospd4g466EOqj9kUw/view?usp=sharing" target="_blank">
-            📄 下載完整 CV
-          </a> -->
                 </div>
             </div>
 
             <div class="hero-content">
                 <div class="hero-section">
-                    <h2>關於我</h2>
+                    <h2 class="highlight-yellow">關於我</h2>
                     <p>我是一個充滿好奇心的創作者，喜歡嘗試不同領域的活動與專案。透過語言、繪畫、寫作、程式設計，我能將想法化為作品，勇於挑戰陌生領域並拓展視野。</p>
                 </div>
             </div>
@@ -58,8 +62,10 @@
         <h2 class="section-title">教育</h2>
         <div class="content-box">
             <ul>
-                <li><b>國立台北科技大學</b> 電機工程學士 <span class="meta-info inline-meta">Sep.2024 - Jun.2026</span></li>
-                <li><b>國立台北科技大學</b> 智慧自動化工程副學士 <span class="meta-info inline-meta">Sep.2019 - Jun.2024</span><br>🎓
+                <li><b class="highlight-yellow">國立台北科技大學</b> 電機工程學士 <span class="meta-info inline-meta">Sep.2024 -
+                        Jun.2026</span></li>
+                <li><b class="highlight-yellow">國立台北科技大學</b> 智慧自動化工程副學士 <span class="meta-info inline-meta">Sep.2019 -
+                        Jun.2024</span><br>🎓
                     每學期皆獲學業表現獎學金</li>
             </ul>
         </div>
@@ -101,7 +107,9 @@
                 <h3>MIT City Science Lab: Music Block</h3>
                 <div class="project-meta">
                     <p class="meta-info">Feb.2023 - Jun.2023</p>
-                    <a href="https://youtu.be/RYG5qpFA1wA" target="_blank" class="project-link">🎥 Demo Video</a>
+                    <a href="https://youtu.be/GiDZrVne1MY" target="_blank" class="project-link">🎥 Concept Demo
+                        Video</a>
+                    <a href="https://youtu.be/RYG5qpFA1wA" target="_blank" class="project-link">🎥 Final Demo Video</a>
                 </div>
                 <div class="desc">
                     <p>將「音樂」實體化的互動裝置，幫助初學者理解樂理，同時具備創意工具潛力。負責專案的韌體與 C 語言開發。</p>
@@ -112,13 +120,17 @@
                 <h3>Behind Brewing: Coffee Maker Circuit Study</h3>
                 <div class="project-meta">
                     <p class="meta-info">Sep.2024 - Jan.2025</p>
+                    <a href="https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" target="_blank"
+                        class="project-link">📄 Poster</a>
+                    <a href="https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" target="_blank"
+                        class="project-link">📄 Report</a>
                 </div>
                 <div class="desc">
                     <p>分析與模擬咖啡機電路，探索電路參數如何影響加熱與溫控。運用 SIMetrix 軟體進行模擬並最佳化沖泡咖啡的電路應用。</p>
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card full-width">
                 <h3>其他專案</h3>
                 <div class="project-meta">
                     <p class="meta-info">2021 - 2022</p>
@@ -126,9 +138,22 @@
                 <div class="desc">
                     <ul>
                         <li>AI/醫療數據處理 (CT 轉檔程式) (與 LEDA Technology 合作)</li>
-                        <li>Python 大富翁遊戲設計</li>
-                        <li>P-TECH Call for Code 疫情人力調度系統</li>
-                        <li>Eco-Friendly Board Game 設計與團隊領導</li>
+                        <li>
+                            Python 大富翁遊戲設計
+                            <a href="https://docs.google.com/presentation/d/1nZF0inf_-JHW2z7FZXvcIbVjg2AGMqM4QNqsCmTZZP0/edit?usp=sharing"
+                                target="_blank" class="project-link">Project Slides</a>
+                        </li>
+                        <li>
+                            P-TECH Call for Code 疫情人力調度系統
+                            <a href="https://youtu.be/--OcSxoVX7c" target="_blank" class="project-link">ConceptVideo</a>
+                            <a href="https://docs.google.com/presentation/d/1kZR2yPctm8VQH8OIeajCIA7lS9Dfmkyc1MmKePWYQAs/edit?usp=sharing"
+                                target="_blank" class="project-link">Concept Slides</a>
+                        </li>
+                        <li>
+                            Eco-Friendly Board Game 設計與團隊領導
+                            <a href="https://hackmd.io/@Shomes/SJ1QirDKF" target="_blank" class="project-link">Game
+                                Instruction</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -171,6 +196,7 @@
             <div class="skill-card">
                 <h3>體育</h3>
                 <ul>
+                    <li>跆拳道一段 <span class="meta-info">December.30.2022</span></li>
                     <li>跆拳道二段 <span class="meta-info">March.17.2023</span></li>
                 </ul>
             </div>
@@ -189,8 +215,8 @@
 
     <section class="main-section" id="experiences">
         <h2 class="section-title">經歷 (Experiences)</h2>
-        <div class="content-box">
-            <div class="experience">
+        <div class="experiences-grid">
+            <div class="experience-card">
                 <h3>Summer Internship: AUO Corporation</h3>
                 <p class="meta-info section-meta">July.2022 - Aug.2022</p>
                 <ul>
@@ -200,7 +226,7 @@
                 </ul>
             </div>
 
-            <div class="experience">
+            <div class="experience-card">
                 <h3>Internship: International Business Machines (IBM) Corporation</h3>
                 <p class="meta-info section-meta">July.2023 - Dec.2023</p>
                 <ul>
@@ -210,7 +236,7 @@
                 </ul>
             </div>
 
-            <div class="experience">
+            <div class="experience-card">
                 <h3>社團幹部：跆拳道社副社長</h3>
                 <p class="meta-info section-meta">July.2022 - Now</p>
                 <ul>
@@ -219,7 +245,7 @@
                 </ul>
             </div>
 
-            <div class="experience">
+            <div class="experience-card">
                 <h3>課外活動</h3>
                 <ul>
                     <li>北科大跆拳道社 <span class="meta-info inline-meta">Oct.2020 - Now</span></li>
@@ -227,7 +253,7 @@
                 </ul>
             </div>
 
-            <div class="experience">
+            <div class="experience-card full-width">
                 <details class="course-details">
                     <summary>選修與額外課程 (Selected Courses)</summary>
                     <div class="course-grid">
@@ -243,8 +269,11 @@
                                 Jun.2021</span></div>
                         <div class="course-item"><span>Deep Learning with TensorFlow</span> <span
                                 class="meta-info">Sep.2021 - Jan.2022</span></div>
-                        <div class="course-item"><span>Computer-Aided-Graphic-Design</span> <span
-                                class="meta-info">Sep.2021 - Jan.2022</span></div>
+                        <div class="course-item"><span><a
+                                    href="https://drive.google.com/file/d/1KgDQrJPf-aZk-drospd4g466EOqj9kUw/view">Computer-Aided-Graphic-Design</a></span>
+                            <span class="meta-info">Sep.2021 -
+                                Jan.2022</span>
+                        </div>
                         <div class="course-item"><span>Electrical Circuit Design and Lab</span> <span
                                 class="meta-info">Feb.2022 - Jun.2022</span></div>
                         <div class="course-item"><span>Industry 4.0 Lecture</span> <span class="meta-info">Feb.2022 -
@@ -307,7 +336,7 @@
         <p>© 2025 黃安華 (Annie) | Built with GitHub Pages</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

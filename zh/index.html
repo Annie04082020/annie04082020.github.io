@@ -21,10 +21,10 @@
         <a href="#" class="logo"><span class="highlight-yellow">黃安華 (Annie)</span></a>
         <div class="nav-links">
             <a href="#about">關於我</a>
+            <a href="#projects">專案</a>
             <a href="#skills">技能</a>
             <a href="#experiences">經歷</a>
             <a href="#courses">修課記錄</a>
-            <a href="#projects">專案</a>
             <a href="#awards">獎項與活動</a>
             <div class="controls">
                 <button id="theme-toggle" class="nav-btn">
@@ -36,453 +36,469 @@
         </div>
     </nav>
 
-    <header class="hero" id="about">
-        <div class="hero-container">
-            <div class="hero-title">
-                <h1><span class="highlight-yellow">黃安華 (Annie)</span></h1>
-                <p class="subtitle">電機工程 | 程式設計 | 視覺設計 | 音樂 | 語言學習 | 跆拳道</p>
+    <div class="main-wrapper">
+        <header class="hero" id="about">
+            <div class="hero-container">
+                <div class="hero-title">
+                    <h1><span class="highlight-yellow">黃安華 (Annie)</span></h1>
+                    <p class="subtitle">電機 | 機械 | 程式設計 </p>
+                    <p class="subtitle">視覺設計 | 音樂 | 語言學習 | 跆拳道</p>
 
-                <div class="hero-contact">
-                    <a href="mailto:annie.huangah@proton.me">📧 annie.huangah@proton.me</a>
-                    <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
-                    <a href="https://www.linkedin.com/in/annie-huang-8375331a7/" target="_blank">🔗
-                        linkedin.com/in/annie-huang</a>
+                    <div class="hero-contact">
+                        <a href="mailto:annie.huangah@proton.me">📧 annie.huangah@proton.me</a>
+                        <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
+                        <a href="https://www.linkedin.com/in/annie-huang-8375331a7/" target="_blank">🔗
+                            linkedin.com/in/annie-huang</a>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-section">
+                        <h2 class="highlight-yellow">關於我</h2>
+                        <p>我是一個充滿好奇心的創作者，喜歡嘗試不同領域的活動與專案。透過語言、繪畫、寫作、程式設計，我能將想法化為作品，勇於挑戰陌生領域並拓展視野。</p>
+                    </div>
                 </div>
             </div>
+        </header>
 
-            <div class="hero-content">
-                <div class="hero-section">
-                    <h2 class="highlight-yellow">關於我</h2>
-                    <p>我是一個充滿好奇心的創作者，喜歡嘗試不同領域的活動與專案。透過語言、繪畫、寫作、程式設計，我能將想法化為作品，勇於挑戰陌生領域並拓展視野。</p>
-                </div>
+        <section class="main-section" id="education">
+            <h2 class="section-title">教育</h2>
+            <div class="content-box">
+                <ul>
+                    <li><b class="highlight-yellow">國立台北科技大學</b> 電機工程系 學士 <span class="meta-info inline-meta">Sep.2024 -
+                            Jun.2026</span></li>
+                    <li><b class="highlight-yellow">國立台北科技大學</b> 智慧自動化工程科 副學士 <span
+                            class="meta-info inline-meta">Sep.2019 -
+                            Jun.2024</span><br>🎓
+                        每學期皆獲學業表現獎學金</li>
+                </ul>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section class="main-section" id="education">
-        <h2 class="section-title">教育</h2>
-        <div class="content-box">
-            <ul>
-                <li><b class="highlight-yellow">國立台北科技大學</b> 電機工程系 學士 <span class="meta-info inline-meta">Sep.2024 -
-                        Jun.2026</span></li>
-                <li><b class="highlight-yellow">國立台北科技大學</b> 智慧自動化工程科 副學士 <span class="meta-info inline-meta">Sep.2019 -
-                        Jun.2024</span><br>🎓
-                    每學期皆獲學業表現獎學金</li>
-            </ul>
-        </div>
-    </section>
+        <section class="main-section" id="projects">
+            <h2 class="section-title">專案</h2>
+            <div class="projects-grid">
 
-    <section class="main-section" id="projects">
-        <h2 class="section-title">專案</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <h3>CSL Ultrasonic Car (Discrete H-Bridge Control)</h3>
-                <div class="project-meta">
-                    <p class="meta-info">Sep.2025 - Jan.2026</p>
-                    <a href="https://github.com/Annie04082020/CSL_Ultrasonic_Car" target="_blank"
-                        class="project-link">💻 GitHub</a>
+                <div class="project-card">
+                    <h3>CSL Ultrasonic Car (Discrete H-Bridge Control)</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Sep.2025 - Jan.2026</p>
+                        <a href="https://github.com/Annie04082020/CSL_Ultrasonic_Car" target="_blank"
+                            class="project-link">💻 GitHub</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>具備物體追蹤與距離維持功能的自走車，利用超音波感測器進行反饋控制。</li>
+                            <li>不使用市售模組，以獨立電晶體 (BJT) 與繼電器手工設計 H 橋馬達驅動硬體電路。</li>
+                            <li>實作中值濾波器 (Median Filter) 處理感測器雜訊，提升數值穩定度。</li>
+                            <li>在 Arduino 上實作具備死區 (Deadband) 的 Bang-Bang 控制演算法，達成平滑修正與原地旋轉。</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="desc">
+
+                <div class="project-card">
+                    <h3>Linux Odyssey: 互動式教學網站</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Apr.2023 - Now</p>
+                        <a href="https://linuxodyssey.xyz/" target="_blank" class="project-link">🌐 網站</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>以 Vue 開發的互動式教學網站，推廣開源教育</li>
+                            <li>第 28 屆 大專校院資訊應用服務創新競賽 鈦坦敏捷開發獎 第二名</li>
+                            <li>第 4 屆 g0v 零時小學校專案孵化競賽茁壯團隊 (首獎)</li>
+                            <li>負責前端開發、自動化測試與視覺設計</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>MIT City Science Lab: Music Block</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Feb.2023 - Jun.2023</p>
+                        <a href="https://youtu.be/GiDZrVne1MY" target="_blank" class="project-link">🎥 Concept Demo
+                            Video</a>
+                        <a href="https://youtu.be/RYG5qpFA1wA" target="_blank" class="project-link">🎥 Final Demo
+                            Video</a>
+                    </div>
+                    <div class="desc">
+                        <p>將「音樂」實體化的互動裝置，幫助初學者理解樂理，同時具備創意工具潛力。負責專案的韌體與 C 語言開發。</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Behind Brewing: Coffee Maker Circuit Study</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Sep.2024 - Jan.2025</p>
+                        <a href="https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" target="_blank"
+                            class="project-link">📄 Poster</a>
+                        <a href="https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" target="_blank"
+                            class="project-link">📄 Report</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>分析與模擬咖啡機電路，探索電路參數如何影響加熱與溫控。</li>
+                            <li>運用 SIMetrix 軟體進行模擬並最佳化沖泡咖啡的電路應用。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card full-width">
+                    <h3>其他專案</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">2021 - 2022</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>AI/醫療數據處理 (CT 轉檔程式) (與 LEDA Technology 合作)</li>
+                            <li>
+                                Python 大富翁遊戲設計
+                                <a href="https://docs.google.com/presentation/d/1nZF0inf_-JHW2z7FZXvcIbVjg2AGMqM4QNqsCmTZZP0/edit?usp=sharing"
+                                    target="_blank" class="project-link">Project Slides</a>
+                            </li>
+                            <li>
+                                P-TECH Call for Code 疫情人力調度系統
+                                <a href="https://youtu.be/--OcSxoVX7c" target="_blank"
+                                    class="project-link">ConceptVideo</a>
+                                <a href="https://docs.google.com/presentation/d/1kZR2yPctm8VQH8OIeajCIA7lS9Dfmkyc1MmKePWYQAs/edit?usp=sharing"
+                                    target="_blank" class="project-link">Concept Slides</a>
+                            </li>
+                            <li>
+                                Eco-Friendly Board Game 設計與團隊領導
+                                <a href="https://hackmd.io/@Shomes/SJ1QirDKF" target="_blank" class="project-link">Game
+                                    Instruction</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="main-section" id="skills">
+            <h2 class="section-title">專業技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>語言</h3>
                     <ul>
-                        <li>具備物體追蹤與距離維持功能的自走車，利用超音波感測器進行反饋控制。</li>
-                        <li>不使用市售模組，以獨立電晶體 (BJT) 與繼電器手工設計 H 橋馬達驅動硬體電路。</li>
-                        <li>實作中值濾波器 (Median Filter) 處理感測器雜訊，提升數值穩定度。</li>
-                        <li>在 Arduino 上實作具備死區 (Deadband) 的 Bang-Bang 控制演算法，達成平滑修正與原地旋轉。</li>
+                        <li>中文 <span class="score-detail">母語</span></li>
+                        <li>英文
+                            <span class="score-detail">TOEIC RL: 810, SW: 270<br>IELTS O: 6.5<br>GRE V: 145, Q: 158, AW:
+                                3.5</span>
+                        </li>
+                        <li>日文 <span class="score-detail">JLPT N1</span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>程式語言</h3>
+                    <ul>
+                        <li>Python, C, C#</li>
+                        <li>HTML, CSS, JavaScript / TypeScript</li>
+                        <li>Vue, Cypress</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>設計與表演</h3>
+                    <ul>
+                        <li>打擊樂、鋼琴、小號</li>
+                        <li>繪畫、平面設計</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>體育</h3>
+                    <ul>
+                        <li>跆拳道一段 <span class="meta-info">December.30.2022</span></li>
+                        <li>跆拳道二段 <span class="meta-info">March.17.2023</span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-card full-width">
+                    <h3>證照與徽章</h3>
+                    <ul>
+                        <li><b>經濟部 3D 列印積層製造工程師能力鑑定 (iPAS)-初級</b> <span class="meta-info">July.2023</span></li>
+                        <li><b>Google Cybersecurity</b> <span class="meta-info">July.2025</span></li>
+                        <li><b>IBM SkillsBuild:</b> Python for Data Science, Growth Behaviors <span
+                                class="meta-info">May.2022, Oct.2023</span></li>
                     </ul>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <h3>Linux Odyssey: 互動式教學網站</h3>
-                <div class="project-meta">
-                    <p class="meta-info">Apr.2023 - Now</p>
-                    <a href="https://linuxodyssey.xyz/" target="_blank" class="project-link">🌐 網站</a>
-                </div>
-                <div class="desc">
-                    <p>以 Vue 開發的互動式教學網站，推廣開源教育，榮獲 InnoServe Awards 第二名與 Sch001 孵化計畫潛力團隊。負責前端開發、自動化測試與視覺設計。</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>MIT City Science Lab: Music Block</h3>
-                <div class="project-meta">
-                    <p class="meta-info">Feb.2023 - Jun.2023</p>
-                    <a href="https://youtu.be/GiDZrVne1MY" target="_blank" class="project-link">🎥 Concept Demo
-                        Video</a>
-                    <a href="https://youtu.be/RYG5qpFA1wA" target="_blank" class="project-link">🎥 Final Demo Video</a>
-                </div>
-                <div class="desc">
-                    <p>將「音樂」實體化的互動裝置，幫助初學者理解樂理，同時具備創意工具潛力。負責專案的韌體與 C 語言開發。</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Behind Brewing: Coffee Maker Circuit Study</h3>
-                <div class="project-meta">
-                    <p class="meta-info">Sep.2024 - Jan.2025</p>
-                    <a href="https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" target="_blank"
-                        class="project-link">📄 Poster</a>
-                    <a href="https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" target="_blank"
-                        class="project-link">📄 Report</a>
-                </div>
-                <div class="desc">
-                    <p>分析與模擬咖啡機電路，探索電路參數如何影響加熱與溫控。運用 SIMetrix 軟體進行模擬並最佳化沖泡咖啡的電路應用。</p>
-                </div>
-            </div>
-
-            <div class="project-card full-width">
-                <h3>其他專案</h3>
-                <div class="project-meta">
-                    <p class="meta-info">2021 - 2022</p>
-                </div>
-                <div class="desc">
+        <section class="main-section" id="experiences">
+            <h2 class="section-title">經歷</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Summer Internship: AUO Corporation</h3>
+                    <p class="meta-info section-meta">July.2022 - Aug.2022</p>
                     <ul>
-                        <li>AI/醫療數據處理 (CT 轉檔程式) (與 LEDA Technology 合作)</li>
-                        <li>
-                            Python 大富翁遊戲設計
-                            <a href="https://docs.google.com/presentation/d/1nZF0inf_-JHW2z7FZXvcIbVjg2AGMqM4QNqsCmTZZP0/edit?usp=sharing"
-                                target="_blank" class="project-link">Project Slides</a>
-                        </li>
-                        <li>
-                            P-TECH Call for Code 疫情人力調度系統
-                            <a href="https://youtu.be/--OcSxoVX7c" target="_blank" class="project-link">ConceptVideo</a>
-                            <a href="https://docs.google.com/presentation/d/1kZR2yPctm8VQH8OIeajCIA7lS9Dfmkyc1MmKePWYQAs/edit?usp=sharing"
-                                target="_blank" class="project-link">Concept Slides</a>
-                        </li>
-                        <li>
-                            Eco-Friendly Board Game 設計與團隊領導
-                            <a href="https://hackmd.io/@Shomes/SJ1QirDKF" target="_blank" class="project-link">Game
-                                Instruction</a>
-                        </li>
+                        <li>經歷 AI、Python PyQt GUI 開發、YOLOv5、Labelme 應用程式操作</li>
+                        <li>維護與調整 AI 偵測系統</li>
+                        <li>結合其他規則工具重新訓練模型以適應不同操作情境</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Internship: International Business Machines (IBM) Corporation</h3>
+                    <p class="meta-info section-meta">July.2023 - Dec.2023</p>
+                    <ul>
+                        <li>經歷 Cypress 自動化測試開發、JavaScript</li>
+                        <li>修復與撰寫測試檔案程式碼</li>
+                        <li>透過自動化測試找出網站與專案潛在問題</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>社團幹部：跆拳道社副社長</h3>
+                    <p class="meta-info section-meta">July.2022 - Aug.2023</p>
+                    <ul>
+                        <li>籌辦社團聯展與校慶活動</li>
+                        <li>維持社團營運與招生工作</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>課外活動</h3>
+                    <ul>
+                        <li>北科大跆拳道社 <span class="meta-info inline-meta">Oct.2020 - Now</span></li>
+                        <li>北科大足球隊 (共同訓練) <span class="meta-info inline-meta">Oct.2022 - 2024</span></li>
+                        <li>竹南國小音樂班/管樂團 <span class="meta-info inline-meta">Sep.2013-Jun.2016</span></li>
                     </ul>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="main-section" id="courses">
+            <h2 class="section-title">修課記錄</h2>
+            <div class="content-box">
+                <div class="experience-card full-width">
+                    <div class="courses-flex-container">
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>智動科核心課程</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="domain">電資</span><span>人工智慧</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">電資</span><span>感測器與物聯網</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>機器人學與實習</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">電資</span><span>機器視覺與實習</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>機械設計</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">電資</span><span>通訊與網路</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">系統</span><span>智慧型控制</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>機械工程實驗 I</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>機動學</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">系統</span><span>機電整合與實習</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>材料力學</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>動力學</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">電資</span><span>深度學習 TensorFlow</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
 
-    <section class="main-section" id="skills">
-        <h2 class="section-title">專業技能</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>語言</h3>
-                <ul>
-                    <li>中文 <span class="score-detail">母語</span></li>
-                    <li>英文
-                        <span class="score-detail">TOEIC RL: 810, SW: 270<br>IELTS O: 6.5<br>GRE V: 145, Q: 158, AW:
-                            3.5</span>
-                    </li>
-                    <li>日文 <span class="score-detail">JLPT N1</span></li>
-                </ul>
-            </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>可程式控制與實習</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>靜力學</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>製造學</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>工程材料</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">機械</span><span>數控工具機與實習</span> <span
+                                            class="meta-info">Sep.2020 -
+                                            Jan.2021</span></div>
+                                    <div class="course-item"><span class="domain">機械</span><span>氣液壓學及實習</span> <span
+                                            class="meta-info">Sep.2020 -
+                                            Jan.2021</span></div>
+                                    <div class="course-item"><span class="domain">電資</span><span>人工智慧概論</span> <span
+                                            class="meta-info">Feb.2020 -
+                                            June.2020</span></div>
+                                    <div class="course-item"><span class="domain">機械</span><span>機械基礎實習 I, II</span>
+                                        <span class="meta-info">Sep.2019 - Jan.2020, Feb.2020 - Jun.2020</span></div>
+                                    <div class="course-item"><span class="domain">電資</span><span>計算機概論</span> <span
+                                            class="meta-info">Sep.2019 -
+                                            Jan.2020</span></div>
+                                    <div class="course-item"><span class="domain">機械</span><span>工程圖學</span> <span
+                                            class="meta-info">Sep.2019 -
+                                            Jan.2020</span></div>
+                                    <div class="course-item"><span class="domain">機械</span><span>電腦輔助製圖</span> <span
+                                            class="meta-info">Sep.2019 -
+                                            Jan.2020</span></div>
+                                    <div class="course-item"><span class="domain">系統</span><span>智慧自動化概論</span> <span
+                                            class="meta-info">Sep.2019 -
+                                            Jan.2020</span></div>
+                                </div>
+                            </details>
+                        </div>
 
-            <div class="skill-card">
-                <h3>程式語言</h3>
-                <ul>
-                    <li>Python, C, C#</li>
-                    <li>HTML, CSS, JavaScript / TypeScript</li>
-                    <li>Vue, Cypress</li>
-                </ul>
-            </div>
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>電機核心課程</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="dept">電機系</span><span>線性代數</span> <span
+                                            class="meta-info">Feb.2026 - Jun.2026</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>通訊系統實習</span> <span
+                                            class="meta-info">Feb.2026 - Jun.2026</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>衛星遙測應用與實習</span> <span
+                                            class="meta-info">Sep.2025 - Jan.2026</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>控制系統實習</span> <span
+                                            class="meta-info">Sep.2025 - Jan.2026</span></div>
+                                    <div class="course-item"><span class="dept">資工系</span><span>物件導向程式設計</span> <span
+                                            class="meta-info">Sep.2025 - Jan.2026</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>電力電子學</span> <span
+                                            class="meta-info">Sep.2025 - Jan.2026</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>電力電子學實習</span> <span
+                                            class="meta-info">Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>微處理機</span> <span
+                                            class="meta-info">Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>電路學 II</span> <span
+                                            class="meta-info">Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>電子學 II</span> <span
+                                            class="meta-info">Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>數位系統</span> <span
+                                            class="meta-info">Sep.2024 - Jan.2025</span></div>
+                                    <div class="course-item"><span class="dept">電資學士班</span><span>電子學實習 I, II</span>
+                                        <span class="meta-info">Sep.2024 - Jan.2025, Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">電機系</span><span>訊號與系統</span> <span
+                                            class="meta-info">Sep.2024 - Jan.2025</span></div>
+                                    <div class="course-item"><span class="dept">電子系</span><span>電路學 I</span> <span
+                                            class="meta-info">Sep.2024 - Jan.2025</span></div>
+                                    <div class="course-item"><span class="dept">資工系</span><span>離散數學</span> <span
+                                            class="meta-info">Feb.2024 - Jun.2024</span></div>
+                                    <div class="course-item"><span class="dept">資工系</span><span>資料結構</span> <span
+                                            class="meta-info">Sep.2023 - Jan.2024</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>機率與統計</span> <span
+                                            class="meta-info">Feb.2023 - Jun.2023</span></div>
 
-            <div class="skill-card">
-                <h3>設計與表演</h3>
-                <ul>
-                    <li>打擊樂、鋼琴、小號</li>
-                    <li>繪畫、平面設計</li>
-                </ul>
-            </div>
-
-            <div class="skill-card">
-                <h3>體育</h3>
-                <ul>
-                    <li>跆拳道一段 <span class="meta-info">December.30.2022</span></li>
-                    <li>跆拳道二段 <span class="meta-info">March.17.2023</span></li>
-                </ul>
-            </div>
-
-            <div class="skill-card full-width">
-                <h3>證照與徽章</h3>
-                <ul>
-                    <li><b>3D 列印工程師 (基礎能力鑑定)</b> <span class="meta-info">July.2023</span></li>
-                    <li><b>Google Cybersecurity</b> <span class="meta-info">July.2025</span></li>
-                    <li><b>IBM SkillsBuild:</b> Python for Data Science, Growth Behaviors <span
-                            class="meta-info">May.2022, Oct.2023</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="main-section" id="experiences">
-        <h2 class="section-title">經歷 (Experiences)</h2>
-        <div class="experiences-grid">
-            <div class="experience-card">
-                <h3>Summer Internship: AUO Corporation</h3>
-                <p class="meta-info section-meta">July.2022 - Aug.2022</p>
-                <ul>
-                    <li>經歷 AI、Python PyQt GUI 開發、YOLOv5、Labelme 應用程式操作</li>
-                    <li>維護與調整 AI 偵測系統</li>
-                    <li>結合其他規則工具重新訓練模型以適應不同操作情境</li>
-                </ul>
-            </div>
-
-            <div class="experience-card">
-                <h3>Internship: International Business Machines (IBM) Corporation</h3>
-                <p class="meta-info section-meta">July.2023 - Dec.2023</p>
-                <ul>
-                    <li>經歷 Cypress 自動化測試開發、JavaScript</li>
-                    <li>修復與撰寫測試檔案程式碼</li>
-                    <li>透過自動化測試找出網站與專案潛在問題</li>
-                </ul>
-            </div>
-
-            <div class="experience-card">
-                <h3>社團幹部：跆拳道社副社長</h3>
-                <p class="meta-info section-meta">July.2022 - Aug.2023</p>
-                <ul>
-                    <li>籌辦社團聯展與校慶活動</li>
-                    <li>維持社團營運與招生工作</li>
-                </ul>
-            </div>
-
-            <div class="experience-card">
-                <h3>課外活動</h3>
-                <ul>
-                    <li>北科大跆拳道社 <span class="meta-info inline-meta">Oct.2020 - Now</span></li>
-                    <li>北科大足球隊 (共同訓練) <span class="meta-info inline-meta">Oct.2022 - 2024</span></li>
-                    <li>竹南國小音樂班/管樂團 <span class="meta-info inline-meta">Sep.2013-Jun.2016</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="main-section" id="courses">
-        <h2 class="section-title">修課記錄</h2>
-        <div class="content-box">
-            <div class="experience-card full-width">
-                <div class="courses-flex-container">
-                    <div class="courses-column">
-                        <details class="course-details">
-                            <summary>智動科核心課程</summary>
-                            <div class="course-grid">
-                                <div class="course-item"><span class="domain">電資</span><span>人工智慧</span>
-                                    <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    <div class="course-item"><span class="dept">智動科</span><span>微處理機與實習</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>自動控制及實習</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>電機機械</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>數位邏輯與實習</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>電子學與實習</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>程式設計與實習</span>
+                                        <span class="meta-info">Sep.2020 - Jan.2021, Feb.2021 - Jun.2021</span>
+                                    </div>
                                 </div>
-                                <div class="course-item"><span class="domain">電資</span><span>感測器與物聯網</span>
-                                    <span class="meta-info">Sep.2023 - Jan.2024</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>機器人學與實習</span>
-                                    <span class="meta-info">Feb.2023 - Jun.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">電資</span><span>機器視覺與實習</span>
-                                    <span class="meta-info">Feb.2023 - Jun.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>機械設計</span>
-                                    <span class="meta-info">Feb.2023 - Jun.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">電資</span><span>通訊與網路</span>
-                                    <span class="meta-info">Sep.2022 - Jan.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">系統</span><span>智慧型控制</span>
-                                    <span class="meta-info">Sep.2022 - Jan.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>機械工程實驗 I</span>
-                                    <span class="meta-info">Sep.2022 - Jan.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>機動學</span>
-                                    <span class="meta-info">Sep.2022 - Jan.2023</span>
-                                </div>
-                                <div class="course-item"><span class="domain">系統</span><span>機電整合與實習</span>
-                                    <span class="meta-info">Feb.2022 - Jun.2022</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>材料力學</span>
-                                    <span class="meta-info">Feb.2022 - Jun.2022</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>動力學</span>
-                                    <span class="meta-info">Sep.2021 - Jan.2022</span>
-                                </div>
-                                <div class="course-item"><span class="domain">電資</span><span>深度學習 TensorFlow</span>
-                                    <span class="meta-info">Sep.2021 - Jan.2022</span>
-                                </div>
-
-                                <div class="course-item"><span class="domain">機械</span><span>可程式控制與實習</span>
-                                    <span class="meta-info">Feb.2021 - Jun.2021</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>靜力學</span>
-                                    <span class="meta-info">Feb.2021 - Jun.2021</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>製造學</span>
-                                    <span class="meta-info">Feb.2021 - Jun.2021</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>工程材料</span>
-                                    <span class="meta-info">Feb.2021 - Jun.2021</span>
-                                </div>
-                                <div class="course-item"><span class="domain">機械</span><span>數控工具機與實習</span> <span
-                                        class="meta-info">Sep.2020 -
-                                        Jan.2021</span></div>
-                                <div class="course-item"><span class="domain">機械</span><span>氣液壓學及實習</span> <span
-                                        class="meta-info">Sep.2020 -
-                                        Jan.2021</span></div>
-                                <div class="course-item"><span class="domain">電資</span><span>人工智慧概論</span> <span
-                                        class="meta-info">Feb.2020 -
-                                        June.2020</span></div>
-                                <div class="course-item"><span class="domain">機械</span><span>機械基礎實習 I, II</span> <span
-                                        class="meta-info">Sep.2019 - Jan.2020, Feb.2020 - Jun.2020</span></div>
-                                <div class="course-item"><span class="domain">電資</span><span>計算機概論</span> <span
-                                        class="meta-info">Sep.2019 -
-                                        Jan.2020</span></div>
-                                <div class="course-item"><span class="domain">機械</span><span>工程圖學</span> <span
-                                        class="meta-info">Sep.2019 -
-                                        Jan.2020</span></div>
-                                <div class="course-item"><span class="domain">機械</span><span>電腦輔助製圖</span> <span
-                                        class="meta-info">Sep.2019 -
-                                        Jan.2020</span></div>
-                                <div class="course-item"><span class="domain">系統</span><span>智慧自動化概論</span> <span
-                                        class="meta-info">Sep.2019 -
-                                        Jan.2020</span></div>
-                            </div>
-                        </details>
+                            </details>
+                        </div>
                     </div>
 
-                    <div class="courses-column">
-                        <details class="course-details">
-                            <summary>電機核心課程</summary>
-                            <div class="course-grid">
-                                <div class="course-item"><span class="dept">電機系</span><span>線性代數</span> <span
-                                        class="meta-info">Feb.2026 - Jun.2026</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>通訊系統實習</span> <span
-                                        class="meta-info">Feb.2026 - Jun.2026</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>衛星遙測應用與實習</span> <span
-                                        class="meta-info">Sep.2025 - Jan.2026</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>控制系統實習</span> <span
-                                        class="meta-info">Sep.2025 - Jan.2026</span></div>
-                                <div class="course-item"><span class="dept">資工系</span><span>物件導向程式設計</span> <span
-                                        class="meta-info">Sep.2025 - Jan.2026</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>電力電子學</span> <span
-                                        class="meta-info">Sep.2025 - Jan.2026</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>電力電子學實習</span> <span
-                                        class="meta-info">Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>微處理機</span> <span
-                                        class="meta-info">Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>電路學 II</span> <span
-                                        class="meta-info">Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>電子學 II</span> <span
-                                        class="meta-info">Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>數位系統</span> <span
-                                        class="meta-info">Sep.2024 - Jan.2025</span></div>
-                                <div class="course-item"><span class="dept">電資學士班</span><span>電子學實習 I, II</span> <span
-                                        class="meta-info">Sep.2024 - Jan.2025, Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">電機系</span><span>訊號與系統</span> <span
-                                        class="meta-info">Sep.2024 - Jan.2025</span></div>
-                                <div class="course-item"><span class="dept">電子系</span><span>電路學 I</span> <span
-                                        class="meta-info">Sep.2024 - Jan.2025</span></div>
-                                <div class="course-item"><span class="dept">資工系</span><span>離散數學</span> <span
-                                        class="meta-info">Feb.2024 - Jun.2024</span></div>
-                                <div class="course-item"><span class="dept">資工系</span><span>資料結構</span> <span
-                                        class="meta-info">Sep.2023 - Jan.2024</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>機率與統計</span> <span
-                                        class="meta-info">Feb.2023 - Jun.2023</span></div>
-
-                                <div class="course-item"><span class="dept">智動科</span><span>微處理機與實習</span>
-                                    <span class="meta-info">Feb.2022 - Jun.2022</span>
+                    <div class="courses-flex-container" style="margin-top: 1.5rem;">
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>跨領域與選修課程</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="dept">北醫藥學系</span><span>藥用植物學</span><a
+                                            href="https://annie04082020.github.io/ReviewCardMaker/" target="_blank"
+                                            class="project-link">圖卡複習工具</a><span class="meta-info">Sep.2025 -
+                                            Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">教育學程</span><span>輔導原理與實務</span> <span
+                                            class="meta-info">Sep.2025 - Jan.2026</span></div>
+                                    <div class="course-item"><span class="dept">教育學程</span><span>學習評量</span> <span
+                                            class="meta-info">Feb.2025 - Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">教育學程</span><span>教育心理學</span> <span
+                                            class="meta-info">Sep.2024 - Jan.2025</span></div>
+                                    <div class="course-item"><span class="dept">建築系</span><span>建築結構系統</span> <span
+                                            class="meta-info">Sep.2023 - Jan.2024</span></div>
+                                    <div class="course-item"><span class="dept">建築系</span><span>建築計畫學</span> <span
+                                            class="meta-info">Sep.2023 - Jan.2024</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>3D 列印與實習</span> <span
+                                            class="meta-info">Sep.2023 - Jan.2024</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>網路程式設計</span> <span
+                                            class="meta-info">Sep.2022 - Jan.2023</span></div>
+                                    <div class="course-item"><span class="dept">工管系</span><span>雲端應用程式開發與應用</span> <span
+                                            class="meta-info">Sep.2022 - Jan.2023</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>電路設計與實習</span> <span
+                                            class="meta-info">Feb.2022 - Jun.2022</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>工業 4.0 講座</span> <span
+                                            class="meta-info">Feb.2022 - Jun.2022</span></div>
+                                    <div class="course-item"><span class="dept">工設系</span><span>電腦輔助視覺設計</span>
+                                        <a href="https://drive.google.com/file/d/1KgDQrJPf-aZk-drospd4g466EOqj9kUw/view"
+                                            target="_blank" class="project-link">課程作品集</a><span
+                                            class="meta-info">Sep.2021 -
+                                            Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>專利法概述</span> <span
+                                            class="meta-info">Feb.2021 - Jun.2021</span></div>
+                                    <div class="course-item"><span>Share@AI Coding Club in NTUT</span> <span
+                                            class="meta-info">Jan.2021 - May.2021</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>Matlab/Simulink
+                                            程式設計</span>
+                                        <span class="meta-info">Sep.2020 - Jan.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>德文 I, II</span> <span
+                                            class="meta-info">Sep.2019 - Jan.2020, Feb.2024 - Jun.2024</span></div>
+                                    <div class="course-item"><span class="dept">智動科</span><span>日文 I, II, III</span>
+                                        <span class="meta-info">Sep.2019 - Jan.2020, Feb.2020 - Jun.2020, Sep.2020 -
+                                            Jan.2021</span></div>
                                 </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>自動控制及實習</span>
-                                    <span class="meta-info">Feb.2022 - Jun.2022</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>電機機械</span>
-                                    <span class="meta-info">Feb.2022 - Jun.2022</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>數位邏輯與實習</span>
-                                    <span class="meta-info">Sep.2021 - Jan.2022</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>電子學與實習</span>
-                                    <span class="meta-info">Sep.2021 - Jan.2022</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>程式設計與實習</span>
-                                    <span class="meta-info">Sep.2020 - Jan.2021, Feb.2021 - Jun.2021</span>
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-
-                <div class="courses-flex-container" style="margin-top: 1.5rem;">
-                    <div class="courses-column">
-                        <details class="course-details">
-                            <summary>跨領域與選修課程</summary>
-                            <div class="course-grid">
-                                <div class="course-item"><span class="dept">北醫藥學系</span><span>藥用植物學</span><a
-                                        href="https://annie04082020.github.io/ReviewCardMaker/" target="_blank"
-                                        class="project-link">圖卡複習工具</a><span class="meta-info">Sep.2025 -
-                                        Jan.2026</span>
-                                </div>
-                                <div class="course-item"><span class="dept">教育學程</span><span>輔導原理與實務</span> <span
-                                        class="meta-info">Sep.2025 - Jan.2026</span></div>
-                                <div class="course-item"><span class="dept">教育學程</span><span>學習評量</span> <span
-                                        class="meta-info">Feb.2025 - Jun.2025</span></div>
-                                <div class="course-item"><span class="dept">教育學程</span><span>教育心理學</span> <span
-                                        class="meta-info">Sep.2024 - Jan.2025</span></div>
-                                <div class="course-item"><span class="dept">建築系</span><span>建築結構系統</span> <span
-                                        class="meta-info">Sep.2023 - Jan.2024</span></div>
-                                <div class="course-item"><span class="dept">建築系</span><span>建築計畫學</span> <span
-                                        class="meta-info">Sep.2023 - Jan.2024</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>3D 列印與實習</span> <span
-                                        class="meta-info">Sep.2023 - Jan.2024</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>網路程式設計</span> <span
-                                        class="meta-info">Sep.2022 - Jan.2023</span></div>
-                                <div class="course-item"><span class="dept">工管系</span><span>雲端應用程式開發與應用</span> <span
-                                        class="meta-info">Sep.2022 - Jan.2023</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>電路設計與實習</span> <span
-                                        class="meta-info">Feb.2022 - Jun.2022</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>工業 4.0 講座</span> <span
-                                        class="meta-info">Feb.2022 - Jun.2022</span></div>
-                                <div class="course-item"><span class="dept">工設系</span><span>電腦輔助視覺設計</span>
-                                    <a href="https://drive.google.com/file/d/1KgDQrJPf-aZk-drospd4g466EOqj9kUw/view"
-                                        target="_blank" class="project-link">課程作品集</a><span class="meta-info">Sep.2021 -
-                                        Jan.2022</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>專利法概述</span> <span
-                                        class="meta-info">Feb.2021 - Jun.2021</span></div>
-                                <div class="course-item"><span>Share@AI Coding Club in NTUT</span> <span
-                                        class="meta-info">Jan.2021 - May.2021</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>Matlab/Simulink 程式設計</span>
-                                    <span class="meta-info">Sep.2020 - Jan.2021</span>
-                                </div>
-                                <div class="course-item"><span class="dept">智動科</span><span>德文 I, II</span> <span
-                                        class="meta-info">Sep.2019 - Jan.2020, Feb.2024 - Jun.2024</span></div>
-                                <div class="course-item"><span class="dept">智動科</span><span>日文 I, II, III</span> <span
-                                        class="meta-info">Sep.2019 - Jan.2020, Feb.2020 - Jun.2020, Sep.2020 -
-                                        Jan.2021</span></div>
-                            </div>
-                        </details>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="main-section" id="awards">
-        <h2 class="section-title">獎項與活動 (Awards & Activities)</h2>
-        <div class="content-box">
-            <ul>
-                <li><b>Sch001 2023 Project Incubation Competition</b> - Selected as Thriving Team <span
-                        class="meta-info inline-meta">March.2.2024</span></li>
-                <li><b>InnoServe Awards 28th</b> - Titansoft Agile Second place <span
-                        class="meta-info inline-meta">Nov.7.2023</span></li>
-                <li><b>NanYing National Taekwondo Championship</b> - Group College and High School Girls First and
-                    Second Level, Third place <span class="meta-info inline-meta">Apr.2.2022</span></li>
-                <li><b>City Youth Forum</b> <span class="meta-info inline-meta">Dec.25-26.2020</span></li>
-                <li><b>Final Prize in School Monographic Group 2021 Girls in Cyber Security</b> <span
-                        class="meta-info inline-meta">May.2021</span></li>
-                <li><b>22nd kW Design Award</b> <span class="meta-info inline-meta">Jan.2022</span></li>
-            </ul>
-        </div>
-    </section>
+        <section class="main-section" id="awards">
+            <h2 class="section-title">獎項與活動</h2>
+            <div class="content-box">
+                <ul>
+                    <li><b>Sch001 2023 Project Incubation Competition</b> - Selected as Thriving Team <span
+                            class="meta-info inline-meta">March.2.2024</span></li>
+                    <li><b>InnoServe Awards 28th</b> - Titansoft Agile Second place <span
+                            class="meta-info inline-meta">Nov.7.2023</span></li>
+                    <li><b>NanYing National Taekwondo Championship</b> - Group College and High School Girls First and
+                        Second Level, Third place <span class="meta-info inline-meta">Apr.2.2022</span></li>
+                    <li><b>City Youth Forum</b> <span class="meta-info inline-meta">Dec.25-26.2020</span></li>
+                    <li><b>Final Prize in School Monographic Group 2021 Girls in Cyber Security</b> <span
+                            class="meta-info inline-meta">May.2021</span></li>
+                    <li><b>22nd kW Design Award</b> <span class="meta-info inline-meta">Jan.2022</span></li>
+                </ul>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2025 黃安華 (Annie) | Built with GitHub Pages</p>
-    </footer>
+        <footer>
+            <p>© 2025 黃安華 (Annie) | Built with GitHub Pages</p>
+        </footer>
+    </div>
 
     <script src="../script.js"></script>
 </body>

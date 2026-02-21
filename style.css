@@ -1,6 +1,10 @@
 /* Default (Light) Theme */
 :root {
-  --bg-color: #f4f5f7;
+  --bg-color: #e2e8f0;
+  --wrapper-bg: #ffffff;
+  --wrapper-shadow: rgba(0, 0, 0, 0.05);
+  --wrapper-border: rgba(0, 0, 0, 0.05);
+
   --text-color: #1a1a1a;
   --nav-bg: rgba(220, 235, 250, 0.9);
   /* Noticeable Ice Blue */
@@ -39,9 +43,13 @@
 
 /* Dark Theme */
 body[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --nav-bg: rgba(18, 22, 38, 0.9);
+  --bg-color: #040814;
+  --wrapper-bg: #0b1121;
+  --wrapper-shadow: rgba(0, 0, 0, 0.4);
+  --wrapper-border: rgba(69, 203, 243, 0.08);
+
+  --text-color: #e2e8f0;
+  --nav-bg: rgba(11, 17, 33, 0.9);
   /* Deep Navy */
 
   --accent-primary: #45CBF3;
@@ -56,19 +64,19 @@ body[data-theme="dark"] {
   --nav-border: rgba(69, 203, 243, 0.2);
   --accent: var(--accent-primary);
   --accent-hover: var(--accent-secondary);
-  --card-bg: #1e1e1e;
-  --hero-bg: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
-  --meta-text: #a0a0a0;
+  --card-bg: #1e293b;
+  --hero-bg: linear-gradient(135deg, #1e293b 0%, #0b1121 100%);
+  --meta-text: #94a3b8;
   --border-light: rgba(69, 203, 243, 0.15);
   --title-bg: rgba(136, 198, 60, 0.15);
   /* Slightly more visible green wash */
   --course-border: rgba(0, 180, 216, 0.2);
-  --toggle-bg: #444;
+  --toggle-bg: #2e3b52;
   --toggle-text: #fff;
-  --footer-bg: #0a0a0a;
+  --footer-bg: #070b14;
   --footer-text: rgba(255, 255, 255, 0.6);
-  --link-nav: #ccc;
-  --text-main: #ddd;
+  --link-nav: #cbd5e1;
+  --text-main: #f1f5f9;
 }
 
 body {
@@ -80,6 +88,18 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--wrapper-bg);
+  box-shadow: 0 0 40px var(--wrapper-shadow);
+  border-left: 1px solid var(--wrapper-border);
+  border-right: 1px solid var(--wrapper-border);
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
 }
 
 /* Modern Navigation Bar */
@@ -720,7 +740,10 @@ body[data-theme="dark"] .experience-card {
 }
 
 /* Yellow Highlights in Dark Mode */
-body[data-theme="dark"] .highlight-yellow {
+body[data-theme="dark"] .highlight-yellow,
+body[data-theme="dark"] .experience-card h3,
+body[data-theme="dark"] .skill-card h3,
+body[data-theme="dark"] .project-card h3 {
   color: #FFD166;
 }
 

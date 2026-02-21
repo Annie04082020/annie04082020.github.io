@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃安華 (Annie) | ポートフォリオ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-theme="light">
+
+    <nav class="navbar">
+        <a href="#" class="logo"><span class="highlight-yellow">Annie Huang</span></a>
+        <div class="nav-links">
+            <a href="#about">自己紹介</a>
+            <a href="#projects">プロジェクト</a>
+            <a href="#skills">スキル</a>
+            <a href="#experiences">経歴</a>
+            <a href="#courses">履修履歴</a>
+            <a href="#awards">受賞歴と活動</a>
+            <div class="controls">
+                <button id="theme-toggle" class="nav-btn">
+                    <span class="icon-moon">🌙</span>
+                    <span class="icon-sun">☀️</span>
+                </button>
+                <select id="language-selector" class="nav-btn">
+                    <option value="jp" selected>JP</option>
+                    <option value="en">EN</option>
+                    <option value="zh">ZH</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="hero" id="about">
+            <div class="hero-container">
+                <div class="hero-title">
+                    <h1><span class="highlight-yellow">黃安華 (Annie)</span></h1>
+                    <p class="subtitle">電気工学 | 機械工学 | プログラミング</p>
+                    <p class="subtitle">デザイン | 音楽 | 語学学習 | テコンドー</p>
+
+                    <div class="hero-contact">
+                        <a href="mailto:annie.huangah@proton.me">📧 annie.huangah@proton.me</a>
+                        <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
+                        <a href="https://www.linkedin.com/in/annie-huang-8375331a7/" target="_blank">🔗
+                            linkedin.com/in/annie-huang</a>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-section">
+                        <h2 class="highlight-yellow">自己紹介</h2>
+                        <p>私は強い好奇心を持つ人間です。様々な分野の活動を経験し、参加してきたことで、世界を観察する新しい視点を学び、未知の分野で学ぶことへの関心を築き上げました。また、私はクリエイターでもあり、自分の作品を作ることが大好きです。自分の考えや物語を表現するために、語学、イラスト、執筆、プログラミングなどのスキルを学びました。これらのスキルを活かして、快適な領域（コンフォートゾーン）から一歩踏み出し、目標を達成するために挑戦的な活動に参加し、視野を広げています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-section" id="education">
+            <h2 class="section-title">学歴</h2>
+            <div class="content-box">
+                <ul>
+                    <li style="margin-top: 0.8rem;"><b class="highlight-yellow">国立台北科技大学
+                            (台北)</b> <br>
+                        電気工学科 学士 / 教育学程 <span class="meta-info inline-meta">Sep.2024 -
+                            Jun.2026</span></li>
+                    <li style="margin-top: 0.8rem;"><b class="highlight-yellow">国立台北科技大学
+                            (台北)</b> <br>
+                        知能自動化工学科 準学士 <span class="meta-info inline-meta">Sep.2019
+                            -
+                            Jun.2024</span><br>
+                        🎓 全学期 学業優秀奨学金 受賞</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="projects">
+            <h2 class="section-title">プロジェクト</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>CSL 超音波自律走行車（ディスクリートHブリッジ制御）</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Sep.2025 - Jan.2026</p>
+                        <a href="https://github.com/Annie04082020/CSL_Ultrasonic_Car" target="_blank"
+                            class="project-link">💻
+                            GitHub</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>超音波センサーのフィードバックを利用した物体追跡および距離維持が可能な自律走行車。</li>
+                            <li>既製のモジュールを使用せず、ディスクリート素子（BJTおよびリレー）からカスタム設計されたHブリッジモータードライバーを構築。</li>
+                            <li>超音波センサーのノイズを除去するため、メディアンフィルタによる信号処理を実装。</li>
+                            <li>スムーズなモーター制御と旋回のために、デッドバンド付きのバンバン（Bang-Bang）制御アルゴリズムをArduino上で開発。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Linux Odyssey: 対話型ターミナル学習用ウェブサイト</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Apr.2023 - Now</p>
+                        <a href="https://linuxodyssey.xyz/" target="_blank" class="project-link">🌐 Website</a>
+                        <a href="https://github.com/NTPU-Jieshou/Linux-Odyssey" target="_blank" class="project-link">💻
+                            GitHub</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>Javascript、TypeScript、Vue開発、テスト自動化、ビジュアルデザインを経験。</li>
+                            <li>第28回 InnoServe Awards Titansoft Agile部門 準優勝。</li>
+                            <li>Sch001 2023 プロジェクト育成コンペティションにて Thriving Team に選出。</li>
+                            <li>2024年秋学期より国立台北大学（NTPU）GDSCと提携協力。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>MIT City Science Lab 春学期 UROP：Music Block</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Feb.2023 - Jun.2023</p>
+                        <a href="https://youtu.be/GiDZrVne1MY" target="_blank" class="project-link">🎥 Concept Demo
+                            Video</a>
+                        <a href="https://youtu.be/RYG5qpFA1wA" target="_blank" class="project-link">🎥 Final Demo
+                            Video</a>
+                    </div>
+                    <div class="desc">
+                        <p>Music Blockは、「音楽」を視覚的な3Dの物体に変えるコンセプト製品であり、音楽初心者に基礎的な音楽理論を教え、音の感覚を養うことを目的としています。</p>
+                        <ul>
+                            <li>ゼロからのプロジェクト立ち上げ、プロジェクト管理、ファームウェア開発（C言語）を経験。</li>
+                            <li>ブロックおよびボトムボードのファームウェア開発を担当。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Behind Brewing：コーヒーメーカーにおけるサーミスタとヒーターの役割</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Sep.2024 - Jan.2025</p>
+                        <a href="https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" target="_blank"
+                            class="project-link">📄 Poster</a>
+                        <a href="https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" target="_blank"
+                            class="project-link">📄 Report</a>
+                    </div>
+                    <div class="desc">
+                        <p>回路理論の授業で取り組んだ、現実世界における実用的な回路に関する研究および調査。</p>
+                        <ul>
+                            <li>元の回路の研究と、SIMetrixソフトウェア上でのシミュレーションを実施。</li>
+                            <li>パラメータを変更し、回路の特徴や違いを検証。</li>
+                            <li>特定の用途（コーヒー抽出）に合わせた回路の最適化を提案。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>LEDA Technology との共同プロジェクト</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">May.2021 - Jan.2022</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>AI、フロントエンド、バックエンド開発の経験。</li>
+                            <li>陽明交通大学（NYCU）、中原大学（CYCU）の学生と協力し、AIを迅速に利用できるウェブサイトを構築。</li>
+                            <li>医師と協力し、データアノテーション用にCTファイルを画像ファイル（.jpg、.png）に変換するプログラムを作成。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>P-TECH Call for Code</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">May.2021 - Jul.2021</p>
+                        <a href="https://youtu.be/--OcSxoVX7c" target="_blank" class="project-link">Concept Video</a>
+                        <a href="https://docs.google.com/presentation/d/1kZR2yPctm8VQH8OIeajCIA7lS9Dfmkyc1MmKePWYQAs/edit?usp=sharing"
+                            target="_blank" class="project-link">Concept Slides</a>
+                    </div>
+                    <div class="desc">
+                        <p>パンデミック（COVID-19）に対応するシステムを設計。</p>
+                        <ul>
+                            <li>システムは2つのパートに分かれており、医療従事者向けのパートでは、十分な物資と人員を備えた最も近い場所を計算するための要件を取得。</li>
+                            <li>一般ユーザー向けのパートでは、迅速な簡易検査サイトと目的地を案内。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>環境に優しいボードゲーム (Eco-Friendly Board Game)</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Sep.2021 - Jun.2022</p>
+                        <a href="https://hackmd.io/@Shomes/SJ1QirDKF" target="_blank" class="project-link">Game
+                            Instruction</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>プロジェクト全体を通じてチームを組織し、主導。</li>
+                            <li>すべてのカードとマップの外観をデザイン。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Pythonによるゲームプロジェクト</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Apr.2021 - Jul.2021</p>
+                        <a href="https://docs.google.com/presentation/d/1nZF0inf_-JHW2z7FZXvcIbVjg2AGMqM4QNqsCmTZZP0/edit?usp=sharing"
+                            target="_blank" class="project-link">Project Slides</a>
+                    </div>
+                    <div class="desc">
+                        <p>Pythonを使用してモノポリーゲームを設計。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="main-section" id="skills">
+            <h2 class="section-title">プロフェッショナルスキル</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>語学力</h3>
+                    <ul>
+                        <li>中国語<span class="score-detail">ネイティブ</span></li>
+                        <li>英語
+                            <span class="score-detail">TOEIC RL: 810, SW: 270<br>IELTS O: 6.5<br>GRE V: 145, Q: 158, AW:
+                                3.5</span>
+                        </li>
+                        <li>日本語 <span class="score-detail">JLPT N1 合格</span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>プログラミング言語</h3>
+                    <ul>
+                        <li>Python, C, C#</li>
+                        <li>HTML, CSS, JavaScript / TypeScript</li>
+                        <li>Vue, Cypress</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>アート＆音楽パフォーマンス</h3>
+                    <ul>
+                        <li>パーカッション、ピアノ、トランペット、バリトン</li>
+                        <li>絵画、デザイン</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>スポーツ</h3>
+                    <ul>
+                        <li>テコンドー 1段 <span class="meta-info">December.30.2022</span></li>
+                        <li>テコンドー 2段 <span class="meta-info">March.17.2023</span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-card full-width">
+                    <h3>資格とバッジ</h3>
+                    <ul>
+                        <li><b>経済部認定 3Dプリント積層造形エンジニア - 初級</b> <span class="meta-info">July.2023</span></li>
+                        <li><b>Google サイバーセキュリティ</b> <span class="meta-info">July.2025</span></li>
+                        <li><b>IBM SkillsBuild:</b> Python for Data Science, Growth Behaviors <span
+                                class="meta-info">May.2022,
+                                Oct.2023</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section" id="experiences">
+            <h2 class="section-title">経歴</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>サマーインターンシップ：AUO Corporation（友達光電）</h3>
+                    <p class="meta-info section-meta">July.2022 - Aug.2022</p>
+                    <ul>
+                        <li>AI、Python PyQt GUI 開発、YOLOv5、Labelmeアプリケーションを経験。</li>
+                        <li>AI検出システムの保守・運用。</li>
+                        <li>モデルの再学習のための追加の調整ツールを統合。</li>
+                        <li>異なる使用目的や製造状況に応じた追加のYOLOv5検出を統合。</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>インターンシップ：International Business Machines (IBM) Corporation</h3>
+                    <p class="meta-info section-meta">July.2023 - Dec.2023</p>
+                    <ul>
+                        <li>Cypressテスト自動化開発、JavaScriptを経験。</li>
+                        <li>テストファイルの修正と新規作成。</li>
+                        <li>自動化テストを通じてウェブサイトの問題を特定。</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>役員：テコンドー部 副部長</h3>
+                    <p class="meta-info section-meta">July.2022 - Now</p>
+                    <ul>
+                        <li>クラブエキスポおよび学園祭の企画・運営。</li>
+                        <li>クラブの運営と維持を管理。</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>課外活動</h3>
+                    <ul>
+                        <li>NTUT テコンドー部 <span class="meta-info inline-meta">Oct.2020 - Now</span></li>
+                        <li>NTUT サッカーチーム（練習参加） <span class="meta-info inline-meta">Oct.2022 - 2024</span>
+                        </li>
+                        <li>竹南小学校 音楽クラス/オーケストラ <span class="meta-info inline-meta">Sep.2013 -
+                                Jun.2016</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section" id="courses">
+            <h2 class="section-title">履修履歴</h2>
+            <div class="content-box">
+                <div class="experience-card full-width">
+                    <div class="courses-flex-container">
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>IAE 必修科目</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="domain">EECS</span><span>人工知能</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>センサーとIoT</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>ロボット工学及び実験</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>マシンビジョン及び実験</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>機械設計</span>
+                                        <span class="meta-info">Feb.2023 - Jun.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>通信とネットワーク</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">Systems</span><span>知能制御</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>機械工学実験 I</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>機械運動学</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">Systems</span><span>メカトロニクス及び実験</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>材料力学</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>動力学</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>ディープラーニング
+                                            (TensorFlow)</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span
+                                            class="domain">ME</span><span>プログラマブルロジックコントローラ及び実験</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>静力学</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>製造プロセス</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>工学材料</span>
+                                        <span class="meta-info">Feb.2021 - Jun.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>CNC工作機械及び実験</span>
+                                        <span class="meta-info">Sep.2020 - Jan.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>空気圧・油圧工学</span> <span
+                                            class="meta-info">Sep.2020 - Jan.2021</span></div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>人工知能概論</span> <span
+                                            class="meta-info">Feb.2020 -
+                                            June.2020</span></div>
+                                    <div class="course-item"><span class="domain">ME</span><span>機械基礎実習 I, II</span>
+                                        <span class="meta-info">Sep.2019 - Jan.2020, Feb.2020 -
+                                            Jun.2020</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">EECS</span><span>計算機科学概論</span> <span
+                                            class="meta-info">Sep.2019 -
+                                            Jan.2020</span></div>
+                                    <div class="course-item"><span class="domain">ME</span><span>図学</span>
+                                        <span class="meta-info">Sep.2019 -
+                                            Jan.2020</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">ME</span><span>コンピュータ支援設計 (CAD)</span>
+                                        <span class="meta-info">Sep.2019 -
+                                            Jan.2020</span>
+                                    </div>
+                                    <div class="course-item"><span class="domain">Systems</span><span>人工知能概論</span>
+                                        <span class="meta-info">Feb.2020 - June.2020</span>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>EE 必修科目</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="dept">EE</span><span>線形代数</span>
+                                        <span class="meta-info">Feb.2026 - Jun.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>通信システム実験</span> <span
+                                            class="meta-info">Feb.2026 - Jun.2026</span></div>
+                                    <div class="course-item"><span class="dept">EE</span><span>衛星リモートセンシング応用及び実験</span>
+                                        <span class="meta-info">Sep.2025 -
+                                            Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>制御システム実験</span>
+                                        <span class="meta-info">Sep.2025 - Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">CSIE</span><span>オブジェクト指向プログラミング</span>
+                                        <span class="meta-info">Sep.2025 - Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>パワーエレクトロニクス</span>
+                                        <span class="meta-info">Sep.2025 - Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>パワーエレクトロニクス実験</span>
+                                        <span class="meta-info">Feb.2025 - Jun.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>マイクロプロセッサ</span>
+                                        <span class="meta-info">Feb.2025 - Jun.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>回路理論 II</span>
+                                        <span class="meta-info">Feb.2025 - Jun.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>電子工学 II</span>
+                                        <span class="meta-info">Feb.2025 - Jun.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EE</span><span>デジタルシステム</span>
+                                        <span class="meta-info">Sep.2024 - Jan.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">EECS Program</span><span>電子工学実験 I,
+                                            II</span> <span class="meta-info">Sep.2024 - Jan.2025, Feb.2025 -
+                                            Jun.2025</span></div>
+                                    <div class="course-item"><span class="dept">EE</span><span>信号とシステム</span>
+                                        <span class="meta-info">Sep.2024 - Jan.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Electronic Eng.</span><span>回路理論
+                                            I</span> <span class="meta-info">Sep.2024 - Jan.2025</span></div>
+                                    <div class="course-item"><span class="dept">CSIE</span><span>離散数学</span>
+                                        <span class="meta-info">Feb.2024 - Jun.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">CSIE</span><span>データ構造</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>確率・統計</span> <span
+                                            class="meta-info">Feb.2023 - Jun.2023</span></div>
+
+                                    <div class="course-item"><span class="dept">IAE</span><span>マイクロプロセッサ及び実験</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>自動制御及び実験</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>電気機器</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>デジタル論理回路及び実験</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>電子工学及び実験</span>
+                                        <span class="meta-info">Sep.2021 - Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>プログラミング設計及び実験</span>
+                                        <span class="meta-info">Sep.2020 - Jan.2021, Feb.2021 - Jun.2021</span>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="courses-flex-container" style="margin-top: 1.5rem;">
+                        <div class="courses-column">
+                            <details class="course-details">
+                                <summary>学際的・選択科目</summary>
+                                <div class="course-grid">
+                                    <div class="course-item"><span class="dept">TMU Pharmacy</span><span>薬用植物学</span><a
+                                            href="https://annie04082020.github.io/ReviewCardMaker/" target="_blank"
+                                            class="project-link">Review Card Maker</a><span class="meta-info">Sep.2025 -
+                                            Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Teacher
+                                            Ed.</span><span>ガイダンスの原理と実践</span> <span class="meta-info">Sep.2025 -
+                                            Jan.2026</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Teacher Ed.</span><span>学習評価</span>
+                                        <span class="meta-info">Feb.2025 - Jun.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Teacher Ed.</span><span>教育心理学</span>
+                                        <span class="meta-info">Sep.2024 - Jan.2025</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Architecture</span><span>建築構造システム</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Architecture</span><span>建築計画</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>3Dプリンティング及び実験</span>
+                                        <span class="meta-info">Sep.2023 - Jan.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>ネットワークプログラミング</span>
+                                        <span class="meta-info">Sep.2022 - Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Ind.
+                                            Eng.</span><span>クラウドコンピューティングと応用</span> <span class="meta-info">Sep.2022 -
+                                            Jan.2023</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>電気回路設計及び実験</span> <span
+                                            class="meta-info">Feb.2022 - Jun.2022</span></div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>インダストリー4.0 概論</span>
+                                        <span class="meta-info">Feb.2022 - Jun.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">Ind.
+                                            Design</span><span>コンピュータ支援グラフィックデザイン</span>
+                                        <a href="https://drive.google.com/file/d/1KgDQrJPf-aZk-drospd4g466EOqj9kUw/view"
+                                            target="_blank" class="project-link">Course Portfolio</a><span
+                                            class="meta-info">Sep.2021 -
+                                            Jan.2022</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>特許法概論</span> <span
+                                            class="meta-info">Feb.2021 - Jun.2021</span></div>
+                                    <div class="course-item"><span>NTUT Share@AI コーディングクラブ</span> <span
+                                            class="meta-info">Jan.2021 - May.2021</span></div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>Matlab/Simulink
+                                            プログラミング設計</span>
+                                        <span class="meta-info">Sep.2020 - Jan.2021</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>ドイツ語 I, II</span>
+                                        <span class="meta-info">Sep.2019 - Jan.2020, Feb.2024 - Jun.2024</span>
+                                    </div>
+                                    <div class="course-item"><span class="dept">IAE</span><span>日本語 I, II,
+                                            III</span>
+                                        <span class="meta-info">Sep.2019 - Jan.2020, Feb.2020 - Jun.2020, Sep.2020 -
+                                            Jan.2021</span>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section" id="awards">
+            <h2 class="section-title">受賞歴・活動</h2>
+            <div class="content-box">
+                <ul>
+                    <li><b>Sch001 2023 プロジェクト育成コンペティション</b> - Thriving Team に選出 <span
+                            class="meta-info inline-meta">March.2.2024</span></li>
+                    <li><b>第28回 InnoServe Awards</b> - Titansoft Agile部門 準優勝 <span
+                            class="meta-info inline-meta">Nov.7.2023</span></li>
+                    <li><b>南瀛杯全国テコンドー選手権大会</b> - 大学・高校女子1〜2段グループ 第3位 <span
+                            class="meta-info inline-meta">Apr.2.2022</span></li>
+                    <li><b>都市青年フォーラム</b> <span class="meta-info inline-meta">Dec.25-26.2020</span></li>
+                    <li><b>2021年 Girls in Cyber Security 学校モノグラフ部門 優秀賞</b> <span
+                            class="meta-info inline-meta">May.2021</span></li>
+                    <li><b>第22回 kWデザイン賞</b> <span class="meta-info inline-meta">Jan.2022</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Annie Huang | Built with GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

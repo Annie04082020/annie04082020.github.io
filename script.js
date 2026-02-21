@@ -5,3 +5,11 @@ if (themeBtn) {
     document.body.setAttribute("data-theme", isDark ? "light" : "dark");
   });
 }
+
+const languageSelector = document.getElementById("language-selector");
+if (languageSelector) {
+  languageSelector.addEventListener("change", (event) => {
+    const selectedLang = event.target.value;
+    window.location.href = `../${selectedLang}/index.html`;
+  });
+}

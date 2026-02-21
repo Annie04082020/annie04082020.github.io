@@ -804,3 +804,16 @@ body[data-theme="dark"] .skill-card:nth-child(4n+4),
 body[data-theme="dark"] .experience-card:nth-child(4n+4) {
   border-bottom-color: var(--accent-green);
 }
+
+/* Orange Highlights */
+h2.section-title.highlight-orange {
+  border-left-color: #FF7B00;
+  background-color: rgba(255, 123, 0, 0.12);
+  color: var(--text-color) !important;
+}
+
+body[data-theme="dark"] h2.section-title.highlight-orange {
+  border-left-color: #FF9F1C;
+  background-color: rgba(255, 159, 28, 0.15);
+  color: var(--text-color) !important;
+}

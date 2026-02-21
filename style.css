@@ -1,9 +1,13 @@
 /* Default (Light) Theme */
 :root {
-  --bg-color: #e2e8f0;
-  --wrapper-bg: #ffffff;
-  --wrapper-shadow: rgba(0, 0, 0, 0.05);
-  --wrapper-border: rgba(0, 0, 0, 0.05);
+  --bg-color: #f4f5f7;
+  --wrapper-bg: transparent;
+  --wrapper-shadow: transparent;
+  --wrapper-border: transparent;
+
+  --frame-width: 14px;
+  --frame-color: #263165;
+  /* Dark Blue */
 
   --text-color: #1a1a1a;
   --nav-bg: rgba(220, 235, 250, 0.9);
@@ -43,10 +47,14 @@
 
 /* Dark Theme */
 body[data-theme="dark"] {
-  --bg-color: #040814;
-  --wrapper-bg: #0b1121;
-  --wrapper-shadow: rgba(0, 0, 0, 0.4);
-  --wrapper-border: rgba(69, 203, 243, 0.08);
+  --bg-color: #0b1121;
+  --wrapper-bg: transparent;
+  --wrapper-shadow: transparent;
+  --wrapper-border: transparent;
+
+  --frame-width: 14px;
+  --frame-color: #263165;
+  /* Dark Blue */
 
   --text-color: #e2e8f0;
   --nav-bg: rgba(11, 17, 33, 0.9);
@@ -87,16 +95,18 @@ body {
   padding-top: 70px;
   scroll-behavior: smooth;
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+
+  /* Physical Monitor Frame */
+  border-left: var(--frame-width) solid var(--frame-color);
+  border-right: var(--frame-width) solid var(--frame-color);
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .main-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--wrapper-bg);
-  box-shadow: 0 0 40px var(--wrapper-shadow);
-  border-left: 1px solid var(--wrapper-border);
-  border-right: 1px solid var(--wrapper-border);
   min-height: calc(100vh - 70px);
   position: relative;
   overflow: hidden;
@@ -106,8 +116,9 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: var(--frame-width);
+  right: var(--frame-width);
+  width: auto;
   height: 70px;
   background: var(--nav-bg);
   backdrop-filter: blur(12px);

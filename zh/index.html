@@ -18,14 +18,19 @@
 <body data-theme="light">
 
     <nav class="navbar">
-        <a href="#" class="logo"><span class="highlight-yellow">黃安華 (Annie)</span></a>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button id="sidebar-toggle" class="nav-btn" style="padding: 0.4rem 0.6rem;">
+                <span>☰</span>
+            </button>
+            <a href="#" class="logo"><span class="highlight-yellow">黃安華 (Annie)</span></a>
+        </div>
         <div class="nav-links">
             <a href="#about">關於我</a>
             <a href="#projects">專案</a>
-            <a href="#skills">技能</a>
             <a href="#experiences">經歷</a>
-            <a href="#courses">修課記錄</a>
-            <a href="#awards">獎項與活動</a>
+            <a href="journal.html">📝 個人日誌</a>
+        </div>
+        <div class="nav-controls">
             <div class="controls">
                 <button id="theme-toggle" class="nav-btn">
                     <span class="icon-moon">🌙</span>
@@ -36,7 +41,21 @@
                     <option value="en">EN</option>
                     <option value="jp">JP</option>
                 </select>
+                <button id="mobile-menu-btn" class="nav-btn menu-btn">
+                    <span>≡</span>
+                </button>
             </div>
+        </div>
+    </nav>
+
+    <nav class="side-navbar">
+        <div class="side-nav-links">
+            <a href="#about">關於我</a>
+            <a href="#projects">專案</a>
+            <a href="#skills">技能</a>
+            <a href="#experiences">經歷</a>
+            <a href="#courses">修課記錄</a>
+            <a href="#awards">獎項與活動</a>
         </div>
     </nav>
 

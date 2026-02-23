@@ -18,14 +18,19 @@
 <body data-theme="light">
 
     <nav class="navbar">
-        <a href="#" class="logo"><span class="highlight-yellow">Annie Huang</span></a>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button id="sidebar-toggle" class="nav-btn" style="padding: 0.4rem 0.6rem;">
+                <span>☰</span>
+            </button>
+            <a href="#" class="logo"><span class="highlight-yellow">Annie Huang</span></a>
+        </div>
         <div class="nav-links">
             <a href="#about">自己紹介</a>
             <a href="#projects">プロジェクト</a>
-            <a href="#skills">スキル</a>
             <a href="#experiences">経歴</a>
-            <a href="#courses">履修履歴</a>
-            <a href="#awards">受賞歴と活動</a>
+            <a href="journal.html">📝 ジャーナル</a>
+        </div>
+        <div class="nav-controls">
             <div class="controls">
                 <button id="theme-toggle" class="nav-btn">
                     <span class="icon-moon">🌙</span>
@@ -36,7 +41,21 @@
                     <option value="en">EN</option>
                     <option value="zh">ZH</option>
                 </select>
+                <button id="mobile-menu-btn" class="nav-btn menu-btn">
+                    <span>≡</span>
+                </button>
             </div>
+        </div>
+    </nav>
+
+    <nav class="side-navbar">
+        <div class="side-nav-links">
+            <a href="#about">自己紹介</a>
+            <a href="#projects">プロジェクト</a>
+            <a href="#skills">スキル</a>
+            <a href="#experiences">経歴</a>
+            <a href="#courses">履修履歴</a>
+            <a href="#awards">受賞歴と活動</a>
         </div>
     </nav>
 

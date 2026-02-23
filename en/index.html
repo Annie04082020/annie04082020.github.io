@@ -18,14 +18,19 @@
 <body data-theme="light">
 
     <nav class="navbar">
-        <a href="#" class="logo"><span class="highlight-yellow">Annie Huang</span></a>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button id="sidebar-toggle" class="nav-btn" style="padding: 0.4rem 0.6rem;">
+                <span>☰</span>
+            </button>
+            <a href="#" class="logo"><span class="highlight-yellow">Annie Huang</span></a>
+        </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
             <a href="#experiences">Experiences</a>
-            <a href="#courses">Courses</a>
-            <a href="#awards">Awards & Activities</a>
+            <a href="journal.html">📝 Journal</a>
+        </div>
+        <div class="nav-controls">
             <div class="controls">
                 <button id="theme-toggle" class="nav-btn">
                     <span class="icon-moon">🌙</span>
@@ -36,7 +41,21 @@
                     <option value="zh">ZH</option>
                     <option value="jp">JP</option>
                 </select>
+                <button id="mobile-menu-btn" class="nav-btn menu-btn">
+                    <span>≡</span>
+                </button>
             </div>
+        </div>
+    </nav>
+
+    <nav class="side-navbar">
+        <div class="side-nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#courses">Courses</a>
+            <a href="#awards">Awards & Activities</a>
         </div>
     </nav>
 
@@ -82,9 +101,11 @@
             <div class="content-box">
                 <ul>
                     <li><b class="highlight-yellow">National Intercollegiate Athletic Games (Taekwondo Poomsae)</b>
-                        <span>2026.04</span></li>
+                        <span>2026.04</span>
+                    </li>
                     <li><b class="highlight-yellow">Taekwondo 3rd Dan Promotion Test (Considering)</b>
-                        <span>2026.06</span></li>
+                        <span>2026.06</span>
+                    </li>
                     <li><b class="highlight-yellow">Summer Internship at NSW, Kitakyushu, Japan</b> <span>2026.07 -
                             2026.08</span></li>
                     <li><b class="highlight-yellow">Graduate School (TBD)</b></li>

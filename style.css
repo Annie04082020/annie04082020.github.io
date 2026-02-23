@@ -93,9 +93,10 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   padding-top: 70px;
+  /* Restore top padding for horizontal navbar */
   scroll-behavior: smooth;
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, padding-left 0.3s ease;
 
   /* Physical Monitor Frame */
   border-left: var(--frame-width) solid var(--frame-color);
@@ -112,7 +113,7 @@ body {
   overflow: hidden;
 }
 
-/* Modern Navigation Bar */
+/* Modern Navigation Bar - Horizontal Top Bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -132,6 +133,69 @@ body {
   box-sizing: border-box;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Vertical Side Navigation */
+.side-navbar {
+  position: fixed;
+  top: 70px;
+  left: var(--frame-width);
+  bottom: 0;
+  width: 200px;
+  background: var(--nav-bg);
+  /* Use rgba to let it blend, or a specific blue */
+  background-color: rgba(235, 245, 255, 0.95);
+  /* Subtle light blue background */
+  border-right: 1px solid var(--border-light);
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+  transform: translateX(-100%);
+  /* Closed state by default */
+}
+
+.side-navbar.open {
+  transform: translateX(0);
+  /* Open state */
+}
+
+body[data-theme="dark"] .side-navbar {
+  background-color: var(--card-bg);
+  /* Revert back to dark gray in dark mode */
+}
+
+.side-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.side-nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.side-nav-links a:hover {
+  background: var(--toggle-bg);
+  color: var(--accent-hover);
+}
+
+/* Page content wrapper adjusting for open sidebar */
+body.sidebar-open {
+  padding-left: calc(200px + var(--frame-width));
 }
 
 h1,
@@ -167,9 +231,20 @@ h3 {
   color: var(--accent-hover);
 }
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+}
+
 .controls {
   display: flex;
   gap: 0.8rem;
+  align-items: center;
+}
+
+/* Hide hamburger menu button on desktop */
+.menu-btn {
+  display: none !important;
 }
 
 .nav-btn {
@@ -223,8 +298,65 @@ body[data-theme="dark"] #language-selector {
 }
 
 @media (max-width: 900px) {
-  .nav-links a {
+  body.sidebar-open {
+    padding-left: 0;
+    /* Don't push content on mobile */
+  }
+
+  .side-navbar {
+    width: 200px;
+    /* Keep overlay width */
+  }
+
+  .navbar {
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    border-right: none;
+    border-bottom: 1px solid var(--nav-border);
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-controls {
+    margin-top: 0;
+    width: auto;
+  }
+
+  .menu-btn {
+    display: flex !important;
+  }
+
+  .nav-links {
     display: none;
+    /* Toggled via JS */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    flex-direction: column;
+    padding: 2rem 5%;
+    border-bottom: 1px solid var(--nav-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .projects-grid,
+  .skills-grid,
+  .experiences-grid {
+    grid-template-columns: 1fr;
   }
 }
 

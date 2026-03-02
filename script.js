@@ -53,3 +53,43 @@ if (sidebarToggleBtn && sideNavbar) {
     });
   });
 }
+
+// Modal logic
+const projectCards = document.querySelectorAll(".project-card[data-modal-target]");
+const modals = document.querySelectorAll(".modal");
+
+if (projectCards.length > 0) {
+  projectCards.forEach(card => {
+    card.addEventListener("click", (e) => {
+      // Don't open modal if a link inside the card was clicked
+      if (e.target.closest('a')) return;
+
+      const targetId = card.getAttribute("data-modal-target");
+      const modal = document.getElementById(targetId);
+      if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent background scroll
+      }
+    });
+  });
+
+  modals.forEach(modal => {
+    const closeBtn = modal.querySelector(".modal-close");
+
+    // Close on X click
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    }
+
+    // Close on background click
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+  });
+}

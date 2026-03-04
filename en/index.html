@@ -179,6 +179,28 @@
                     </div>
                 </div>
 
+                <div class="project-card" data-modal-target="modal-yolo-v10">
+                    <h3>Performance Analysis of YOLO-Based Models for Contraband Image Identification on the SIXray
+                        Dataset: A Case Study on YOLOv10</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">Dec 2025 – Mar 2026</p>
+                        <a href="https://your-link-to-pdf.com/SIXrayYOLO_Report.pdf" target="_blank"
+                            class="project-link">📄 Report PDF</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>Processed SIXray dataset (1M+ X-ray images) with extreme 1:1000 class imbalance;
+                                implemented Class-Balanced Grouping and Mosaic augmentation.</li>
+                            <li>Trained YOLOv10 nano/small models under RTX 3080 constraints; analyzed trade-offs in mAP
+                                (up to 0.502), latency, and FLOPs.</li>
+                            <li>Identified VRAM overflow in larger models; proposed dynamic batch sizing and learning
+                                rate scheduling to stabilize training.</li>
+                            <li>Compared with YOLOv4_sr benchmark, demonstrating YOLOv10's efficiency for edge-device
+                                security systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="project-card" data-modal-target="modal-linux-odyssey">
                     <h3>Linux Odyssey: Interactive Terminal Teaching Website</h3>
                     <div class="project-meta">
@@ -302,7 +324,6 @@
                         <p>Designed a monopoly game with Python.</p>
                     </div>
                 </div>
-
             </div>
 
             <!-- Modals for Projects -->
@@ -406,6 +427,29 @@
                         <p>[Enter your process details here...]</p>
                         <h4>More Details</h4>
                         <p>[Enter expanded details or learnings here...]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-yolo-v10" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-body">
+                        <h3>Performance Analysis of YOLO-Based Models for Contraband Image Identification:
+                            YOLOv10 Case Study</h3>
+                        <h4>Process</h4>
+                        <p>This project involved handling a massive X-ray dataset with severe class imbalance.
+                            We focused on optimizing YOLOv10 for deployment in high-stakes security environments
+                            with specific hardware constraints.</p>
+                        <h4>More Details</h4>
+                        <ul>
+                            <li><b>Skills:</b> Python, YOLOv10 (object detection), Data Engineering, Model
+                                Optimization, AI for Security Inspection.</li>
+                            <li><b>Optimization:</b> Successfully managed VRAM usage on an RTX 3080 through
+                                dynamic batching.</li>
+                            <li><b>Performance:</b> Achieved a significant balance between speed and accuracy
+                                suitable for edge devices.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

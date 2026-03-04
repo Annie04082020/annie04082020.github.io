@@ -139,10 +139,27 @@
                     </div>
                     <div class="desc">
                         <ul>
-                            <li>具備物體追蹤與距離維持功能的自走車，利用超音波感測器進行反饋控制。</li>
-                            <li>不使用市售模組，以獨立電晶體 (BJT) 與繼電器手工設計 H 橋馬達驅動硬體電路。</li>
-                            <li>實作中值濾波器 (Median Filter) 處理感測器雜訊，提升數值穩定度。</li>
-                            <li>在 Arduino 上實作具備死區 (Deadband) 的 Bang-Bang 控制演算法，達成平滑修正與原地旋轉。</li>
+                            <li>配備超音波感測器之自律行駛避障小車，具備障礙物跟隨與距離保持功能。</li>
+                            <li>採用離散元件（BJT 與繼電器）手工搭建 H 橋馬達驅動器，捨棄現成驅動模組。</li>
+                            <li>實作中值濾波器（Median Filter）排除超音波感測雜訊。</li>
+                            <li>開發具備死區控制（Deadband）的 Bang-Bang 控制演算法，實現平滑修正與現地轉向。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-modal-target="modal-yolo-v10">
+                    <h3>基於 YOLO 模型的 SIXray 數據集違禁物識別性能分析：以 YOLOv10 為例</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">2025年12月 – 2026年3月 (畢業專題)</p>
+                        <a href="https://your-link-to-pdf.com/SIXrayYOLO_Report.pdf" target="_blank"
+                            class="project-link">📄 專案報告 PDF</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>處理 SIXray 數據集（100萬+ X光影像）極端不平衡問題；實作類別平衡分組與 Mosaic 數據增強。</li>
+                            <li>在 RTX 3080 限制下訓練 YOLOv10 nano/small 模型；分析 mAP、延遲與 FLOPs 權衡。</li>
+                            <li>解決較大模型的 VRAM 溢出問題；提出動態批次大小與學習率排程優化訓練。</li>
+                            <li>與 YOLOv4_sr 比較，證明 YOLOv10 在邊緣運算安全監控系統中的高效性。</li>
                         </ul>
                     </div>
                 </div>
@@ -212,7 +229,7 @@
                             </li>
                             <li>
                                 P-TECH Call for Code 疫情人力調度系統
-                                <a href="https://youtu.be/--OcSxoVX7c" target="_blank"
+                                <a href="https://youtu.be/--OcSxoVXc" target="_blank"
                                     class="project-link">ConceptVideo</a>
                                 <a href="https://docs.google.com/presentation/d/1kZR2yPctm8VQH8OIeajCIA7lS9Dfmkyc1MmKePWYQAs/edit?usp=sharing"
                                     target="_blank" class="project-link">Concept Slides</a>
@@ -225,7 +242,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
 
             <!-- Modals for Projects -->
@@ -290,6 +306,23 @@
                         <p>[在此輸入更多專案開發過程與細節...]</p>
                         <h4>更多資訊</h4>
                         <p>[在此輸入其他補充資訊...]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-yolo-v10" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-body">
+                        <h3>基於 YOLO 模型的 SIXray 數據集違禁物識別：YOLOv10 案例分析</h3>
+                        <h4>實作過程</h4>
+                        <p>此專案涉及處理具有嚴重類別不平衡的大規模 X 光數據集。我們專注於在特定的硬體限制下，優化 YOLOv10 以部署於高風險的安全環境。</p>
+                        <h4>更多資訊</h4>
+                        <ul>
+                            <li><b>相關技能:</b> Python, YOLOv10 (物件偵測), 數據工程, 模型優化, AI 安全檢查。</li>
+                            <li><b>優化方案:</b> 透過動態批次處理成功管理了 RTX 3080 上的 VRAM 使用。</li>
+                            <li><b>性能表現:</b> 在適合邊緣設備的速度與準確性之間取得了顯著平衡。</li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -154,6 +154,23 @@
                     </div>
                 </div>
 
+                <div class="project-card" data-modal-target="modal-yolo-v10">
+                    <h3>YOLOベースモデルを用いたSIXrayデータセットにおける禁制品識別性能の分析：YOLOv10を例として</h3>
+                    <div class="project-meta">
+                        <p class="meta-info">2025年12月 – 2026年3月 (卒業研究)</p>
+                        <a href="https://your-link-to-pdf.com/SIXrayYOLO_Report.pdf" target="_blank"
+                            class="project-link">📄 レポート PDF</a>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li>100万枚以上のX線画像を含むSIXrayデータセットを処理。極端な不均衡に対しクラスバランス・グルーピングとMosaic拡張を実装。</li>
+                            <li>RTX 3080制限下でYOLOv10 nano/smallモデルを学習。mAP（最大0.502）、遅延、FLOPsのトレードオフを分析。</li>
+                            <li>大規模モデルのVRAM溢れを特定。動的バッチサイズと学習率スケジューリングにより学習を安定化。</li>
+                            <li>YOLOv4_srと比較し、エッジデバイス向けセキュリティシステムにおけるYOLOv10の効率性を実証。</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="project-card" data-modal-target="modal-linux-odyssey">
                     <h3>Linux Odyssey: 対話型ターミナル学習用ウェブサイト</h3>
                     <div class="project-meta">
@@ -269,7 +286,6 @@
                         <p>Pythonを使用してモノポリーゲームを設計。</p>
                     </div>
                 </div>
-
             </div>
 
             <!-- Modals for Projects -->
@@ -373,6 +389,24 @@
                         <p>[ここにプロジェクトのプロセスや詳細を入力してください...]</p>
                         <h4>詳しい情報</h4>
                         <p>[ここでさらに詳しい情報を追加してください...]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-yolo-v10" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-body">
+                        <h3>YOLOベースモデルを用いたSIXrayデータセットにおける禁制品識別：YOLOv10ケーススタディ</h3>
+                        <h4>プロセス</h4>
+                        <p>このプロジェクトでは、深刻なクラス不均衡を持つ大規模なX線データセットの処理を行いました。特定のハードウェア制限下で、高リスクなセキュリティ環境へ展開するためにYOLOv10を最適化することに焦点を当てました。
+                        </p>
+                        <h4>詳しい情報</h4>
+                        <ul>
+                            <li><b>関連スキル:</b> Python, YOLOv10 (物体検出), データエンジニアリング, モデル最適化, AIセキュリティ検査。</li>
+                            <li><b>最適化方案:</b> 動的バッチ処理により、RTX 3080上のVRAM使用量を効率的に管理しました。</li>
+                            <li><b>パフォーマンス:</b> エッジデバイスに適した速度と精度の顕著なバランスを達成しました。</li>
+                        </ul>
                     </div>
                 </div>
             </div>

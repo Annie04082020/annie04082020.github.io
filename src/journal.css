@@ -1,0 +1,70 @@
+/* Specific Journal Styles */
+#journal-content {
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+#journal-content h1,
+#journal-content h2,
+#journal-content h3 {
+    color: var(--accent);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#journal-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.5rem;
+}
+
+#journal-content a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-decoration-color: rgba(136, 198, 60, 0.4);
+}
+
+#journal-content a:hover {
+    color: var(--accent-hover);
+}
+
+#journal-content pre {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border-light);
+}
+
+#journal-content code {
+    font-family: monospace;
+    background: var(--card-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+#journal-content pre code {
+    padding: 0;
+    background: none;
+}
+
+#journal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--meta-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}

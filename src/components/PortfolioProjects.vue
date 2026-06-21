@@ -6,7 +6,7 @@
         v-for="project in data.list" 
         :key="project.id" 
         class="project-card" 
-        :class="{ 'full-width': project.id === 'other-projects' || project.id === 'leda' && lang === 'en' }"
+        :class="{ 'full-width': project.id === 'other-projects' || (project.id === 'leda' && lang === 'en') }"
         @click="openModal($event, project)"
       >
         <h3>{{ project.title }}</h3>

@@ -89,6 +89,33 @@ export const portfolioData = {
           }
         },
         {
+          id: "angry-birds",
+          title: "Angry Birds Replica (C++ / PTSD Engine)",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "🎥 Mid-term Demo", url: "https://youtu.be/V9pe8lg6LLU" },
+            { text: "🎥 Final Demo", url: "https://youtu.be/aVP6Vbt74fo" }
+          ],
+          bullets: [
+            "1:1 faithful replica of Angry Birds built in C++ as the semester capstone for Object-Oriented Programming Lab (OOPL 2026 Spring).",
+            "Physics-based slingshot mechanics with multi-type birds (each with unique special abilities) and destructible pig fortresses made of wood, stone, and ice.",
+            "Built on a custom in-house game engine (PTSD framework) — handling rendering, audio (SDL2_mixer + OGG/Vorbis), and collision detection from scratch.",
+            "Applied OOP principles: inheritance hierarchies for bird/pig/block types, polymorphic ability dispatch, and component-based scene management."
+          ],
+          modal: {
+            processTitle: "Development Process",
+            process: "Collaborated as PM with a 2-person team over one semester. Designed the full game architecture — from slingshot trajectory physics, multi-stage block destruction, to bird special-ability triggers. Integrated the PTSD engine (a practical C++ 2D game framework from NTUT OSC) and extended it with game-specific systems including stage loading, score calculation, and animated particle effects.",
+            detailsTitle: "Technical Highlights",
+            bullets: [
+              "<strong>Physics</strong>: Projectile motion with drag simulation; collision response between circular and rectangular rigid bodies.",
+              "<strong>Bird Abilities</strong>: Red (standard), Yellow (speed burst), Blue (triple split), Black (explosion), White (egg drop).",
+              "<strong>Block Materials</strong>: Wood / Stone / Ice — each with distinct HP, mass, and fracture animations.",
+              "<strong>Audio</strong>: SDL2_mixer with OGG/Vorbis for launch SFX, collision impacts, and background music.",
+              "<strong>Tools</strong>: C++17, CMake, SDL2, PTSD framework; developed on WSL Ubuntu + Windows."
+            ]
+          }
+        },
+        {
           id: "yolo-v10",
           title: "Performance Analysis of YOLO-Based Models for Contraband Image Identification on the SIXray Dataset: A Case Study on YOLOv10",
           date: "Dec 2025 – Mar 2026",
@@ -587,6 +614,33 @@ export const portfolioData = {
           }
         },
         {
+          id: "angry-birds",
+          title: "Angry Birds 完整復刻版（C++ / PTSD 引擎）",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "🎥 期中成果", url: "https://youtu.be/V9pe8lg6LLU" },
+            { text: "🎥 期末成果", url: "https://youtu.be/aVP6Vbt74fo" }
+          ],
+          bullets: [
+            "物件導向程式設計實習（OOPL 2026春）課程成果，以 C++ 1:1 完整復刻 Angry Birds。",
+            "具備物理彈弓發射機制、多種鳥類特殊技能，以及以木頭、石頭、冰塊搭建的豬隻防禦堡壘。",
+            "基於 PTSD 遊戲框架開發，涵蓋渲染、音效（SDL2_mixer + OGG/Vorbis）及碰撞偵測。",
+            "應用 OOP 設計原則：鳥類/豬/方塊的繼承階層、多型技能觸發、元件化場景管理。"
+          ],
+          modal: {
+            processTitle: "開發過程",
+            process: "以專案經理（PM）身分與組員兩人合作完成一學期的開發。從彈弓拋體物理、多階段方塊破壞到鳥類技能觸發，完整設計遊戲架構。整合 PTSD（北科開源社 C++ 2D 遊戲框架）並擴充實作了關卡載入、分數計算及動態粒子特效等系統。",
+            detailsTitle: "技術亮點",
+            bullets: [
+              "<strong>物理系統</strong>：拋體運動模擬（含空氣阻力）；圓形與矩形剛體碰撞響應。",
+              "<strong>鳥類技能</strong>：紅色（標準）、黃色（加速衝刺）、藍色（三連分裂）、黑色（爆炸）、白色（下蛋）。",
+              "<strong>方塊材質</strong>：木頭 / 石頭 / 冰塊 — 各具不同 HP、質量與破碎動畫。",
+              "<strong>音效</strong>：SDL2_mixer + OGG/Vorbis，涵蓋發射音效、碰撞音效及背景音樂。",
+              "<strong>工具</strong>：C++17、CMake、SDL2、PTSD 框架；開發環境為 WSL Ubuntu + Windows。"
+            ]
+          }
+        },
+        {
           id: "yolo-v10",
           title: "基於 YOLO 模型的 SIXray 數據集違禁物識別性能分析：以 YOLOv10 為例",
           date: "2025年12月 – 2026年3月 (畢業專題)",
@@ -1079,6 +1133,33 @@ export const portfolioData = {
             process: "シャーシの設計・製作、カスタム回路レイアウト、およびモータードライバー基板の設計を完全にゼロから実施。超音波センサーを組み込み、メディアンフィルタを使用してノイズや誤反射を効果的に除去し、距離フィードバックを正確に校正。深いハードウェアレベルの理解を得るため、市販のHブリッジICを避け、ディスクリートトランジスタ回路を手作業で構築。",
             detailsTitle: "詳しい情報",
             details: "ディスクリート回路設計の実践的経験や、電気信号ノイズのデバッグ、旋回時の安定化用コントローラロジック（デッドバンド付きBang-Bang制御）の調整スキルを大幅に向上させました。"
+          }
+        },
+        {
+          id: "angry-birds",
+          title: "Angry Birds 完全復刻版（C++ / PTSDエンジン）",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "🎥 中間発表", url: "https://youtu.be/V9pe8lg6LLU" },
+            { text: "🎥 期末発表", url: "https://youtu.be/aVP6Vbt74fo" }
+          ],
+          bullets: [
+            "オブジェクト指向プログラミング実習（OOPL 2026春）の学期成果として、C++で Angry Birds を 1:1 完全復刻。",
+            "物理パチンコ発射メカニズム、ユニークな特殊能力を持つ複数種類の鳥、さらに木・石・氷で述べられた豪の要塞を実装。",
+            "PTSDアニメーションフレームワークをベースに構築。レンダリング、サウンド（SDL2_mixer + OGG/Vorbis）、衝突検出を包括。",
+            "OOP設計原則の適用：鳥・豪・ブロック種の継承階層、ポリモーフィックな技能発動、コンポーネントベースのシーン管理。"
+          ],
+          modal: {
+            processTitle: "開発プロセス",
+            process: "PMとしてチームメンバー2名で一学期をかけて開発。パチンコの投射物理・多段階のブロック破壊・鳥の技能発動まで、全体のアーキテクチャを設計。PTSD（NTUT OSCのC++ 2Dゲームフレームワーク）を統合し、ステージロード・スコア計算・アニメーションパーティクルエフェクトなどのシステムを拡充実装。",
+            detailsTitle: "技術ハイライト",
+            bullets: [
+              "<strong>物理システム</strong>：投射軌道シミュレーション（空気抗力あり）；円形と矩形の剛体衝突応答。",
+              "<strong>鳥の能力</strong>：赤（標準）、黄（加速突辺）、青（三連分裂）、黒（爆発）、白（子走投下）。",
+              "<strong>ブロック素材</strong>：木材 / 石材 / 氷 — それぞれ異なHP・質量・破壊アニメーション。",
+              "<strong>サウンド</strong>：SDL2_mixer + OGG/Vorbisで発射音・衝突音・ BGM。",
+              "<strong>ツール</strong>：C++17、CMake、SDL2、PTSDフレームワーク；WSL Ubuntu + Windowsで開発。"
+            ]
           }
         },
         {

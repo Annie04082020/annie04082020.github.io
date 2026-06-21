@@ -69,30 +69,11 @@ export const portfolioData = {
       title: "Projects",
       list: [
         {
-          id: "csl-car",
-          title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
-          date: "Sep.2025 - Jan.2026",
-          links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
-          ],
-          bullets: [
-            "Autonomous vehicle capable of object tracking and distance maintenance using ultrasonic feedback.",
-            "Custom-designed H-Bridge motor driver built from discrete components (BJTs and Relays) instead of pre-made modules.",
-            "Implemented signal processing with a Median Filter to eliminate ultrasonic sensor noise.",
-            "Developed Bang-Bang with Deadband control algorithm on Arduino for smooth motor correction and spot turns."
-          ],
-          modal: {
-            processTitle: "Process & Implementation Details",
-            process: "Designed and built the chassis, custom electrical layout, and motor driver boards from scratch. Integrated ultrasonic sensors and successfully calibrated the distance feedback using median filtering to ignore false reflections. Structured discrete transistor circuits to avoid integrated H-bridge ICs for deep hardware-level understanding.",
-            detailsTitle: "Key Learnings & More Info",
-            details: "Gained significant hands-on experience in discrete circuit design, debugging electrical signal noise, and tuning basic controller logic (Bang-Bang with Deadband control) to prevent oscillation."
-          }
-        },
-        {
           id: "angry-birds",
           title: "Angry Birds Replica (C++ / PTSD Engine)",
           date: "Feb.2026 - Jun.2026",
           links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/Angry_Birds_Replica" },
             { text: "🎥 Mid-term Demo", url: "https://youtu.be/V9pe8lg6LLU" },
             { text: "🎥 Final Demo", url: "https://youtu.be/aVP6Vbt74fo" }
           ],
@@ -133,6 +114,47 @@ export const portfolioData = {
             process: "This project involved handling a massive X-ray dataset with severe class imbalance. We focused on optimizing YOLOv10 for deployment in high-stakes security environments with specific hardware constraints. Implemented custom training loops, evaluated data augmentation parameters, and calculated the speed vs accuracy curves across multiple YOLO models.",
             detailsTitle: "More Info",
             details: "Skills used: Python, PyTorch, YOLOv10, Data Engineering, GPU Resource Optimization. The results showed that YOLOv10 small/nano versions are highly viable for deployment in real-time embedded security screening."
+          }
+        },
+        {
+          id: "csl-car",
+          title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
+          date: "Sep.2025 - Jan.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
+          ],
+          bullets: [
+            "Autonomous vehicle capable of object tracking and distance maintenance using ultrasonic feedback.",
+            "Custom-designed H-Bridge motor driver built from discrete components (BJTs and Relays) instead of pre-made modules.",
+            "Implemented signal processing with a Median Filter to eliminate ultrasonic sensor noise.",
+            "Developed Bang-Bang with Deadband control algorithm on Arduino for smooth motor correction and spot turns."
+          ],
+          modal: {
+            processTitle: "Process & Implementation Details",
+            process: "Designed and built the chassis, custom electrical layout, and motor driver boards from scratch. Integrated ultrasonic sensors and successfully calibrated the distance feedback using median filtering to ignore false reflections. Structured discrete transistor circuits to avoid integrated H-bridge ICs for deep hardware-level understanding.",
+            detailsTitle: "Key Learnings & More Info",
+            details: "Gained significant hands-on experience in discrete circuit design, debugging electrical signal noise, and tuning basic controller logic (Bang-Bang with Deadband control) to prevent oscillation."
+          }
+        },
+        {
+          id: "behind-brewing",
+          title: "Behind Brewing: The Role of Thermistors and Heaters in Coffee Maker",
+          date: "Sep.2024 - Jan.2025",
+          links: [
+            { text: "📄 Poster", url: "https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" },
+            { text: "📄 Report", url: "https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" }
+          ],
+          bullets: [
+            "A study and research about practical circuit in real world in Circuit Theory course.",
+            "Study of the original circuit and simulation on SIMetrix software.",
+            "Modify the parameters to see difference and features of the circuit.",
+            "Optimise the circuit in specific usage (Coffee Brewing)."
+          ],
+          modal: {
+            processTitle: "Analysis & Process",
+            process: "Deconstructed the electrical architecture of commercial drip coffee makers. Modeled the thermal feedback loops using SPICE software (SIMetrix) and calculated ideal resistor values for precise 92-96°C temperature maintenance.",
+            detailsTitle: "Results",
+            details: "Provided optimized circuit designs showing a 15% reduction in initial temperature overshoot, ensuring a more consistent extraction."
           }
         },
         {
@@ -178,24 +200,21 @@ export const portfolioData = {
           }
         },
         {
-          id: "behind-brewing",
-          title: "Behind Brewing: The Role of Thermistors and Heaters in Coffee Maker",
-          date: "Sep.2024 - Jan.2025",
+          id: "eco-game",
+          title: "Eco-Friendly Board Game",
+          date: "Sep.2021 - Jun.2022",
           links: [
-            { text: "📄 Poster", url: "https://drive.google.com/file/d/1SSEOqHq4tcBxyClBmXNReTBxNrtyTdih/view" },
-            { text: "📄 Report", url: "https://drive.google.com/file/d/1RqWXQ3pm93QrQahQ7eKvH8Fp-MuJWMHF/view" }
+            { text: "Game Instruction", url: "https://hackmd.io/@Shomes/SJ1QirDKF" }
           ],
           bullets: [
-            "A study and research about practical circuit in real world in Circuit Theory course.",
-            "Study of the original circuit and simulation on SIMetrix software.",
-            "Modify the parameters to see difference and features of the circuit.",
-            "Optimise the circuit in specific usage (Coffee Brewing)."
+            "Led and organized the team throughout the project.",
+            "Designed the exterior of all the cards and map."
           ],
           modal: {
-            processTitle: "Analysis & Process",
-            process: "Deconstructed the electrical architecture of commercial drip coffee makers. Modeled the thermal feedback loops using SPICE software (SIMetrix) and calculated ideal resistor values for precise 92-96°C temperature maintenance.",
-            detailsTitle: "Results",
-            details: "Provided optimized circuit designs showing a 15% reduction in initial temperature overshoot, ensuring a more consistent extraction."
+            processTitle: "Creative Process",
+            process: "Drafted gameplay rules focusing on environmental issues (carbon footprint, recycling). Illustrated map artwork, card icons, and layout in vector formats.",
+            detailsTitle: "Team Leadership",
+            details: "Coordinated cross-discipline roles including game designers, copywriters, and manufacturers, successfully producing a playable physical prototype."
           }
         },
         {
@@ -233,24 +252,6 @@ export const portfolioData = {
             process: "Collaborated in a remote team during the peak of COVID-19 pandemic to design a resource routing concept. Formulated allocation rules and mock interfaces for hospital personnel and general public.",
             detailsTitle: "Project Context",
             details: "Designed as a submission for P-TECH Call for Code competition, emphasizing disaster management and emergency resource dispatch."
-          }
-        },
-        {
-          id: "eco-game",
-          title: "Eco-Friendly Board Game",
-          date: "Sep.2021 - Jun.2022",
-          links: [
-            { text: "Game Instruction", url: "https://hackmd.io/@Shomes/SJ1QirDKF" }
-          ],
-          bullets: [
-            "Led and organized the team throughout the project.",
-            "Designed the exterior of all the cards and map."
-          ],
-          modal: {
-            processTitle: "Creative Process",
-            process: "Drafted gameplay rules focusing on environmental issues (carbon footprint, recycling). Illustrated map artwork, card icons, and layout in vector formats.",
-            detailsTitle: "Team Leadership",
-            details: "Coordinated cross-discipline roles including game designers, copywriters, and manufacturers, successfully producing a playable physical prototype."
           }
         },
         {
@@ -322,6 +323,7 @@ export const portfolioData = {
       title: "Coding Portfolio",
       subtitle: "🌐 Websites & Tools",
       items: [
+        { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — 1:1 Angry Birds clone in C++ (PTSD engine, SDL2, OOP capstone)" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — Flashcard study tool for Pharmaceutical Botany, built with vanilla HTML/CSS/JS" },
         { title: "Linear Algebra Assistant", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — Linear Algebra Application for course verification" },
         { title: "Linux Odyssey", url: "https://linuxodyssey.xyz/", desc: " — Interactive Linux terminal teaching website (Vue)" },
@@ -594,30 +596,11 @@ export const portfolioData = {
       title: "專案",
       list: [
         {
-          id: "csl-car",
-          title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
-          date: "Sep.2025 - Jan.2026",
-          links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
-          ],
-          bullets: [
-            "配備超音波感測器之自律行駛避障小車，具備障礙物跟隨與距離保持功能。",
-            "採用離散元件（BJT 與繼電器）手工搭建 H 橋馬達驅動器，捨棄現成驅動模組。",
-            "實作中值濾波器（Median Filter）排除超音波感測雜訊。",
-            "開發具備死區控制（Deadband）的 Bang-Bang 控制演算法，實現平滑修正與現地轉向。"
-          ],
-          modal: {
-            processTitle: "實作過程與細節",
-            process: "從零開始設計並製作車體底盤、客製化電路佈局以及馬達驅動板。整合超音波感測器並透過中值濾波進行精準測距校正，濾除錯誤反射訊號。手工搭建離散電晶體 H 橋，捨棄現成驅動 IC 以求深度理解硬體底層運作原理。",
-            detailsTitle: "更多資訊",
-            details: "在此專案中獲得了豐富的離散電路設計與除錯經驗，並學會如何優化電路雜訊及調校控制器邏輯（Bang-Bang control），避免馬達產生過度震盪。"
-          }
-        },
-        {
           id: "angry-birds",
           title: "Angry Birds 完整復刻版（C++ / PTSD 引擎）",
           date: "Feb.2026 - Jun.2026",
           links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/Angry_Birds_Replica" },
             { text: "🎥 期中成果", url: "https://youtu.be/V9pe8lg6LLU" },
             { text: "🎥 期末成果", url: "https://youtu.be/aVP6Vbt74fo" }
           ],
@@ -638,6 +621,26 @@ export const portfolioData = {
               "<strong>音效</strong>：SDL2_mixer + OGG/Vorbis，涵蓋發射音效、碰撞音效及背景音樂。",
               "<strong>工具</strong>：C++17、CMake、SDL2、PTSD 框架；開發環境為 WSL Ubuntu + Windows。"
             ]
+          }
+        },
+        {
+          id: "csl-car",
+          title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
+          date: "Sep.2025 - Jan.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
+          ],
+          bullets: [
+            "配備超音波感測器之自律行駛避障小車，具備障礙物跟隨與距離保持功能。",
+            "採用離散元件（BJT 與繼電器）手工搭建 H 橋馬達驅動器，捨棄現成驅動模組。",
+            "實作中值濾波器（Median Filter）排除超音波感測雜訊。",
+            "開發具備死區控制（Deadband）的 Bang-Bang 控制演算法，實現平滑修正與現地轉向。"
+          ],
+          modal: {
+            processTitle: "實作過程與細節",
+            process: "從零開始設計並製作車體底盤、客製化電路佈局以及馬達驅動板。整合超音波感測器並透過中值濾波進行精準測距校正，濾除錯誤反射訊號。手工搭建離散電晶體 H 橋，捨棄現成驅動 IC 以求深度理解硬體底層運作原理。",
+            detailsTitle: "更多資訊",
+            details: "在此專案中獲得了豐富的離散電路設計與除錯經驗，並學會如何優化電路雜訊及調校控制器邏輯（Bang-Bang control），避免馬達產生過度震盪。"
           }
         },
         {
@@ -844,6 +847,7 @@ export const portfolioData = {
       title: "Coding 作品集",
       subtitle: "🌐 網站與工具",
       items: [
+        { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD 引擎、SDL2、OOP 課程成果）" },
         { title: "圖卡複習工具 (Review Card Maker)", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 藥用植物學複習用途，純 HTML/CSS/JS" },
         { title: "線性代數助手 (Linear Algebra Assistant)", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — 線性代數計算工具，課程輔助用" },
         { title: "Linux Odyssey", url: "https://linuxodyssey.xyz/", desc: " — 互動式 Linux 教學網站 (Vue)" },
@@ -1116,30 +1120,11 @@ export const portfolioData = {
       title: "プロジェクト",
       list: [
         {
-          id: "csl-car",
-          title: "CSL 超音波自律走行車（ディスクリートHブリッジ制御）",
-          date: "Sep.2025 - Jan.2026",
-          links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
-          ],
-          bullets: [
-            "超音波センサーのフィードバックを利用した物体追跡および距離維持が可能な自律走行車。",
-            "既製のモジュールを使用せず、ディスクリート素子（BJTおよびリレー）からカスタム設計されたHブリッジモータードライバーを構築。",
-            "超音波センサーのノイズを除去するため、メディアンフィルタによる信号処理を実装。",
-            "スムーズなモーター制御と旋回のために、デッドバンド付きのバンバン（Bang-Bang）制御アルゴリズムをArduino上で開発。"
-          ],
-          modal: {
-            processTitle: "プロセスと詳細",
-            process: "シャーシの設計・製作、カスタム回路レイアウト、およびモータードライバー基板の設計を完全にゼロから実施。超音波センサーを組み込み、メディアンフィルタを使用してノイズや誤反射を効果的に除去し、距離フィードバックを正確に校正。深いハードウェアレベルの理解を得るため、市販のHブリッジICを避け、ディスクリートトランジスタ回路を手作業で構築。",
-            detailsTitle: "詳しい情報",
-            details: "ディスクリート回路設計の実践的経験や、電気信号ノイズのデバッグ、旋回時の安定化用コントローラロジック（デッドバンド付きBang-Bang制御）の調整スキルを大幅に向上させました。"
-          }
-        },
-        {
           id: "angry-birds",
           title: "Angry Birds 完全復刻版（C++ / PTSDエンジン）",
           date: "Feb.2026 - Jun.2026",
           links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/Angry_Birds_Replica" },
             { text: "🎥 中間発表", url: "https://youtu.be/V9pe8lg6LLU" },
             { text: "🎥 期末発表", url: "https://youtu.be/aVP6Vbt74fo" }
           ],
@@ -1180,6 +1165,26 @@ export const portfolioData = {
             process: "深刻なクラス不均衡を持つ大規模なX線データセットの処理を行いました。特定のハードウェア制限下で、高リスクなセキュリティ環境へ展開するためにYOLOv10を最適化することに焦点を当てました。カスタムのトレーニングループの実装や、データ拡張パラメータの評価、各種YOLOモデルにおける速度と精度の相関分析を実施しました。",
             detailsTitle: "詳しい情報",
             details: "関連スキル: Python, PyTorch, YOLOv10 (物体検出), データエンジニアリング, GPUリソース最適化。実験により、YOLOv10のsmall/nanoバージョンはリアルタイム組み込みセキュリティ検査機器への展開に極めて実用的であることが証明されました。"
+          }
+        },
+        {
+          id: "csl-car",
+          title: "CSL 超音波自律走行車（ディスクリートHブリッジ制御）",
+          date: "Sep.2025 - Jan.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/CSL_Ultrasonic_Car" }
+          ],
+          bullets: [
+            "超音波センサーのフィードバックを利用した物体追跡および距離維持が可能な自律走行車。",
+            "既製のモジュールを使用せず、ディスクリート素子（BJTおよびリレー）からカスタム設計されたHブリッジモータードライバーを構築。",
+            "超音波センサーのノイズを除去するため、メディアンフィルタによる信号処理を実装。",
+            "スムーズなモーター制御と旋回のために、デッドバンド付きのバンバン（Bang-Bang）制御アルゴリズムをArduino上で開発。"
+          ],
+          modal: {
+            processTitle: "プロセスと詳細",
+            process: "シャーシの設計・製作、カスタム回路レイアウト、およびモータードライバー基板の設計を完全にゼロから実施。超音波センサーを組み込み、メディアンフィルタを使用してノイズや誤反射を効果的に除去し、距離フィードバックを正確に校正。深いハードウェアレベルの理解を得るため、市販のHブリッジICを避け、ディスクリートトランジスタ回路を手作業で構築。",
+            detailsTitle: "詳しい情報",
+            details: "ディスクリート回路設計の実践的経験や、電気信号ノイズのデバッグ、旋回時の安定化用コントローラロジック（デッドバンド付きBang-Bang制御）の調整スキルを大幅に向上させました。"
           }
         },
         {
@@ -1369,6 +1374,7 @@ export const portfolioData = {
       title: "コーディング作品集",
       subtitle: "🌐 ウェブサイト・ツール",
       items: [
+        { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD エンジン、SDL2、OOP クラス成果）" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 薬用植物学復習用フラッシュカードツール，純粋な HTML/CSS/JS で構築" },
         { title: "線形代数アシスタント (Linear Algebra Assistant)", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — 線形代数計算ツール，授業の確認・演習用" },
         { title: "Linux Odyssey", url: "https://linuxodyssey.xyz/", desc: " — インタラクティブなLinux教育ウェブサイト (Vue)" },

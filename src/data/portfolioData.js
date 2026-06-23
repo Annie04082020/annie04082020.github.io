@@ -69,6 +69,31 @@ export const portfolioData = {
       title: "Projects",
       list: [
         {
+          id: "ultimate-bomb",
+          title: "UltimateBomb (VHDL / Digital Logic Design)",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+          ],
+          bullets: [
+            "A composite logic game combining bomb defusal and 'ultimate password' gameplay.",
+            "Digital Logic Design Lab Final Project for the semester.",
+            "Implemented the core FSM controller, random number generator, and limit registers in VHDL.",
+            "Includes dual input modes (BCD/BIN) and dynamic difficulty scaling."
+          ],
+          modal: {
+            processTitle: "Development Process",
+            process: "Designed and implemented the hardware logic for a bomb defusal game. The game flow consists of initialization, next bomb generation, game input, and checking pass conditions. The core logic was written in VHDL, modeling state machines, ALUs, and memory registers.",
+            detailsTitle: "Technical Highlights",
+            bullets: [
+              "<strong>Control Unit</strong>: Developed the main Game Controller FSM and Level Manager.",
+              "<strong>Memory Unit</strong>: Mode Selector, Min/Max registers with bounding logic.",
+              "<strong>ALU</strong>: Hardware RNG, Countdown Timer, Time-Out Checker, Password Comparator.",
+              "<strong>Output Unit</strong>: Custom 16-Segment decoder for game states (IDLE, WIN, LOSE, ERROR) and LED array controller."
+            ]
+          }
+        },
+        {
           id: "angry-birds",
           title: "Angry Birds Replica (C++ / PTSD Engine)",
           date: "Feb.2026 - Jun.2026",
@@ -323,6 +348,7 @@ export const portfolioData = {
       title: "Coding Portfolio",
       subtitle: "🌐 Websites & Tools",
       items: [
+        { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDL logic game combining bomb defusal and ultimate password" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — 1:1 Angry Birds clone in C++ (PTSD engine, SDL2, OOP capstone)" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — Flashcard study tool for Pharmaceutical Botany, built with vanilla HTML/CSS/JS" },
         { title: "Linear Algebra Assistant", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — Linear Algebra Application for course verification" },
@@ -596,6 +622,31 @@ export const portfolioData = {
       title: "專案",
       list: [
         {
+          id: "ultimate-bomb",
+          title: "UltimateBomb 終極密碼拆彈遊戲 (VHDL)",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+          ],
+          bullets: [
+            "結合拆彈遊戲與終極密碼玩法的複合式邏輯遊戲。",
+            "這學期數位邏輯設計實習專題作品。",
+            "使用 VHDL 實作核心 FSM 狀態機、亂數產生器與上下限暫存器等硬體邏輯。",
+            "支援 BCD 與 BIN 雙輸入模式，並具備四種遊戲難度與動態縮圈機制。"
+          ],
+          modal: {
+            processTitle: "開發過程",
+            process: "設計並實作了拆彈遊戲的硬體邏輯架構。遊戲流程包含初始化、生成密碼、輸入倒數與縮圈檢查。整個系統分為控制單元、記憶單元、運算邏輯單元及輸出單元，並以 VHDL 進行開發與驗證。",
+            detailsTitle: "技術亮點",
+            bullets: [
+              "<strong>控制單元</strong>：實作了系統核心大腦（Game Controller FSM）與關卡管理器（Level Manager）。",
+              "<strong>記憶單元</strong>：設計了具備防呆機制的上下限暫存器（Min/Max Register）及模式設定。",
+              "<strong>運算單元</strong>：硬體亂數產生器、降頻倒數計時器及純硬體密碼比較器。",
+              "<strong>輸出單元</strong>：自建 16 段顯示器字型庫（顯示 IDLE, WIN, LOSE 等），以及動態 LED 進度解碼器。"
+            ]
+          }
+        },
+        {
           id: "angry-birds",
           title: "Angry Birds 完整復刻版（C++ / PTSD 引擎）",
           date: "Feb.2026 - Jun.2026",
@@ -847,6 +898,7 @@ export const portfolioData = {
       title: "Coding 作品集",
       subtitle: "🌐 網站與工具",
       items: [
+        { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDL 實作的複合式拆彈與終極密碼遊戲" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD 引擎、SDL2、OOP 課程成果）" },
         { title: "圖卡複習工具 (Review Card Maker)", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 藥用植物學複習用途，純 HTML/CSS/JS" },
         { title: "線性代數助手 (Linear Algebra Assistant)", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — 線性代數計算工具，課程輔助用" },
@@ -1120,6 +1172,31 @@ export const portfolioData = {
       title: "プロジェクト",
       list: [
         {
+          id: "ultimate-bomb",
+          title: "UltimateBomb 爆弾解除ゲーム (VHDL)",
+          date: "Feb.2026 - Jun.2026",
+          links: [
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+          ],
+          bullets: [
+            "爆弾解除と「究極のパスワード」ゲームを組み合わせた複合ロジックゲーム。",
+            "デジタル論理設計実験クラスの期末プロジェクト。",
+            "VHDLを使用してコアFSM、乱数生成器、ハードウェアロジックを実装。",
+            "BCDおよびBINのデュアル入力モードと、動的な難易度調整機能を搭載。"
+          ],
+          modal: {
+            processTitle: "開発プロセス",
+            process: "爆弾解除ゲームのハードウェア論理アーキテクチャを設計および実装。ゲームフローは初期化、パスワード生成、入力カウントダウン、範囲縮小チェックで構成。システム全体を制御ユニット、記憶ユニット、ALU、出力ユニットに分割し、VHDLで開発。",
+            detailsTitle: "技術的なハイライト",
+            bullets: [
+              "<strong>制御ユニット</strong>：コアとなるGame Controller FSMとLevel Managerを実装。",
+              "<strong>記憶ユニット</strong>：フェイルセーフロジックを備えたMin/Maxレジスタおよびモードセレクタ。",
+              "<strong>演算ユニット</strong>：ハードウェアRNG、カウントダウンタイマー、パスワード比較器。",
+              "<strong>出力ユニット</strong>：16セグメントLEDデコーダ（IDLE, WIN, LOSEなどを表示）および動的LEDプログレスバー。"
+            ]
+          }
+        },
+        {
           id: "angry-birds",
           title: "Angry Birds 完全復刻版（C++ / PTSDエンジン）",
           date: "Feb.2026 - Jun.2026",
@@ -1374,6 +1451,7 @@ export const portfolioData = {
       title: "コーディング作品集",
       subtitle: "🌐 ウェブサイト・ツール",
       items: [
+        { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDLで実装された爆弾解除と究極のパスワードの複合ゲーム" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD エンジン、SDL2、OOP クラス成果）" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 薬用植物学復習用フラッシュカードツール，純粋な HTML/CSS/JS で構築" },
         { title: "線形代数アシスタント (Linear Algebra Assistant)", url: "https://annie04082020.github.io/linear_algebra_assistant/", desc: " — 線形代数計算ツール，授業の確認・演習用" },

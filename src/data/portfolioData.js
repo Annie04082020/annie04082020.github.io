@@ -73,7 +73,8 @@ export const portfolioData = {
           title: "UltimateBomb (VHDL / Digital Logic Design)",
           date: "Feb.2026 - Jun.2026",
           links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" },
+            { text: "🎥 Demo Video", url: "https://youtu.be/1ahN5QPq28g" }
           ],
           bullets: [
             "A composite logic game combining bomb defusal and 'ultimate password' gameplay.",
@@ -626,7 +627,8 @@ export const portfolioData = {
           title: "UltimateBomb 終極密碼拆彈遊戲 (VHDL)",
           date: "Feb.2026 - Jun.2026",
           links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" },
+            { text: "🎥 專題影片", url: "https://youtu.be/1ahN5QPq28g" }
           ],
           bullets: [
             "結合拆彈遊戲與終極密碼玩法的複合式邏輯遊戲。",
@@ -1176,7 +1178,8 @@ export const portfolioData = {
           title: "UltimateBomb 爆弾解除ゲーム (VHDL)",
           date: "Feb.2026 - Jun.2026",
           links: [
-            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" }
+            { text: "💻 GitHub", url: "https://github.com/Annie04082020/UltimateBomb" },
+            { text: "🎥 プロジェクト動画", url: "https://youtu.be/1ahN5QPq28g" }
           ],
           bullets: [
             "爆弾解除と「究極のパスワード」ゲームを組み合わせた複合ロジックゲーム。",

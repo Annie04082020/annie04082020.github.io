@@ -24,7 +24,16 @@
             </select>
           </div>
 
-          <div class="journal-actions">
+          <div class="journal-actions" style="display: flex; gap: 0.6rem;">
+            <button 
+              v-if="isUnlocked && selectedLogId" 
+              class="btn-danger" 
+              :disabled="isDeleting" 
+              @click="handleDelete"
+            >
+              🗑️ {{ isDeleting ? labels.deleting : labels.deleteBtn }}
+            </button>
+
             <button class="lock-btn" @click="toggleLockPanel">
               <span v-if="!isUnlocked">🔒 {{ labels.unlock }}</span>
               <span v-else>✏️ {{ labels.newEntry }}</span>
@@ -138,6 +147,7 @@ const newTitle = ref('')
 const newDate = ref(todayDateString())
 const newContent = ref('')
 const isPublishing = ref(false)
+const isDeleting = ref(false)
 const statusMessage = ref('')
 const statusType = ref('')
 
@@ -210,6 +220,10 @@ const labels = computed(() => {
       publishBtn: '🚀 發布至 GitHub',
       publishing: '發布中...',
       closeBtn: '關閉面板',
+      deleteBtn: '刪除此文章',
+      deleteConfirm: '確定要刪除這篇日誌文章嗎？刪除後將無法復原。',
+      deleting: '刪除中...',
+      deleteSuccess: '🗑️ 成功刪除文章！GitHub Pages 將在 1-2 分鐘內重新部署。',
       errTitleRequired: '請輸入文章標題與內容',
       errTokenRequired: '請先輸入 GitHub Token',
       publishSuccess: '🎉 發布成功！文章已直接更新，GitHub Pages 將在 1-2 分鐘內自動重新部署。'
@@ -241,6 +255,10 @@ const labels = computed(() => {
       publishBtn: '🚀 GitHub へ公開',
       publishing: '公開中...',
       closeBtn: '閉じる',
+      deleteBtn: 'この投稿を削除',
+      deleteConfirm: 'このエントリーを削除してもよろしいですか？この操作は取り消せません。',
+      deleting: '削除中...',
+      deleteSuccess: '🗑️ エントリーを削除しました！GitHub Pages に反映されるまで1〜2分かかります。',
       errTitleRequired: 'タイトルと本文を入力してください',
       errTokenRequired: 'GitHub Token を入力してください',
       publishSuccess: '🎉 公開成功！GitHub Pages に反映されるまで1〜2分かかります。'
@@ -272,6 +290,10 @@ const labels = computed(() => {
       publishBtn: '🚀 Publish to GitHub',
       publishing: 'Publishing...',
       closeBtn: 'Close Panel',
+      deleteBtn: 'Delete Entry',
+      deleteConfirm: 'Are you sure you want to delete this journal entry? This action cannot be undone.',
+      deleting: 'Deleting...',
+      deleteSuccess: '🗑️ Entry deleted successfully! GitHub Pages will auto-deploy in 1-2 minutes.',
       errTitleRequired: 'Please provide both title and content.',
       errTokenRequired: 'Please enter a GitHub Token.',
       publishSuccess: '🎉 Published successfully! GitHub Pages will auto-deploy in 1-2 minutes.'
@@ -421,6 +443,130 @@ const handlePublish = async () => {
   }
 }
 
+const handleDelete = async () => {
+  if (!selectedLogId.value) return
+
+  const currentEntry = logs.value.find(l => l.id === selectedLogId.value)
+  const entryTitle = currentEntry ? currentEntry.title : selectedLogId.value
+
+  if (!confirm(`${labels.value.deleteConfirm}\n\n[ ${entryTitle} ]`)) {
+    return
+  }
+
+  if (!githubToken.value.trim()) {
+    statusMessage.value = labels.value.errTokenRequired
+    statusType.value = 'error'
+    showLockPanel.value = true
+    return
+  }
+
+  isDeleting.value = true
+  statusMessage.value = labels.value.deleting
+  statusType.value = 'loading'
+  showLockPanel.value = true
+
+  const token = githubToken.value.trim()
+  const repoOwner = 'annie04082020'
+  const repoName = 'annie04082020.github.io'
+  const targetFilename = selectedLogId.value
+  const mdPath = `public/logs/${targetFilename}`
+  const indexPath = `public/logs/index.json`
+
+  try {
+    // 1. Delete markdown file if it exists on GitHub
+    const fileRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    })
+
+    if (fileRes.ok) {
+      const fileData = await fileRes.json()
+      const fileSha = fileData.sha
+
+      const deleteFileRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `delete journal file: ${targetFilename}`,
+          sha: fileSha
+        })
+      })
+
+      if (!deleteFileRes.ok) {
+        console.warn(`Could not delete markdown file ${targetFilename}, continuing index update.`)
+      }
+    }
+
+    // 2. Fetch index.json from GitHub and remove entry
+    const indexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    })
+
+    if (!indexRes.ok) {
+      throw new Error(`Failed to fetch index.json for deletion.`)
+    }
+
+    const indexData = await indexRes.json()
+    const currentSha = indexData.sha
+    const rawIndexJson = decodeURIComponent(escape(atob(indexData.content.replace(/\s/g, ''))))
+    let indexList = JSON.parse(rawIndexJson)
+
+    // Remove deleted entry from index
+    indexList = indexList.filter(item => item.id !== targetFilename)
+
+    const updatedIndexStr = JSON.stringify(indexList, null, 2)
+    const updatedIndexBase64 = utf8ToBase64(updatedIndexStr)
+
+    const updateIndexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: `remove journal entry from index: ${targetFilename}`,
+        content: updatedIndexBase64,
+        sha: currentSha
+      })
+    })
+
+    if (!updateIndexRes.ok) {
+      const errJson = await updateIndexRes.json()
+      throw new Error(`Failed to update index.json after deletion: ${errJson.message || updateIndexRes.statusText}`)
+    }
+
+    // Success! Update local state
+    logs.value = indexList
+    if (indexList.length > 0) {
+      selectedLogId.value = indexList[0].id
+      loadMarkdown(indexList[0].id)
+    } else {
+      selectedLogId.value = ''
+      journalHtml.value = '<p>No journal entries found.</p>'
+    }
+
+    statusMessage.value = labels.value.deleteSuccess
+    statusType.value = 'success'
+
+  } catch (err) {
+    console.error('Delete error:', err)
+    statusMessage.value = `❌ Error deleting: ${err.message}`
+    statusType.value = 'error'
+  } finally {
+    isDeleting.value = false
+  }
+}
+
 const fetchLogsIndex = async () => {
   try {
     const res = await fetch(`../logs/index.json?t=${Date.now()}`)
@@ -467,4 +613,5 @@ onMounted(() => {
   fetchLogsIndex()
 })
 </script>
+
 

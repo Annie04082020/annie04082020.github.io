@@ -434,6 +434,11 @@ const handlePublish = async () => {
     statusMessage.value = labels.value.publishSuccess
     statusType.value = 'success'
 
+    setTimeout(() => {
+      showLockPanel.value = false
+      statusMessage.value = ''
+    }, 1500)
+
   } catch (err) {
     console.error('Publishing error:', err)
     statusMessage.value = `❌ Error: ${err.message}`
@@ -557,6 +562,12 @@ const handleDelete = async () => {
 
     statusMessage.value = labels.value.deleteSuccess
     statusType.value = 'success'
+
+    // Auto-close editor/status panel after 1.2 seconds upon success
+    setTimeout(() => {
+      showLockPanel.value = false
+      statusMessage.value = ''
+    }, 1200)
 
   } catch (err) {
     console.error('Delete error:', err)

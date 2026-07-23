@@ -68,3 +68,178 @@
 .back-link:hover {
     color: var(--accent);
 }
+
+/* Journal Editor & Lock Styles */
+.journal-actions {
+    margin-left: auto;
+}
+
+.lock-btn {
+    background: var(--card-bg, #f4f4f4);
+    color: var(--text-color, #333);
+    border: 1px solid var(--border-light, #ccc);
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.lock-btn:hover {
+    border-color: var(--accent, #4a90e2);
+    color: var(--accent, #4a90e2);
+}
+
+.editor-card {
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-light, #e0e0e0);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.editor-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--accent, #333);
+    font-size: 1.25rem;
+}
+
+.editor-form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.editor-form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--meta-text, #666);
+}
+
+.editor-input,
+.editor-textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light, #ccc);
+    background: var(--bg-color, #fff);
+    color: var(--text-color, #222);
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.editor-input:focus,
+.editor-textarea:focus {
+    outline: none;
+    border-color: var(--accent, #4a90e2);
+}
+
+.editor-textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.editor-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.editor-row .editor-form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.editor-buttons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--accent, #4a90e2);
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--meta-text, #666);
+    border: 1px solid var(--border-light, #ccc);
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-color, #333);
+}
+
+.status-msg {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.status-msg.success {
+    background: rgba(46, 204, 113, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-msg.error {
+    background: rgba(231, 76, 60, 0.15);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.status-msg.loading {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.preview-box {
+    margin-top: 1.5rem;
+    border-top: 1px dashed var(--border-light, #ccc);
+    padding-top: 1rem;
+}
+
+.preview-box h4 {
+    margin-top: 0;
+    color: var(--meta-text, #888);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+

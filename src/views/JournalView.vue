@@ -423,7 +423,7 @@ const handlePublish = async () => {
 
 const fetchLogsIndex = async () => {
   try {
-    const res = await fetch('../logs/index.json')
+    const res = await fetch(`../logs/index.json?t=${Date.now()}`)
     if (!res.ok) throw new Error('Could not fetch index.json')
     const data = await res.json()
     logs.value = data
@@ -442,7 +442,7 @@ const loadMarkdown = async (filename) => {
   if (!filename) return
   journalHtml.value = labels.value.loading
   try {
-    const res = await fetch(`../logs/${filename}`)
+    const res = await fetch(`../logs/${filename}?t=${Date.now()}`)
     if (!res.ok) throw new Error('Network response was not ok')
     const markdownText = await res.text()
     // Parse markdown to HTML

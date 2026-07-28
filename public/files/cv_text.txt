@@ -1,0 +1,156 @@
+Annie An -Hua-Huang(黃安華 ) 
+Phone : (+886) 0933 -509-191  
+Email:  annie.huangah@proton.me  | Linkedin  | GitHub  | 
+ 
+About Me  
+I am a person with great curiosity, since I have experienced and participated 
+different genre of activities, I learned new perspectives to observe the world, and 
+build up interest to learn in an unfamiliar field. I'm also a creator, I lo ve to build my 
+own works, in order to express my thoughts and stories, I learned skills like 
+languages, drawing, writing, and coding. With these skills, I'm able to step out the 
+comfort zone, participate challenging activities to reach the goals and expand  my 
+scope of view.   
+ 
+Education  
+National Taipei University of Technology           Taipei,  Taiwan  
+Bachelor  Degree of  Electrical Engineering  / Education program          Sep.2024 -Jun.2026  
+National Taipei University of Technology           Taipei,  Taiwan  
+Associate Degree of Intelligent Automation Engineering             Sep.2019 -Jun.2024  
+- Scholarship for Academic Performance in every semester   
+Professional Skills  
+Languages: Mandarin (Native), English (TOEIC  RL:810, SW:270, IELTS O:6.5, GRE V:145, Q:158, AW:3.5 ), 
+Japanese ( Passed  JLPT N1 ) 
+Coding Languages : Python, C, C#,HTML,CSS , Vue, Javascript / TypeScript, Vue, Cypress             
+IBM SkillsBuild Batch : Python for Data Science, Growth Behaviors          May.2022 , Oct.2023  
+Art/Music Performing: Percussion, Piano, Trumpet, Baritone, Painting , Designing   
+Sports : Taekwondo 2 Dan                                               March.17.202 3 
+Certificate: MOEA Certified 3D Printing Additive Manufacturing Engineer -Associate Level                 July.2023  
+Google Cybersecurity                      July 2025  
+Awards  
+Sch001 2023 Project incubation competition  Select as Thriving Team         March.2 2024  
+InnoServe Awards Titansoft Agile  Second place                Nov.4 2023  
+Experiences  
+Extra Curriculum   
+NTUT Taekwondo Club             Oct. 2020 -Now 
+NTUT Soccer Team (Join  Practice)           Oct.2022 -2024  
+Selected and Additional  Courses  
+Basic German                   Sep.2019 -Jan.2020 , Feb.2024 -Jun.2024  
+Introduction to Artificial  Intelligence             Feb.2020 -June.2020  
+Programming Design with  Matlab/Simulink                             Sep.2020 -Jan.2021  
+Share@AI Coding Club in NTUT               Jan.2021 -May.2021  
+Overview of Patent Law                Feb.2021 -Jun.2021  
+Deep Learning with TensorFlow                Sep.2021 -Jan.2022  
+Computer -Aided -Graphic -Design                Sep.2021 -Jan.2022  
+Electrical Circuit Design and Lab               Feb.2022 -Jun.2022  
+Industry 4.0 Lecture                 Feb.2022 -Jun.2022  
+Cloud based Computing and Application              Sep.2022 -Jan.2023  
+Network Programming                 Sep.2022 -Jan.2023  
+3D printing and Lab                  Sep.2023 -Jan.2024  
+Architecture Planning                  Sep.2023 -Jan.2024  
+\nStructure and System Planning   (Architecture)              Sep.2023 -Jan.2024  
+Data Structure                  Sep.2023 -Jan.2024  
+Discrete Math                  Feb.2024 -Jun.2024  
+Digital System                       Sep.2024 -Jan.2025  
+Power Electronics Lab                 Feb.2025 -Jun.2025  
+Power System                  Sep.2025 -Jan.2026  
+Power Electronics                 Sep.2025 -Jan.2026  
+Object -Oriented Programming                Sep.2025 -Jan.2026  
+Contro l System Lab                 Sep.2025 -Jan.2026  
+Satellite Remote Sensing Applications and Lab             Sep.2025 -Jan.2026  
+Pharmaceutical Botany                Sep.2025 -Jan.2026  
+Projects  
+1. Project work with  LEDA Technology               May.2021 -Jan.2022  
+-Experie nced AI, F rontend , and Backend Development  
+ Cooperate with NYCU, and CYCU students, led by LEDA workers, we made a website that 
+people could use AI quickly, and also provide services such as clip the picture as training data.  
+ Cooperate with doctors, I wrote a program which is able to tr ansfer CT files to picture  
+( .jpg, .png ) files, so the data could be used in annotation.  
+ 
+3. Python project of game                  Apr.2021 -Jul.2021  
+-Designed a monopoly game with python.  
+ 
+4. P-TECH Call for Code                           May.2021 -Jul.2021  
+-Designed a system due to the pandemic  (COVID -19) 
+ The system gets information  from people, hospital, schedule the manpower  of doctors 
+and medical staffs due to the pandemic screening. The system is divided into two parts: the 
+medical staff part is able to get requirements from people or hospital, calculate the nearest 
+place with ad equate materials and manpower , and the normal user part is able to ask the 
+system should they go for the quick sieve and  where sh ould they go.  
+ 
+5. Eco-Friendly Board Game               Sep.2021 -Jun.2022  
+ 
+ Lead and organized the team through out the pro ject 
+ Designed the exterior of all the cards, Map  
+ 
+ 
+6. MIT City Science Lab Spring UROP  : Music Block                         Feb.2023 -Jun.2023  
+-Learn to start a project from 0 to 1 , project management, firmware, C  
+7. Linux Odyssey  : Interactive Terminal Teaching Website                  Apr.2023 -Now 
+-Experienced Javasript, TypeScript, Vue Development, Test Automation , Visual Design  
+ Frontend Development and M aintenance   
+ Test Automation Development  
+ Logo,Website Interface , Poster Design  
+ InnoServe Awards 28th Taitansoft Agile Second place  
+ Selected as Thriving Team  in Sch001  2023 Project incubation competition  
+ Constantly holding Activities for Open Source promotion, education and share 
+developing experience  
+ Cooperates with NTPU GDSC in 2024 Autumn  
+  
+ Music Block is a concept product of turning "Music" into a visible 3D substance, 
+the target is to teach music beginners basic music theory, and also build a 
+sense of sounds through it, we also looking forward to the music professionals 
+utilising it as a cr eativity tool  
+ Firmware Development for the blocks and bottom board  \n8. Behind Brewing  : The Role of Thermistors and Heates in Coffee Maker       Sep.2024 -Jan.2025  
+- A study and research about practical circuit in real world  in Circuit Theory  course  
+Research Steps:  
+ Study o f the original circuit  
+ Simulation on SIMetrix software  
+ Modify the parameters to see difference and features of the circuit  
+ Optimise the circuit  in specific usage (Coffee Brewing)  
+ 
+Summer Internship: AUO Corporation            July.2022 -Aug.2022  
+-Experienced AI, Python PyQt GUI Development, YOLOv5, Labelme Application  
+ Maintaining the AI detection system  
+ Combine additional regulation tool to retrain model.  
+ Combine additional YOLOv5 detection for different usage  and manufacture 
+circumstances  
+ 
+Internship:  International Business Machines Corporation               July.20 23-Dec.2023 
+-Experienced Cypress Test Automation Development , JavaScript  
+ Fix and w rite test ing files 
+ Specify website problems from the automation tests  
+ 
+ 
+Committee Members:  Vice President of Taekwondo Club        July.2022 -Now 
+ Raise Club Exposition and School Fair  
+ Maintain club Operation  
+ 
+ 
+ 
+Activities   
+ 
+                    
+                             
+                 
+ 
+City Youth Forum      
+Dec.25 -26 2020  
+Final Prize in School Monographic 
+Group  2021 Girls in Cyber Security     
+May.2021  
+22nd kW Design Award      
+Jan.2022  
+28th InnoServe Award s  
+- Titansoft Agile            Nov.7 2023  
+Second place  
+Linux Odyssey – Interactive 
+Terminal Teaching Website  Sch001 2023 Project incubation 
+competition          March.2 2024  
+Select as Thriving Team  
+Linux Odyssey – Interactive 
+Terminal Teaching Website  NanYing National Taekwondo Championship   
+Apr.2 2022  
+Group C ollege and High School Girls First and 
+Second Level   
+Third place  Poster  Link 
+Preliminary Results Link  

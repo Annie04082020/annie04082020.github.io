@@ -268,3 +268,123 @@
     letter-spacing: 0.05em;
 }
 
+/* Attachment & Edit Buttons */
+.btn-attach {
+    background: var(--card-bg, #f4f4f4);
+    color: var(--text-color, #333);
+    border: 1px solid var(--border-light, #ccc);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-attach:hover:not(:disabled) {
+    border-color: var(--accent, #4a90e2);
+    color: var(--accent, #4a90e2);
+}
+
+.btn-edit {
+    background: transparent;
+    color: var(--accent, #4a90e2);
+    border: 1px solid rgba(74, 144, 226, 0.4);
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-edit:hover:not(:disabled) {
+    background: rgba(74, 144, 226, 0.1);
+    border-color: var(--accent, #4a90e2);
+}
+
+/* Rendered CSV Table Styles */
+.csv-table-wrapper {
+    margin: 1.5rem 0;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-light, #e0e0e0);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    overflow-x: auto;
+}
+
+.csv-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.csv-table-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--meta-text, #666);
+}
+
+.csv-download-btn {
+    background: var(--accent-green, #2ecc71);
+    color: #ffffff;
+    border: none;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.csv-download-btn:hover {
+    opacity: 0.9;
+}
+
+.csv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.csv-table th {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-color, #222);
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--border-light, #ccc);
+}
+
+.csv-table td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--border-light, #eee);
+    color: var(--text-color, #444);
+}
+
+.csv-table tr:hover td {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Private Gate Center Card */
+.private-gate-card {
+    max-width: 480px;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+

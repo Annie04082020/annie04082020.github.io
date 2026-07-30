@@ -24,7 +24,7 @@ export const portfolioData = {
       title: "Upcoming / Future Plans",
       items: [
         { name: "Summer Internship at NSW, Kitakyushu, Japan", date: "2026.07 - 2026.08" },
-        { name: "Graduate School (TBD)", date: "" }
+        { name: "National Taiwan University - Master's Program in Smart MHI (Smart Medicine and Health Informatics)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
       ]
     },
     education: {
@@ -578,7 +578,7 @@ export const portfolioData = {
       title: "未來計畫",
       items: [
         { name: "日本-北九州 NSW 暑期實習", date: "2026.07 - 2026.08" },
-        { name: "研究所(待定)", date: "" }
+        { name: "國立臺灣大學 智慧醫療與健康資訊碩士學位學程 (NTU Smart MHI)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
       ]
     },
     education: {
@@ -1129,7 +1129,7 @@ export const portfolioData = {
       title: "今後の予定計画",
       items: [
         { name: "日本・北九州 NSW 夏季インターンシップ", date: "2026.07 - 2026.08" },
-        { name: "大学院 (未定)", date: "" }
+        { name: "国立台湾大学 スマート医療・健康情報学修士プログラム (NTU Smart MHI)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
       ]
     },
     education: {

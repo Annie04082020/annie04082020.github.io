@@ -1,0 +1,43 @@
+## Zybo (1st Gen.) constraints file
+## chapter: 2
+## project: HDMI colorbar
+
+#Clock signal
+set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 }     [get_ports { clk }];
+create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clk }];
+
+#Reset
+set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { rst }]; 
+
+##Single LED
+set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports {led1}];
+set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports {led2}];
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports {led3}];
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports {led4}];
+
+
+##Buttons
+set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports {btn}];
+#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports {}];
+
+##HDMI
+#set_property -dict { PACKAGE_PIN H17   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN H16   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN D20   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN D19   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN B20   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN C20   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN A20   IOSTANDARD TMDS_33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN B19   IOSTANDARD TMDS_33 } [get_ports {}];
+
+##Switches
+#set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports {}];
+#set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports {}];
+
+## false path
+#set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] \
+#    -group [get_clocks -include_generated_clocks clk_fpga_0 -filter {NAME !~ clk_fpga_0}]

@@ -86,13 +86,14 @@
             </div>
           </div>
 
-          <!-- Hidden File Input for Attachments -->
+          <!-- Hidden File Input for Attachments (Multi-file & All formats) -->
           <input 
             type="file" 
             ref="fileInputRef" 
+            multiple
             style="display: none;" 
-            @change="handleFileUpload" 
-            accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.csv,.zip,.png,.jpg,.jpeg,.gif,.webp"
+            @change="handleFileInputChange" 
+            accept="*"
           />
 
           <!-- Editor Panel -->
@@ -130,11 +131,26 @@
                   </button>
                 </div>
               </div>
-              <textarea 
-                class="editor-textarea" 
-                v-model="newContent" 
-                :placeholder="labels.contentPlaceholder"
-              ></textarea>
+
+              <!-- Drag & Drop Zone for Files -->
+              <div 
+                class="drop-zone-container" 
+                :class="{ 'is-dragging': isDragging }"
+                @dragover.prevent="onDragOver"
+                @dragleave.prevent="onDragLeave"
+                @drop.prevent="onFileDrop"
+              >
+                <div v-if="isDragging" class="drop-overlay">
+                  <span style="font-size: 2.5rem; margin-bottom: 0.5rem;">📂</span>
+                  <span>{{ labels.dropOverlayText }}</span>
+                </div>
+
+                <textarea 
+                  class="editor-textarea" 
+                  v-model="newContent" 
+                  :placeholder="labels.contentPlaceholder"
+                ></textarea>
+              </div>
             </div>
 
             <!-- Live Preview section -->
@@ -189,6 +205,7 @@ const newContent = ref('')
 const isPublishing = ref(false)
 const isDeleting = ref(false)
 const isUploading = ref(false)
+const isDragging = ref(false)
 const statusMessage = ref('')
 const statusType = ref('')
 
@@ -332,7 +349,7 @@ const labels = computed(() => {
       back: '← 回到主頁面',
       select: '選擇日誌文章:',
       loading: '<p>載入文章中...</p>',
-      error: '<p>無法載入日誌。若在本地直接開啟檔案，瀏覽器可能會阻擋載入。請使用 Live Server 等伺服器工具開啟。</p>',
+      error: '<p>無法載入日誌。若在本地開啟檔案，瀏覽器可能會阻擋載入。請使用 Live Server 等伺服器工具開啟。</p>',
       loadFail: '<p>讀取日誌文章失敗。請確認文章是否存在。</p>',
       unlock: '解鎖發布',
       newEntry: '寫新日誌',
@@ -352,7 +369,7 @@ const labels = computed(() => {
       titlePlaceholder: '例如：今日課題解法與心得',
       dateLabel: '發布日期',
       contentLabel: 'Markdown 內文',
-      contentPlaceholder: '在這邊輸入 Markdown 內容...',
+      contentPlaceholder: '可直接拖曳檔案進來，支援 .v, .vhdl, .py, .cpp, .js 等多個程式檔/圖片/文件...',
       previewTitle: '即時預覽',
       publishBtn: '🚀 發布至 GitHub',
       updateBtn: '💾 儲存修改內容',
@@ -363,10 +380,12 @@ const labels = computed(() => {
       deleteConfirm: '確定要刪除這篇日誌文章嗎？刪除後將無法復原。',
       deleting: '刪除中...',
       deleteSuccess: '🗑️ 成功刪除文章！',
-      attachBtn: '上傳附件 (PDF/Word/Excel)',
-      attachUploading: '上傳檔案中...',
+      attachBtn: '上傳附件 (可拖曳/多檔/程式碼)',
+      attachUploading: '上傳中',
       attachSuccess: '📎 附件上傳成功！已自動插入下載連結',
       csvInsertBtn: '插入 CSV 範本',
+      dropOverlayText: '📂 放開滑鼠以批次上傳檔案 (支援多檔 / .v / .vhdl / .py / 圖片 / 文件)',
+      batchUploadSuccess: '個檔案上傳成功！已自動插入連結',
       errTitleRequired: '請輸入文章標題與內容',
       errTokenRequired: '請先輸入 Access Key / Token',
       publishSuccess: '🎉 儲存成功！GitHub Pages 將在 1-2 分鐘內自動重新部署。'
@@ -396,7 +415,7 @@ const labels = computed(() => {
       titlePlaceholder: '例: 本日の課題と解決策',
       dateLabel: '日付',
       contentLabel: 'Markdown 本文',
-      contentPlaceholder: 'ここに Markdown で文章を入力...',
+      contentPlaceholder: 'ファイルをドラッグ&ドロップ可能 (.v, .vhdl, .py, .cpp, 画像, ドキュメント対応)...',
       previewTitle: 'リアルタイムプレビュー',
       publishBtn: '🚀 GitHub へ公開',
       updateBtn: '💾 変更を保存',
@@ -407,10 +426,12 @@ const labels = computed(() => {
       deleteConfirm: 'このエントリーを削除してもよろしいですか？この操作は取り消せません。',
       deleting: '削除中...',
       deleteSuccess: '🗑️ エントリーを削除しました！',
-      attachBtn: '添付ファイルをアップロード (PDF/Word/Excel)',
-      attachUploading: 'アップロード中...',
+      attachBtn: '添付ファイルをアップロード (ドラッグ&ドロップ/複数/コード対応)',
+      attachUploading: 'アップロード中',
       attachSuccess: '📎 アップロード成功！ダウンロードリンクを挿入しました',
       csvInsertBtn: 'CSV テンプレートを挿入',
+      dropOverlayText: '📂 マウスを離してファイルを一括アップロード (.v / .vhdl / .py / 複数対応)',
+      batchUploadSuccess: '個のファイルをアップロードしました！',
       errTitleRequired: 'タイトルと本文を入力してください',
       errTokenRequired: 'Access Key / Token を入力してください',
       publishSuccess: '🎉 保存成功！GitHub Pages に反映されるまで1〜2分かかります。'
@@ -440,7 +461,7 @@ const labels = computed(() => {
       titlePlaceholder: 'e.g., Daily task insights and solution',
       dateLabel: 'Date',
       contentLabel: 'Markdown Content',
-      contentPlaceholder: 'Write markdown content here...',
+      contentPlaceholder: 'Drag & drop files here (.v, .vhdl, .py, .cpp, images, docs supported)...',
       previewTitle: 'Live Preview',
       publishBtn: '🚀 Publish to GitHub',
       updateBtn: '💾 Save Changes',
@@ -451,10 +472,12 @@ const labels = computed(() => {
       deleteConfirm: 'Are you sure you want to delete this journal entry? This action cannot be undone.',
       deleting: 'Deleting...',
       deleteSuccess: '🗑️ Entry deleted successfully!',
-      attachBtn: 'Attach File (PDF/Word/Excel)',
-      attachUploading: 'Uploading file...',
+      attachBtn: 'Attach Files (Drag & Drop / Multi-file / Code)',
+      attachUploading: 'Uploading',
       attachSuccess: '📎 Attachment uploaded! Link inserted.',
       csvInsertBtn: 'Insert CSV Template',
+      dropOverlayText: '📂 Drop files to upload in batch (.v / .vhdl / .py / multi-file)',
+      batchUploadSuccess: 'files uploaded successfully!',
       errTitleRequired: 'Please provide both title and content.',
       errTokenRequired: 'Please enter Access Key / Token.',
       publishSuccess: '🎉 Saved successfully! GitHub Pages will auto-deploy in 1-2 minutes.'
@@ -531,9 +554,34 @@ const insertCsvTemplate = () => {
   newContent.value += csvSnippet
 }
 
-const handleFileUpload = async (event) => {
-  const file = event.target.files && event.target.files[0]
-  if (!file) return
+// Drag and drop event handlers
+const onDragOver = () => {
+  isDragging.value = true
+}
+
+const onDragLeave = () => {
+  isDragging.value = false
+}
+
+const onFileDrop = (event) => {
+  isDragging.value = false
+  const files = event.dataTransfer && event.dataTransfer.files
+  if (files && files.length > 0) {
+    processFilesBatch(files)
+  }
+}
+
+const handleFileInputChange = (event) => {
+  const files = event.target.files
+  if (files && files.length > 0) {
+    processFilesBatch(files)
+  }
+}
+
+// Multi-file batch upload processor
+const processFilesBatch = async (fileList) => {
+  const files = Array.from(fileList)
+  if (!files || files.length === 0) return
 
   if (!githubToken.value.trim()) {
     statusMessage.value = labels.value.errTokenRequired
@@ -542,68 +590,67 @@ const handleFileUpload = async (event) => {
   }
 
   isUploading.value = true
-  statusMessage.value = labels.value.attachUploading
   statusType.value = 'loading'
-
   const token = githubToken.value.trim()
   const repoOwner = 'annie04082020'
   const repoName = 'annie04082020.github.io'
-  const timestamp = Date.now()
-  const safeFilename = `${timestamp}-${file.name.replace(/[^a-zA-Z0-9_.-]/g, '_')}`
-  const targetPath = `public/attachments/${safeFilename}`
 
-  try {
-    const reader = new FileReader()
-    reader.onload = async (e) => {
-      try {
-        const base64Content = arrayBufferToBase64(e.target.result)
+  let successCount = 0
 
-        const uploadRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${targetPath}`, {
-          method: 'PUT',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: `upload attachment: ${file.name}`,
-            content: base64Content
-          })
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i]
+    statusMessage.value = `${labels.value.attachUploading} (${i + 1}/${files.length}): ${file.name}...`
+
+    try {
+      const arrayBuf = await file.arrayBuffer()
+      const base64Content = arrayBufferToBase64(arrayBuf)
+      const timestamp = Date.now()
+      const safeFilename = `${timestamp}-${file.name.replace(/[^a-zA-Z0-9_.-]/g, '_')}`
+      const targetPath = `public/attachments/${safeFilename}`
+
+      const uploadRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${targetPath}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `upload attachment: ${file.name}`,
+          content: base64Content
         })
+      })
 
-        if (!uploadRes.ok) {
-          const errJson = await uploadRes.json()
-          throw new Error(errJson.message || `Upload failed (Status ${uploadRes.status})`)
-        }
-
-        // Auto insert Markdown link
-        const ext = file.name.split('.').pop().toLowerCase()
-        const isImg = ['png', 'jpg', 'jpeg', 'gif', 'webp'].includes(ext)
-        const relativePath = `../attachments/${safeFilename}`
-        
-        const markdownLink = isImg 
-          ? `\n![${file.name}](${relativePath})\n`
-          : `\n[📎 下載 ${file.name}](${relativePath})\n`
-
-        newContent.value += markdownLink
-        statusMessage.value = labels.value.attachSuccess
-        statusType.value = 'success'
-      } catch (err) {
-        console.error('Attachment upload API error:', err)
-        statusMessage.value = `❌ ${err.message}`
-        statusType.value = 'error'
-      } finally {
-        isUploading.value = false
-        if (fileInputRef.value) fileInputRef.value.value = ''
+      if (!uploadRes.ok) {
+        const errJson = await uploadRes.json()
+        throw new Error(errJson.message || `Upload failed (Status ${uploadRes.status})`)
       }
+
+      const ext = file.name.split('.').pop().toLowerCase()
+      const isImg = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'bmp'].includes(ext)
+      const relativePath = `../attachments/${safeFilename}`
+      
+      if (isImg) {
+        newContent.value += `\n![${file.name}](${relativePath})\n`
+      } else {
+        newContent.value += `\n[📎 下載 ${file.name}](${relativePath})\n`
+      }
+
+      successCount++
+    } catch (err) {
+      console.error(`Error uploading ${file.name}:`, err)
+      statusMessage.value = `❌ ${file.name}: ${err.message}`
+      statusType.value = 'error'
     }
-    reader.readAsArrayBuffer(file)
-  } catch (err) {
-    console.error('File reading error:', err)
-    statusMessage.value = `❌ ${err.message}`
-    statusType.value = 'error'
-    isUploading.value = false
   }
+
+  if (successCount > 0) {
+    statusMessage.value = `🎉 ${successCount} ${labels.value.batchUploadSuccess}`
+    statusType.value = 'success'
+  }
+
+  isUploading.value = false
+  if (fileInputRef.value) fileInputRef.value.value = ''
 }
 
 const handlePublish = async () => {
@@ -933,6 +980,7 @@ onMounted(() => {
   }
 })
 </script>
+
 
 
 

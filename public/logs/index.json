@@ -1,5 +1,10 @@
 [
   {
+    "id": "log-20260810-3421.md",
+    "title": "Raspberry Pi camera v2 with kv260",
+    "date": "2026-08-10"
+  },
+  {
     "id": "log-20260806-4048.md",
     "title": "FPGA HDMI mux: changeable scrolling speed, resolution, direction color bars",
     "date": "2026-08-06"

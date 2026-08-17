@@ -1,0 +1,13 @@
+set_property board_part xilinx.com:kv260_som:part0:1.2 [current_project]  
+set_property board_connections {som240_1_connector xilinx.com:kv260_carrier:som240_1_connector:1.2} [current_project]  
+set_property target_language Verilog [current_project]  
+set_property default_lib work [current_project]  
+  
+# source block design tcl（換成你的實際路徑）  
+source {C:/path/to/fpga/bd/imx219_to_kria_displayport_vivado2021.2.tcl}  
+  
+# 存成bd檔  
+save_bd_design_as -dir build -force design_1.bd
+
+read_xdc {C:/path/to/fpga/constraints/Kria_KV_CarrierCard_Rev1.xdc}  
+opt_design

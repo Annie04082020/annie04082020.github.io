@@ -23,7 +23,7 @@ export const portfolioData = {
     upcoming: {
       title: "Upcoming / Future Plans",
       items: [
-        { name: "Summer Internship at NSW, Kitakyushu, Japan", date: "2026.07 - 2026.08" },
+        { name: "Summer Internship at NSW (Fukuoka Office), in partnership with Kitakyushu City, Japan", date: "2026.07 - 2026.08" },
         { name: "National Taiwan University - Master's Program in Smart MHI (Smart Medicine and Health Informatics)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
       ]
     },
@@ -362,6 +362,12 @@ export const portfolioData = {
       title: "Experiences",
       list: [
         {
+          title: "Summer Internship: NSW (Fukuoka Office), in partnership with Kitakyushu City",
+          company: "NSW",
+          date: "July.2026 - Aug.2026",
+          bullets: []
+        },
+        {
           title: "Summer Internship: AUO Corporation",
           company: "AUO",
           date: "July.2022 - Aug.2022",
@@ -401,6 +407,7 @@ export const portfolioData = {
         },
         {
           title: "Tech Community & Talks",
+          fullWidth: true,
           company: "",
           date: "",
           bullets: [
@@ -412,6 +419,7 @@ export const portfolioData = {
         },
         {
           title: "Engineering Training & Exhibitions",
+          group: "training-forums",
           company: "",
           date: "",
           bullets: [
@@ -422,6 +430,7 @@ export const portfolioData = {
         },
         {
           title: "Competitions",
+          group: "comp-athletic",
           company: "",
           date: "",
           bullets: [
@@ -432,6 +441,7 @@ export const portfolioData = {
         },
         {
           title: "Athletic Events",
+          group: "comp-athletic",
           company: "",
           date: "",
           bullets: [
@@ -442,6 +452,7 @@ export const portfolioData = {
         },
         {
           title: "Forums",
+          group: "training-forums",
           company: "",
           date: "",
           bullets: [
@@ -577,7 +588,7 @@ export const portfolioData = {
     upcoming: {
       title: "未來計畫",
       items: [
-        { name: "日本-北九州 NSW 暑期實習", date: "2026.07 - 2026.08" },
+        { name: "日本 NSW 暑期實習（福岡事業所・協力：北九州市役所）", date: "2026.07 - 2026.08" },
         { name: "國立臺灣大學 智慧醫療與健康資訊碩士學位學程 (NTU Smart MHI)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
       ]
     },
@@ -913,6 +924,12 @@ export const portfolioData = {
       title: "經歷",
       list: [
         {
+          title: "暑期實習生: NSW（福岡事業所・協力：北九州市役所）",
+          company: "NSW",
+          date: "July.2026 - Aug.2026",
+          bullets: []
+        },
+        {
           title: "暑期實習生: 友達股份有限公司",
           company: "友達光電",
           date: "July.2022 - Aug.2022",
@@ -952,6 +969,7 @@ export const portfolioData = {
         },
         {
           title: "技術社群與專案發表",
+          fullWidth: true,
           company: "",
           date: "",
           bullets: [
@@ -963,6 +981,7 @@ export const portfolioData = {
         },
         {
           title: "工程專業培訓與展覽",
+          group: "training-forums",
           company: "",
           date: "",
           bullets: [
@@ -973,6 +992,7 @@ export const portfolioData = {
         },
         {
           title: "競賽參與",
+          group: "comp-athletic",
           company: "",
           date: "",
           bullets: [
@@ -983,6 +1003,7 @@ export const portfolioData = {
         },
         {
           title: "體育賽事",
+          group: "comp-athletic",
           company: "",
           date: "",
           bullets: [
@@ -993,6 +1014,7 @@ export const portfolioData = {
         },
         {
           title: "論壇參與",
+          group: "training-forums",
           company: "",
           date: "",
           bullets: [

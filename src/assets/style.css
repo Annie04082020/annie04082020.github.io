@@ -884,6 +884,14 @@ li {
   grid-column: 1 / -1;
 }
 
+/* Pair wrapper: spans full grid width, lays out 2 cards side by side */
+.experience-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
 .experience-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);

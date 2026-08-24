@@ -180,10 +180,14 @@
 </template>
 
 <script setup>
-import { ref, computed, onBeforeMount, onMounted, watch } from 'vue'
+import { ref, computed, onBeforeMount, onMounted, onUnmounted, watch } from 'vue'
 import { marked } from 'marked'
 import { portfolioData } from '../data/portfolioData'
 import PortfolioNavbar from '../components/PortfolioNavbar.vue'
+
+// Private repo where all journal files and attachments are stored
+const PRIVATE_REPO_OWNER = 'annie04082020'
+const PRIVATE_REPO_NAME = 'journal-private'
 
 const lang = ref('en')
 const logs = ref([])
@@ -210,6 +214,7 @@ const statusMessage = ref('')
 const statusType = ref('')
 
 const fileInputRef = ref(null)
+const blobUrls = ref([])  // tracks blob: URLs created for private attachments
 
 function todayDateString() {
   const d = new Date()
@@ -532,9 +537,18 @@ const startEditCurrentEntry = async () => {
   showLockPanel.value = true
 
   try {
-    const res = await fetch(`../logs/${selectedLogId.value}?t=${Date.now()}`)
+    const res = await fetch(
+      `https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/logs/${selectedLogId.value}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${githubToken.value.trim()}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      }
+    )
     if (!res.ok) throw new Error('Failed to fetch entry content for editing.')
-    newContent.value = await res.text()
+    const resData = await res.json()
+    newContent.value = decodeURIComponent(escape(atob(resData.content.replace(/\s/g, ''))))
     statusMessage.value = ''
   } catch (err) {
     console.error('Error loading markdown for edit:', err)
@@ -578,7 +592,7 @@ const handleFileInputChange = (event) => {
   }
 }
 
-// Multi-file batch upload processor
+// Multi-file batch upload processor (uploads to private repo)
 const processFilesBatch = async (fileList) => {
   const files = Array.from(fileList)
   if (!files || files.length === 0) return
@@ -592,8 +606,6 @@ const processFilesBatch = async (fileList) => {
   isUploading.value = true
   statusType.value = 'loading'
   const token = githubToken.value.trim()
-  const repoOwner = 'annie04082020'
-  const repoName = 'annie04082020.github.io'
 
   let successCount = 0
 
@@ -606,9 +618,9 @@ const processFilesBatch = async (fileList) => {
       const base64Content = arrayBufferToBase64(arrayBuf)
       const timestamp = Date.now()
       const safeFilename = `${timestamp}-${file.name.replace(/[^a-zA-Z0-9_.-]/g, '_')}`
-      const targetPath = `public/attachments/${safeFilename}`
+      const targetPath = `attachments/${safeFilename}`
 
-      const uploadRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${targetPath}`, {
+      const uploadRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${targetPath}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -628,12 +640,13 @@ const processFilesBatch = async (fileList) => {
 
       const ext = file.name.split('.').pop().toLowerCase()
       const isImg = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'bmp'].includes(ext)
-      const relativePath = `../attachments/${safeFilename}`
-      
+      // Use gh-private:// scheme so loadMarkdown knows to fetch via API
+      const privatePath = `gh-private://attachments/${safeFilename}`
+
       if (isImg) {
-        newContent.value += `\n![${file.name}](${relativePath})\n`
+        newContent.value += `\n![${file.name}](${privatePath})\n`
       } else {
-        newContent.value += `\n[📎 下載 ${file.name}](${relativePath})\n`
+        newContent.value += `\n[📎 下載 ${file.name}](${privatePath})\n`
       }
 
       successCount++
@@ -671,8 +684,6 @@ const handlePublish = async () => {
   statusType.value = 'loading'
 
   const token = githubToken.value.trim()
-  const repoOwner = 'annie04082020'
-  const repoName = 'annie04082020.github.io'
   const timestamp = Date.now()
   const dateFormatted = newDate.value || todayDateString()
   
@@ -681,12 +692,12 @@ const handlePublish = async () => {
     ? editingFilename.value
     : `log-${dateFormatted.replace(/-/g, '')}-${timestamp.toString().slice(-4)}.md`
     
-  const mdPath = `public/logs/${filename}`
-  const indexPath = `public/logs/index.json`
+  const mdPath = `logs/${filename}`
+  const indexPath = `logs/index.json`
 
   try {
     // 1. Fetch current index.json from GitHub
-    const indexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+    const indexRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${indexPath}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.v3+json'
@@ -720,7 +731,7 @@ const handlePublish = async () => {
     const updatedIndexBase64 = utf8ToBase64(updatedIndexStr)
 
     // 2. Update index.json via GitHub API
-    const updateIndexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+    const updateIndexRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${indexPath}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -743,7 +754,7 @@ const handlePublish = async () => {
     // Fetch SHA if file exists
     let existingMdSha = undefined
     try {
-      const mdCheckRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+      const mdCheckRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${mdPath}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github.v3+json'
@@ -758,7 +769,7 @@ const handlePublish = async () => {
     }
 
     const mdBase64 = utf8ToBase64(newContent.value)
-    const createMdRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+    const createMdRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${mdPath}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -829,15 +840,13 @@ const handleDelete = async () => {
   showLockPanel.value = true
 
   const token = githubToken.value.trim()
-  const repoOwner = 'annie04082020'
-  const repoName = 'annie04082020.github.io'
   const targetFilename = selectedLogId.value
-  const mdPath = `public/logs/${targetFilename}`
-  const indexPath = `public/logs/index.json`
+  const mdPath = `logs/${targetFilename}`
+  const indexPath = `logs/index.json`
 
   try {
     // 1. Delete markdown file if it exists on GitHub
-    const fileRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+    const fileRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${mdPath}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.v3+json'
@@ -848,7 +857,7 @@ const handleDelete = async () => {
       const fileData = await fileRes.json()
       const fileSha = fileData.sha
 
-      await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${mdPath}`, {
+      await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${mdPath}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -863,7 +872,7 @@ const handleDelete = async () => {
     }
 
     // 2. Fetch index.json from GitHub and remove entry
-    const indexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+    const indexRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${indexPath}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.v3+json'
@@ -885,7 +894,7 @@ const handleDelete = async () => {
     const updatedIndexStr = JSON.stringify(indexList, null, 2)
     const updatedIndexBase64 = utf8ToBase64(updatedIndexStr)
 
-    const updateIndexRes = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${indexPath}`, {
+    const updateIndexRes = await fetch(`https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${indexPath}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -931,15 +940,81 @@ const handleDelete = async () => {
   }
 }
 
+// Returns MIME type from filename extension
+const getMimeType = (filename) => {
+  const ext = (filename.split('.').pop() || '').toLowerCase()
+  const mimeMap = {
+    png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg',
+    gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml', bmp: 'image/bmp',
+    pdf: 'application/pdf', txt: 'text/plain',
+    v: 'text/plain', vhdl: 'text/plain', py: 'text/plain',
+    csv: 'text/csv', json: 'application/json',
+    zip: 'application/zip', mp4: 'video/mp4', mp3: 'audio/mpeg',
+  }
+  return mimeMap[ext] || 'application/octet-stream'
+}
+
+// Revoke all previously created blob: URLs to free memory
+const revokeOldBlobUrls = () => {
+  blobUrls.value.forEach(url => URL.revokeObjectURL(url))
+  blobUrls.value = []
+}
+
+// Finds gh-private:// and ../attachments/ URLs in rendered HTML,
+// fetches their content from the private repo via API, and replaces
+// them with blob: URLs so the browser can display/download them.
+const processAttachmentUrls = async (html, token) => {
+  const attachmentRegex = /(src|href)="(gh-private:\/\/attachments\/|\.\.\/attachments\/)([^"]+)"/g
+  const matches = [...html.matchAll(attachmentRegex)]
+  if (matches.length === 0) return html
+
+  let processedHtml = html
+  for (const match of matches) {
+    const [fullMatch, attrName, , filename] = match
+    const apiPath = `attachments/${filename}`
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/${apiPath}`,
+        { headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github.v3+json' } }
+      )
+      if (!res.ok) continue
+      const data = await res.json()
+      const byteChars = atob(data.content.replace(/\s/g, ''))
+      const byteArray = new Uint8Array(byteChars.length)
+      for (let i = 0; i < byteChars.length; i++) byteArray[i] = byteChars.charCodeAt(i)
+      const blob = new Blob([byteArray], { type: getMimeType(filename) })
+      const blobUrl = URL.createObjectURL(blob)
+      blobUrls.value.push(blobUrl)
+      const downloadAttr = attrName === 'href' ? ` download="${filename}"` : ''
+      processedHtml = processedHtml.replace(fullMatch, `${attrName}="${blobUrl}"${downloadAttr}`)
+    } catch (e) {
+      console.error(`Failed to load attachment ${filename}:`, e)
+    }
+  }
+  return processedHtml
+}
+
 const fetchLogsIndex = async () => {
   if (!isUnlocked.value) return
+  const token = githubToken.value.trim()
+  if (!token) return
   try {
-    const res = await fetch(`../logs/index.json?t=${Date.now()}`)
-    if (!res.ok) throw new Error('Could not fetch index.json')
+    const res = await fetch(
+      `https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/logs/index.json`,
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      }
+    )
+    if (!res.ok) throw new Error(`Could not fetch index.json (${res.status})`)
     const data = await res.json()
-    logs.value = data
-    if (data.length > 0) {
-      selectedLogId.value = data[0].id
+    const rawJson = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))))
+    const parsed = JSON.parse(rawJson)
+    logs.value = parsed
+    if (parsed.length > 0) {
+      selectedLogId.value = parsed[0].id
     } else {
       journalHtml.value = '<p>No journal entries found.</p>'
     }
@@ -951,13 +1026,26 @@ const fetchLogsIndex = async () => {
 
 const loadMarkdown = async (filename) => {
   if (!filename || !isUnlocked.value) return
+  const token = githubToken.value.trim()
+  if (!token) return
   journalHtml.value = labels.value.loading
+  revokeOldBlobUrls()
   try {
-    const res = await fetch(`../logs/${filename}?t=${Date.now()}`)
+    const res = await fetch(
+      `https://api.github.com/repos/${PRIVATE_REPO_OWNER}/${PRIVATE_REPO_NAME}/contents/logs/${filename}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      }
+    )
     if (!res.ok) throw new Error('Network response was not ok')
-    const markdownText = await res.text()
+    const data = await res.json()
+    const markdownText = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))))
     const parsedHtml = marked.parse(markdownText)
-    journalHtml.value = parseAndRenderCsvTables(parsedHtml)
+    const processedHtml = await processAttachmentUrls(parseAndRenderCsvTables(parsedHtml), token)
+    journalHtml.value = processedHtml
   } catch (err) {
     console.error(`Error loading markdown file ${filename}:`, err)
     journalHtml.value = labels.value.loadFail
@@ -972,6 +1060,10 @@ watch(selectedLogId, (newId) => {
   if (newId && isUnlocked.value) {
     loadMarkdown(newId)
   }
+})
+
+onUnmounted(() => {
+  revokeOldBlobUrls()
 })
 
 onMounted(() => {

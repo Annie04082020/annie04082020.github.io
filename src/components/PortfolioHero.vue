@@ -8,7 +8,7 @@
         <div class="hero-contact">
           <a href="mailto:annie.huangah@proton.me">📧 annie.huangah@proton.me</a>
           <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
-          <a href="https://www.linkedin.com/in/annie-huang-8375331a7/" target="_blank">🔗 linkedin.com/in/annie-huang</a>
+          <a href="https://www.linkedin.com/in/anniehuang221b/" target="_blank">🔗 linkedin.com/in/annie-huang</a>
         </div>
       </div>
 

@@ -21,15 +21,29 @@ export const portfolioData = {
       aboutText: "I am a person with great curiosity. Since I have experienced and participated in different genres of activities, I learned new perspectives to observe the world and built up an interest to learn in an unfamiliar field. I'm also a creator, I love to build my own works. In order to express my thoughts and stories, I learned skills like languages, drawing, writing, and coding. With these skills, I'm able to step out of the comfort zone, participate in challenging activities to reach the goals and expand my scope of view."
     },
     upcoming: {
-      title: "Upcoming / Future Plans",
+      title: "Recent Updates",
       items: [
-        { name: "Summer Internship at NSW (Fukuoka Office), in partnership with Kitakyushu City, Japan", date: "2026.07 - 2026.08" },
-        { name: "National Taiwan University - Master's Program in Smart MHI (Smart Medicine and Health Informatics)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
+        {
+          name: "NTU Course Calendar: Bookmarklet & Mobile Widgets",
+          desc: "Developing a utility to parse and export schedules directly from the university course selection system into Google Calendar (.ics), along with companion iOS & Android home screen widgets for instant schedule access.",
+          url: "https://github.com/Annie04082020/ntu-course-calendar",
+          bullets: [
+            "Direct .ics calendar file generation from course registration pages",
+            "Home screen widgets for iOS (Scriptable / WidgetKit) & Android (Glance / Jetpack)",
+            "Lightweight browser bookmarklet for seamless schedule parsing and syncing"
+          ]
+        }
       ]
     },
     education: {
       title: "Education",
       items: [
+        {
+          degree: "Master's Program in Smart Medicine and Health Informatics (Smart MHI)",
+          school: "National Taiwan University (Taipei)",
+          date: "Sep.2026 - Present",
+          note: ""
+        },
         {
           degree: "Bachelor Degree of Electrical Engineering / Education program",
           school: "National Taipei University of Technology (Taipei)",
@@ -349,6 +363,7 @@ export const portfolioData = {
       title: "Coding Portfolio",
       subtitle: "🌐 Websites & Tools",
       items: [
+        { title: "NTU Course Calendar", url: "https://github.com/Annie04082020/ntu-course-calendar", desc: " — Course schedule exporter (.ics) with iOS & Android home screen widgets" },
         { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDL logic game combining bomb defusal and ultimate password" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — 1:1 Angry Birds clone in C++ (PTSD engine, SDL2, OOP capstone)" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — Flashcard study tool for Pharmaceutical Botany, built with vanilla HTML/CSS/JS" },
@@ -365,7 +380,13 @@ export const portfolioData = {
           title: "Summer Internship: NSW (Fukuoka Office), in partnership with Kitakyushu City",
           company: "NSW",
           date: "July.2026 - Aug.2026",
-          bullets: []
+          bullets: [
+            "Participated in Japanese corporate new-employee OJT (On-the-Job Training), completing end-to-end engineering workflows from implementation to verification.",
+            "FPGA implementation and testing; Video logs: <a href=\"https://www.youtube.com/playlist?list=PLe9AELfnvWi8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"project-link\" style=\"text-decoration: underline;\">YouTube Playlist</a>",
+            "Visited Kitakyushu Science and Research Park (Orio); hands-on experience with ROS2 and Pololu self-balancing robots.",
+            "Analyzed differences in workplace culture and communication styles across Japanese, American, and Taiwanese enterprises, concluding with a poster presentation.",
+            "Enhanced Japanese communication and conversational fluency through daily immersion (both typed correspondence and spoken collaboration)."
+          ]
         },
         {
           title: "Summer Internship: AUO Corporation",
@@ -586,15 +607,29 @@ export const portfolioData = {
       aboutText: "我是一個充滿好奇心的創作者，喜歡嘗試不同領域的活動與專案。透過語言、繪畫、寫作、程式設計，我能將想法化為作品，勇於挑戰陌生領域並拓展視野。"
     },
     upcoming: {
-      title: "未來計畫",
+      title: "近況",
       items: [
-        { name: "日本 NSW 暑期實習（福岡事業所・協力：北九州市役所）", date: "2026.07 - 2026.08" },
-        { name: "國立臺灣大學 智慧醫療與健康資訊碩士學位學程 (NTU Smart MHI)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
+        {
+          name: "NTU 課程日曆匯出工具與桌面小工具 (Bookmarklet & App)",
+          desc: "正在開發一套可以直接從選課網站快速匯出 Google 日曆 (.ics) 檔案的書籤工具，並開發支援 iOS 與 Android 的桌面小工具及配套 App，方便隨時在手機主畫面快速掌握課表。",
+          url: "https://github.com/Annie04082020/ntu-course-calendar",
+          bullets: [
+            "選課網站課表一鍵匯出 Google 日曆 (.ics) 格式",
+            "支援 iOS 與 Android 桌面即時課表小工具與配套應用程式",
+            "輕量級瀏覽器書籤工具 (Bookmarklet) 快速解析同步"
+          ]
+        }
       ]
     },
     education: {
       title: "教育",
       items: [
+        {
+          degree: "智慧醫療與健康資訊碩士學位學程 (Smart MHI)",
+          school: "國立臺灣大學",
+          date: "Sep.2026 - 在學中",
+          note: ""
+        },
         {
           degree: "電機工程系 學士",
           school: "國立台北科技大學",
@@ -911,6 +946,7 @@ export const portfolioData = {
       title: "Coding 作品集",
       subtitle: "🌐 網站與工具",
       items: [
+        { title: "NTU Course Calendar", url: "https://github.com/Annie04082020/ntu-course-calendar", desc: " — 台大選課課表 Google 日曆 (.ics) 匯出書籤工具與 iOS/Android 桌面小工具 App" },
         { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDL 實作的複合式拆彈與終極密碼遊戲" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD 引擎、SDL2、OOP 課程成果）" },
         { title: "圖卡複習工具 (Review Card Maker)", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 藥用植物學複習用途，純 HTML/CSS/JS" },
@@ -927,7 +963,13 @@ export const portfolioData = {
           title: "暑期實習生: NSW（福岡事業所・協力：北九州市役所）",
           company: "NSW",
           date: "July.2026 - Aug.2026",
-          bullets: []
+          bullets: [
+            "日商新社員 OJT（在職培訓），經歷從需求、實作至驗證等完整工程流程",
+            "FPGA 專案實作與驗證，影片紀錄：<a href=\"https://www.youtube.com/playlist?list=PLe9AELfnvWi8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"project-link\" style=\"text-decoration: underline;\">YouTube 播放清單</a>",
+            "折尾學研都市（北九州學術研究都市）參訪，體驗 ROS2 與 Pololu 自平衡機器人實作",
+            "深入了解日商、美商與台商之職場文化與風格差異，並進行海報成果發表",
+            "全日語工作環境，大幅增進日文溝通與會話能力（涵蓋商務打字與日常/會議口說）"
+          ]
         },
         {
           title: "暑期實習生: 友達股份有限公司",
@@ -1148,15 +1190,29 @@ export const portfolioData = {
       aboutText: "私は強い好奇心を持つ人間です。様々な分野の活動を経験し、参加してきたことで、世界を観察する新しい視点を学び、未知の分野で学ぶことへの関心を築き上げました。また、私はクリエイターでもあり、自分の作品を作ることが大好きです。自分の考えや物語を表現するために、語学、イラスト、執筆、プログラミングなどのスキルを学びました。これらのスキルを活かして、快適な領域（コンフォートゾーン）から一歩踏み出し、目標を達成するために挑戦的な活動に参加し、視野を広げています。"
     },
     upcoming: {
-      title: "今後の予定計画",
+      title: "近況・現在の取り組み",
       items: [
-        { name: "日本・北九州 NSW 夏季インターンシップ", date: "2026.07 - 2026.08" },
-        { name: "国立台湾大学 スマート医療・健康情報学修士プログラム (NTU Smart MHI)", date: "2026.09 -", url: "https://smartmhi.ntu.edu.tw/" }
+        {
+          name: "大学履修カレンダー出力ツール＆ウィジェットアプリ（Bookmarklet & App）",
+          desc: "履修登録システムからGoogleカレンダー（.ics）へ直接スケジュールを一括エクスポートできるブックマークレット、および時間割をホーム画面で確認できるiOS/Androidウィジェット・コンパニオンアプリを開発中。",
+          url: "https://github.com/Annie04082020/ntu-course-calendar",
+          bullets: [
+            "履修登録ページからGoogleカレンダー（.ics）形式への直接エクスポート機能",
+            "iOSおよびAndroid対応のホーム画面時間割ウィジェット＆アプリ",
+            "ブラウザ用ブックマークレット（Bookmarklet）によるワンクリック連携"
+          ]
+        }
       ]
     },
     education: {
       title: "学歴",
       items: [
+        {
+          degree: "スマート医療・健康情報学修士プログラム (Smart MHI)",
+          school: "国立台湾大学 (台北)",
+          date: "Sep.2026 - 在学中",
+          note: ""
+        },
         {
           degree: "電気工学科 学士 / 教育学程",
           school: "国立台北科技大学 (台北)",
@@ -1476,6 +1532,7 @@ export const portfolioData = {
       title: "コーディング作品集",
       subtitle: "🌐 ウェブサイト・ツール",
       items: [
+        { title: "NTU Course Calendar", url: "https://github.com/Annie04082020/ntu-course-calendar", desc: " — 台湾大学の履修登録からGoogleカレンダーへの出力ツール＆iOS/Androidウィジェット" },
         { title: "UltimateBomb", url: "https://github.com/Annie04082020/UltimateBomb", desc: " — VHDLで実装された爆弾解除と究極のパスワードの複合ゲーム" },
         { title: "Angry Birds Replica", url: "https://github.com/Annie04082020/Angry_Birds_Replica", desc: " — C++ 1:1 Angry Birds 復刻（PTSD エンジン、SDL2、OOP クラス成果）" },
         { title: "Review Card Maker", url: "https://annie04082020.github.io/ReviewCardMaker/", desc: " — 薬用植物学復習用フラッシュカードツール，純粋な HTML/CSS/JS で構築" },
@@ -1488,6 +1545,18 @@ export const portfolioData = {
     experiences: {
       title: "経歴",
       list: [
+        {
+          title: "サマーインターンシップ：NSW（福岡事業所・北九州市役所連携）",
+          company: "NSW",
+          date: "July.2026 - Aug.2026",
+          bullets: [
+            "日本企業の新入社員OJT（実務研修）に参加し、要件定義から実装、検証に至る一連のエンジニアリングプロセスを体験",
+            "FPGAの実装および検証。記録動画：<a href=\"https://www.youtube.com/playlist?list=PLe9AELfnvWi8\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"project-link\" style=\"text-decoration: underline;\">YouTubeプレイリスト</a>",
+            "北九州学術研究都市（折尾）の見学、ROS2およびPololu倒立振子ロボットの実機開発を体験",
+            "日系・米系・台湾系企業の企業文化や働き方の相違点を分析・理解し、ポスターセッションにて発表",
+            "全編日本語の環境下で、実務チャット・タイピングおよび対面・口頭での実践的な日本語コミュニケーション能力を向上"
+          ]
+        },
         {
           title: "サマーインターンシップ：AUO Corporation（友達光電）",
           company: "友達光電",

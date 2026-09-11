@@ -9,7 +9,7 @@
             <h3>{{ exp.title }}</h3>
             <p v-if="exp.date" class="meta-info section-meta">{{ exp.date }}</p>
             <ul>
-              <li v-for="(bullet, bIndex) in exp.bullets" :key="bIndex">{{ bullet }}</li>
+              <li v-for="(bullet, bIndex) in exp.bullets" :key="bIndex" v-html="bullet"></li>
             </ul>
           </div>
         </div>
@@ -18,7 +18,7 @@
           <h3>{{ item.card.title }}</h3>
           <p v-if="item.card.date" class="meta-info section-meta">{{ item.card.date }}</p>
           <ul>
-            <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex">{{ bullet }}</li>
+            <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex" v-html="bullet"></li>
           </ul>
         </div>
         <!-- Normal card -->
@@ -26,7 +26,7 @@
           <h3>{{ item.card.title }}</h3>
           <p v-if="item.card.date" class="meta-info section-meta">{{ item.card.date }}</p>
           <ul>
-            <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex">{{ bullet }}</li>
+            <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex" v-html="bullet"></li>
           </ul>
         </div>
       </template>

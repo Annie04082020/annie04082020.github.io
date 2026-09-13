@@ -2,19 +2,38 @@
   <header class="hero" id="about">
     <div class="hero-container">
       <div class="hero-title">
-        <h1><span class="highlight-yellow">{{ data.name }}</span></h1>
-        <p v-for="(sub, index) in data.subtitles" :key="index" class="subtitle">{{ sub }}</p>
+        <div class="hero-status-tag">
+          <span class="status-indicator"></span>
+          <span class="status-text">PORTFOLIO // SYSTEM ACTIVE</span>
+        </div>
+        
+        <h1><span class="hero-name-gradient">{{ data.name }}</span></h1>
+        
+        <div class="hero-subtitles">
+          <p v-for="(sub, index) in data.subtitles" :key="index" class="subtitle">
+            <span class="subtitle-bullet">&gt;</span> {{ sub }}
+          </p>
+        </div>
 
         <div class="hero-contact">
-          <a href="mailto:annie.huangah@proton.me">📧 annie.huangah@proton.me</a>
-          <a href="https://github.com/Annie04082020" target="_blank">💻 github.com/Annie04082020</a>
-          <a href="https://www.linkedin.com/in/anniehuang221b/" target="_blank">🔗 linkedin.com/in/annie-huang</a>
+          <a href="mailto:annie.huangah@proton.me" class="contact-badge">
+            <span class="contact-icon">📧</span>
+            <span>annie.huangah@proton.me</span>
+          </a>
+          <a href="https://github.com/Annie04082020" target="_blank" rel="noopener noreferrer" class="contact-badge">
+            <span class="contact-icon">💻</span>
+            <span>github.com/Annie04082020</span>
+          </a>
+          <a href="https://www.linkedin.com/in/anniehuang221b/" target="_blank" rel="noopener noreferrer" class="contact-badge">
+            <span class="contact-icon">🔗</span>
+            <span>linkedin.com/in/annie-huang</span>
+          </a>
         </div>
       </div>
 
       <div class="hero-content">
         <div class="hero-section">
-          <h2 class="highlight-yellow">{{ data.aboutTitle }}</h2>
+          <h2>{{ data.aboutTitle }}</h2>
           <p>{{ data.aboutText }}</p>
         </div>
       </div>

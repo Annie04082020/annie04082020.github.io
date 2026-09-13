@@ -590,8 +590,8 @@ export const portfolioData = {
     }
   },
   zh: {
-    title: "黃安華 (Annie) | 網頁履歷",
-    logoName: "黃安華 (Annie)",
+    title: "黃安華 | 網頁履歷",
+    logoName: "黃安華",
     nav: {
       about: "關於我",
       projects: "專案",
@@ -602,7 +602,7 @@ export const portfolioData = {
       journal: "📝 個人日誌"
     },
     hero: {
-      name: "黃安華 (Annie)",
+      name: "黃安華",
       subtitles: [
         "電機 | 機械 | 程式設計",
         "視覺設計 | 音樂 | 語言學習 | 跆拳道"
@@ -1173,7 +1173,7 @@ export const portfolioData = {
       ]
     },
     footer: {
-      text: "© 2025 黃安華 (Annie) | Built with GitHub Pages"
+      text: "© 2025 黃安華 | Built with GitHub Pages"
     }
   },
   jp: {

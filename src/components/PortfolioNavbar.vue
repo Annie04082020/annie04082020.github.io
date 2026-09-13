@@ -7,7 +7,7 @@
           <span>☰</span>
         </button>
         <a href="#" class="logo">
-          <span class="highlight-yellow">{{ navData.logoName }}</span>
+          <span class="logo-text">{{ navData.logoName }}</span>
         </a>
       </div>
       
@@ -115,8 +115,8 @@ const changeLanguage = (e) => {
 }
 
 onMounted(() => {
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme') || 'light'
+  // Load saved theme (default to dark)
+  const savedTheme = localStorage.getItem('theme') || 'dark'
   setTheme(savedTheme)
 })
 </script>

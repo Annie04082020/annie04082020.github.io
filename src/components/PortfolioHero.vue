@@ -7,7 +7,8 @@
           <span class="status-text">PORTFOLIO // SYSTEM ACTIVE</span>
         </div>
         
-        <h1><span class="hero-name-gradient">{{ data.name }}</span></h1>
+        <h1 :class="{ 'has-kana': !!data.kana }"><span class="hero-name-gradient">{{ data.name }}</span></h1>
+        <div v-if="data.kana" class="hero-name-kana">{{ data.kana }}</div>
         
         <div class="hero-subtitles">
           <p v-for="(sub, index) in data.subtitles" :key="index" class="subtitle">

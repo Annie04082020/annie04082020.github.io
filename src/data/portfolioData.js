@@ -1177,8 +1177,8 @@ export const portfolioData = {
     }
   },
   jp: {
-    title: "黃安華 (Annie) | ポートフォリオ",
-    logoName: "Annie Huang",
+    title: "黃　安華 | ポートフォリオ",
+    logoName: "黃　安華",
     nav: {
       about: "自己紹介",
       projects: "プロジェクト",
@@ -1189,7 +1189,8 @@ export const portfolioData = {
       journal: "📝 ジャーナル"
     },
     hero: {
-      name: "黃安華 (Annie)",
+      name: "黃　安華",
+      kana: "コウ　アン　カ",
       subtitles: [
         "電気工学 | 機械工学 | プログラミング",
         "デザイン | 音楽 | 語学学習 | テコンドー"
@@ -1758,7 +1759,7 @@ export const portfolioData = {
       ]
     },
     footer: {
-      text: "© 2025 黄金華 (Annie) | Built with GitHub Pages"
+      text: "© 2025 黃　安華 | Built with GitHub Pages"
     }
   }
 }

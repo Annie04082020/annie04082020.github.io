@@ -473,8 +473,13 @@ header.hero {
   margin-bottom: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.03em;
-  line-height: 1.2;
+  line-height: 1.35;
   white-space: nowrap;
+  overflow: visible;
+}
+
+.hero-title h1.has-kana {
+  margin-bottom: 0.25rem;
 }
 
 @media (max-width: 1000px) {
@@ -486,6 +491,13 @@ header.hero {
 
 .hero-name-gradient,
 .hero-title h1 .highlight-yellow {
+  display: inline-block;
+  line-height: 1.35;
+  padding-top: 0.06em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
+  vertical-align: bottom;
+  overflow: visible;
   background: linear-gradient(135deg, #ffffff 40%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -497,6 +509,22 @@ body[data-theme="light"] .hero-title h1 .highlight-yellow {
   background: linear-gradient(135deg, #0f172a 40%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-name-kana {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--accent-secondary);
+  margin-top: 0.15rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.92;
+}
+
+body[data-theme="light"] .hero-name-kana {
+  color: #0284c7;
 }
 
 .hero-subtitles {

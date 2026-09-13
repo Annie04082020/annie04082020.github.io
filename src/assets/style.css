@@ -58,22 +58,22 @@
   --footer-text: #64748b;
 }
 
-/* Light Theme: High-End Minimalist Tech Lab */
+/* Light Theme: Nordic Cool Slate & Frosted Blueprint (煙燻霧灰 / 冰霜灰藍，柔和護眼) */
 body[data-theme="light"] {
-  --bg-color: #f8fafc;
-  --bg-surface: #f1f5f9;
-  --card-bg: rgba(255, 255, 255, 0.88);
+  --bg-color: #e2e8f0;             /* Nordic Fog Slate */
+  --bg-surface: #d8e0ea;           /* Muted Blueprint Base */
+  --card-bg: rgba(248, 250, 252, 0.88); /* Crisp Frosted Slate White Cards */
   --card-bg-hover: rgba(255, 255, 255, 0.98);
 
-  --hero-bg: radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.06) 0%, transparent 45%),
-             radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.04) 0%, transparent 45%),
-             #f8fafc;
+  --hero-bg: radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+             radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 45%),
+             #e2e8f0;
 
-  --nav-bg: rgba(248, 250, 252, 0.88);
-  --nav-border: rgba(15, 23, 42, 0.08);
+  --nav-bg: rgba(226, 232, 240, 0.88);
+  --nav-border: rgba(15, 23, 42, 0.09);
 
   --accent-primary: #0284c7;       /* Precision Electric Blue */
-  --accent-secondary: #0ea5e9;
+  --accent-secondary: #0369a1;     /* Deep Sky Tech */
   --accent-tertiary: #4f46e5;
   --accent-green: #059669;
   --accent-purple: #7c3aed;
@@ -81,21 +81,21 @@ body[data-theme="light"] {
   --accent-hover: #0369a1;
   --accent: var(--accent-primary);
 
-  --border-light: rgba(15, 23, 42, 0.08);
-  --border-hover: rgba(2, 132, 199, 0.35);
-  --course-border: rgba(15, 23, 42, 0.06);
-  --glow-cyan: 0 0 20px rgba(2, 132, 199, 0.12);
-  --glow-subtle: 0 8px 24px rgba(15, 23, 42, 0.04);
+  --border-light: rgba(15, 23, 42, 0.09);
+  --border-hover: rgba(2, 132, 199, 0.42);
+  --course-border: rgba(15, 23, 42, 0.08);
+  --glow-cyan: 0 0 20px rgba(2, 132, 199, 0.15);
+  --glow-subtle: 0 6px 20px rgba(15, 23, 42, 0.06);
 
   --text-color: #0f172a;
   --text-main: #334155;
   --meta-text: #64748b;
   --link-nav: #334155;
 
-  --toggle-bg: rgba(15, 23, 42, 0.04);
-  --toggle-border: rgba(15, 23, 42, 0.1);
+  --toggle-bg: rgba(15, 23, 42, 0.06);
+  --toggle-border: rgba(15, 23, 42, 0.12);
   --toggle-text: #0f172a;
-  --footer-bg: #f1f5f9;
+  --footer-bg: #d8e0ea;
   --footer-text: #64748b;
 }
 
@@ -623,7 +623,8 @@ body[data-theme="light"] .hero-name-kana {
 
 body[data-theme="light"] .contact-badge,
 body[data-theme="light"] .hero-contact a {
-  background: rgba(15, 23, 42, 0.02);
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.1);
 }
 
 .contact-badge:hover,

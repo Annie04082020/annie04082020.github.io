@@ -410,20 +410,24 @@ export const portfolioData = {
           ]
         },
         {
-          title: "Committee Members: Vice President of Taekwondo Club",
+          title: "Extracurricular Experience: Taekwondo Club",
           company: "Taekwondo Club",
-          date: "July.2022 - Now",
-          bullets: [
-            "Raise Club Exposition and School Fair.",
-            "Maintain club Operation."
-          ]
-        },
-        {
-          title: "Club Performance: Taekwondo Club",
-          company: "Taekwondo Club",
-          date: "2022 - 2026",
-          bullets: [
-            "Solo and Group Performances."
+          subsections: [
+            {
+              subtitle: "Executive Board: Vice President",
+              date: "July.2022 - Aug.2023",
+              bullets: [
+                "Raise Club Exposition and School Fair.",
+                "Maintain club Operation."
+              ]
+            },
+            {
+              subtitle: "Club Performance",
+              date: "2022 - 2026",
+              bullets: [
+                "Solo and Group Performances."
+              ]
+            }
           ]
         },
         {
@@ -993,20 +997,24 @@ export const portfolioData = {
           ]
         },
         {
-          title: "社團幹部：跆拳道社副社長",
+          title: "社團經歷：跆拳道社",
           company: "跆拳道社",
-          date: "July.2022 - Aug.2023",
-          bullets: [
-            "籌辦社團聯展與校慶活動。",
-            "維持社團營運與招生工作。"
-          ]
-        },
-        {
-          title: "社團公演：跆拳道社",
-          company: "跆拳道社",
-          date: "2022 - 2026",
-          bullets: [
-            "個人與團體演出。"
+          subsections: [
+            {
+              subtitle: "社團幹部：副社長",
+              date: "July.2022 - Aug.2023",
+              bullets: [
+                "籌辦社團聯展與校慶活動。",
+                "維持社團營運與招生工作。"
+              ]
+            },
+            {
+              subtitle: "社團公演",
+              date: "2022 - 2026",
+              bullets: [
+                "個人與團體演出。"
+              ]
+            }
           ]
         },
         {
@@ -1579,20 +1587,24 @@ export const portfolioData = {
           ]
         },
         {
-          title: "役員：テコンドー部 副部長",
+          title: "サークル活動：テコンドー部",
           company: "テコンドー部",
-          date: "July.2022 - Now",
-          bullets: [
-            "クラブエキスポおよび学園祭の企画・運営。",
-            "クラブの運営と維持を管理。"
-          ]
-        },
-        {
-          title: "クラブ公演：テコンドー部",
-          company: "テコンドー部",
-          date: "2022 - 2026",
-          bullets: [
-            "個人およびグループでのパフォーマンス"
+          subsections: [
+            {
+              subtitle: "役員：副部長",
+              date: "July.2022 - Aug.2023",
+              bullets: [
+                "クラブエキスポおよび学園祭の企画・運営。",
+                "クラブの運営と維持を管理。"
+              ]
+            },
+            {
+              subtitle: "クラブ公演",
+              date: "2022 - 2026",
+              bullets: [
+                "個人およびグループでのパフォーマンス"
+              ]
+            }
           ]
         },
         {

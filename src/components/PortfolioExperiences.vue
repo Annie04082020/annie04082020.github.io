@@ -8,7 +8,18 @@
           <div v-for="(exp, gi) in item.cards" :key="gi" class="experience-card">
             <h3>{{ exp.title }}</h3>
             <p v-if="exp.date" class="meta-info section-meta">{{ exp.date }}</p>
-            <ul>
+            <template v-if="exp.subsections">
+              <div v-for="(sub, sIdx) in exp.subsections" :key="sIdx" class="experience-subsection">
+                <div class="subsection-header">
+                  <h4 class="subsection-title">{{ sub.subtitle }}</h4>
+                  <span v-if="sub.date" class="meta-info subsection-date">{{ sub.date }}</span>
+                </div>
+                <ul>
+                  <li v-for="(bullet, bIndex) in sub.bullets" :key="bIndex" v-html="bullet"></li>
+                </ul>
+              </div>
+            </template>
+            <ul v-else-if="exp.bullets">
               <li v-for="(bullet, bIndex) in exp.bullets" :key="bIndex" v-html="bullet"></li>
             </ul>
           </div>
@@ -17,7 +28,18 @@
         <div v-else-if="item.type === 'full'" class="experience-card full-width">
           <h3>{{ item.card.title }}</h3>
           <p v-if="item.card.date" class="meta-info section-meta">{{ item.card.date }}</p>
-          <ul>
+          <template v-if="item.card.subsections">
+            <div v-for="(sub, sIdx) in item.card.subsections" :key="sIdx" class="experience-subsection">
+              <div class="subsection-header">
+                <h4 class="subsection-title">{{ sub.subtitle }}</h4>
+                <span v-if="sub.date" class="meta-info subsection-date">{{ sub.date }}</span>
+              </div>
+              <ul>
+                <li v-for="(bullet, bIndex) in sub.bullets" :key="bIndex" v-html="bullet"></li>
+              </ul>
+            </div>
+          </template>
+          <ul v-else-if="item.card.bullets">
             <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex" v-html="bullet"></li>
           </ul>
         </div>
@@ -25,7 +47,18 @@
         <div v-else class="experience-card">
           <h3>{{ item.card.title }}</h3>
           <p v-if="item.card.date" class="meta-info section-meta">{{ item.card.date }}</p>
-          <ul>
+          <template v-if="item.card.subsections">
+            <div v-for="(sub, sIdx) in item.card.subsections" :key="sIdx" class="experience-subsection">
+              <div class="subsection-header">
+                <h4 class="subsection-title">{{ sub.subtitle }}</h4>
+                <span v-if="sub.date" class="meta-info subsection-date">{{ sub.date }}</span>
+              </div>
+              <ul>
+                <li v-for="(bullet, bIndex) in sub.bullets" :key="bIndex" v-html="bullet"></li>
+              </ul>
+            </div>
+          </template>
+          <ul v-else-if="item.card.bullets">
             <li v-for="(bullet, bIndex) in item.card.bullets" :key="bIndex" v-html="bullet"></li>
           </ul>
         </div>

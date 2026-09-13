@@ -3,10 +3,10 @@
     <!-- Top Navbar -->
     <nav class="navbar">
       <div style="display: flex; align-items: center; gap: 1rem;">
-        <button id="sidebar-toggle" class="nav-btn" style="padding: 0.4rem 0.6rem;" @click="toggleSidebar">
-          <span>☰</span>
+        <button id="sidebar-toggle" class="nav-btn" style="padding: 0.4rem 0.6rem;" @click="toggleSidebar" aria-label="Toggle Sidebar">
+          <BaseIcon name="menu" size="18" />
         </button>
-        <a href="#" class="logo">
+        <a href="index.html#" class="logo">
           <span class="logo-text">{{ navData.logoName }}</span>
         </a>
       </div>
@@ -15,14 +15,21 @@
         <a href="index.html#about" @click="closeMobileMenu">{{ navData.nav.about }}</a>
         <a href="index.html#projects" @click="closeMobileMenu">{{ navData.nav.projects }}</a>
         <a href="index.html#experiences" @click="closeMobileMenu">{{ navData.nav.experiences }}</a>
-        <a :href="journalUrl" @click="closeMobileMenu" style="color: var(--accent);">{{ navData.nav.journal }}</a>
+        <a :href="resumeUrl" @click="closeMobileMenu" class="nav-link-resume">
+          <BaseIcon name="file-text" size="14" style="margin-right: 4px;" />
+          <span>{{ navData.nav.resume || (lang === 'zh' ? '簡歷' : lang === 'jp' ? '履歴書' : 'Resume') }}</span>
+        </a>
+        <a :href="journalUrl" @click="closeMobileMenu" class="nav-link-journal">
+          <BaseIcon name="book-open" size="14" style="margin-right: 4px;" />
+          <span>{{ cleanJournalText(navData.nav.journal) }}</span>
+        </a>
       </div>
       
       <div class="nav-controls">
         <div class="controls">
-          <button id="theme-toggle" class="nav-btn" @click="toggleTheme">
-            <span class="icon-moon">🌙</span>
-            <span class="icon-sun">☀️</span>
+          <button id="theme-toggle" class="nav-btn" @click="toggleTheme" aria-label="Toggle Theme">
+            <BaseIcon name="moon" size="16" class="icon-moon" />
+            <BaseIcon name="sun" size="16" class="icon-sun" />
           </button>
           
           <select id="language-selector" class="nav-btn" :value="lang" @change="changeLanguage">
@@ -31,8 +38,8 @@
             <option value="jp">JP</option>
           </select>
           
-          <button id="mobile-menu-btn" class="nav-btn menu-btn" @click="toggleMobileMenu">
-            <span>≡</span>
+          <button id="mobile-menu-btn" class="nav-btn menu-btn" @click="toggleMobileMenu" aria-label="Toggle Menu">
+            <BaseIcon name="menu" size="18" />
           </button>
         </div>
       </div>
@@ -47,6 +54,14 @@
         <a href="index.html#experiences" @click="closeSidebar">{{ navData.nav.experiences }}</a>
         <a href="index.html#courses" @click="closeSidebar">{{ navData.nav.courses }}</a>
         <a href="index.html#awards" @click="closeSidebar">{{ navData.nav.awards }}</a>
+        <a :href="resumeUrl" @click="closeSidebar" style="color: var(--accent-primary);">
+          <BaseIcon name="file-text" size="15" style="margin-right: 6px;" />
+          <span>{{ navData.nav.resume || (lang === 'zh' ? '簡歷' : lang === 'jp' ? '履歴書' : 'Resume') }}</span>
+        </a>
+        <a :href="journalUrl" @click="closeSidebar" style="color: var(--accent-secondary);">
+          <BaseIcon name="book-open" size="15" style="margin-right: 6px;" />
+          <span>{{ cleanJournalText(navData.nav.journal) }}</span>
+        </a>
       </div>
     </nav>
   </div>
@@ -54,6 +69,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import BaseIcon from './BaseIcon.vue'
 
 const props = defineProps({
   lang: {
@@ -73,6 +89,15 @@ const theme = ref('light')
 const journalUrl = computed(() => {
   return 'journal.html'
 })
+
+const resumeUrl = computed(() => {
+  return 'resume.html'
+})
+
+const cleanJournalText = (text) => {
+  if (!text) return ''
+  return text.replace(/^[^\w\u4e00-\u9fa5\u3040-\u30ff\u3400-\u4dbf]+/, '').trim()
+}
 
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value

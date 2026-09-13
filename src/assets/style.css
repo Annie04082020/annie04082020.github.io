@@ -275,6 +275,20 @@ body[data-theme="light"] .logo .highlight-yellow {
   background: rgba(0, 240, 255, 0.05);
 }
 
+.nav-links a.nav-link-resume {
+  color: var(--accent-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-links a.nav-link-journal {
+  color: var(--accent-secondary);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
 .nav-controls {
   display: flex;
   align-items: center;

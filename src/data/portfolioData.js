@@ -9,7 +9,8 @@ export const portfolioData = {
       experiences: "Experiences",
       courses: "Courses",
       awards: "Awards & Activities",
-      journal: "📝 Journal"
+      resume: "Resume",
+      journal: "Journal"
     },
     hero: {
       name: "Annie Huang",
@@ -599,7 +600,8 @@ export const portfolioData = {
       experiences: "經歷",
       courses: "修課記錄",
       awards: "獎項與活動",
-      journal: "📝 個人日誌"
+      resume: "個人履歷",
+      journal: "個人日誌"
     },
     hero: {
       name: "黃安華",
@@ -1186,7 +1188,8 @@ export const portfolioData = {
       experiences: "経歴",
       courses: "履修履歴",
       awards: "受賞歴と活動",
-      journal: "📝 ジャーナル"
+      resume: "履歴書",
+      journal: "ジャーナル"
     },
     hero: {
       name: "黃　安華",

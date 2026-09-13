@@ -7,7 +7,9 @@
       <div class="content-box">
         <!-- Private Gate: Locked State Screen -->
         <div v-if="!isUnlocked" class="editor-card private-gate-card">
-          <h3>🔒 {{ labels.privateGateTitle }}</h3>
+          <h3 style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <BaseIcon name="lock" :size="22" /> {{ labels.privateGateTitle }}
+          </h3>
           <p style="font-size: 0.95rem; color: var(--meta-text); margin-bottom: 1.5rem;">
             {{ labels.privateGateHint }}
           </p>
@@ -28,8 +30,8 @@
             </label>
           </div>
           <div class="editor-buttons" style="justify-content: center;">
-            <button class="btn-primary" style="padding: 0.75rem 2rem;" @click="verifyAndUnlock">
-              🔑 {{ labels.unlockBtn }}
+            <button class="btn-primary" style="padding: 0.75rem 2rem; display: inline-flex; align-items: center; gap: 0.5rem;" @click="verifyAndUnlock">
+              <BaseIcon name="key" :size="16" /> {{ labels.unlockBtn }}
             </button>
           </div>
           <div v-if="statusMessage" class="status-msg" :class="statusType" style="margin-top: 1.5rem;">
@@ -184,6 +186,7 @@ import { ref, computed, onBeforeMount, onMounted, onUnmounted, watch } from 'vue
 import { marked } from 'marked'
 import { portfolioData } from '../data/portfolioData'
 import PortfolioNavbar from '../components/PortfolioNavbar.vue'
+import BaseIcon from '../components/BaseIcon.vue'
 
 // Private repo where all journal files and attachments are stored
 const PRIVATE_REPO_OWNER = 'annie04082020'

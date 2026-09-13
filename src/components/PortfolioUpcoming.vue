@@ -11,8 +11,8 @@
               :href="item.url" 
               target="_blank" 
               rel="noopener noreferrer" 
-              style="margin-left: 0.5rem; color: var(--accent); font-size: 0.85em; text-decoration: underline;"
-            >[🔗 Link]</a>
+              style="margin-left: 0.5rem; color: var(--accent); font-size: 0.85em; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.25rem;"
+            ><BaseIcon name="external-link" :size="13" />Link</a>
             <span v-if="item.date" style="margin-left: 0.5rem; color: var(--text-secondary); font-size: 0.9em;"> {{ item.date }}</span>
           </div>
           <p v-if="item.desc" style="margin: 0.3rem 0 0.5rem 0; color: var(--text-secondary); line-height: 1.6;">{{ item.desc }}</p>
@@ -26,6 +26,8 @@
 </template>
 
 <script setup>
+import BaseIcon from './BaseIcon.vue'
+
 defineProps({
   data: {
     type: Object,

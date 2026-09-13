@@ -30,15 +30,15 @@
 
         <div class="hero-contact">
           <a href="mailto:annie.huangah@proton.me" class="contact-badge">
-            <span class="contact-icon">📧</span>
+            <BaseIcon name="mail" size="15" />
             <span>annie.huangah@proton.me</span>
           </a>
           <a href="https://github.com/Annie04082020" target="_blank" rel="noopener noreferrer" class="contact-badge">
-            <span class="contact-icon">💻</span>
+            <BaseIcon name="github" size="15" />
             <span>github.com/Annie04082020</span>
           </a>
           <a href="https://www.linkedin.com/in/anniehuang221b/" target="_blank" rel="noopener noreferrer" class="contact-badge">
-            <span class="contact-icon">🔗</span>
+            <BaseIcon name="linkedin" size="15" />
             <span>linkedin.com/in/annie-huang</span>
           </a>
         </div>
@@ -55,6 +55,8 @@
 </template>
 
 <script setup>
+import BaseIcon from './BaseIcon.vue'
+
 defineProps({
   data: {
     type: Object,

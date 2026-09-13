@@ -21,7 +21,8 @@
             class="project-link"
             @click.stop
           >
-            {{ link.text }}
+            <BaseIcon :name="getLinkIcon(link)" size="14" />
+            <span>{{ cleanLinkText(link.text) }}</span>
           </a>
         </div>
         
@@ -66,6 +67,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import BaseIcon from './BaseIcon.vue'
 
 defineProps({
   lang: {
@@ -91,5 +93,19 @@ const openModal = (e, project) => {
 const closeModal = () => {
   activeProject.value = null
   document.body.style.overflow = '' // Restore scroll
+}
+
+const getLinkIcon = (link) => {
+  if (!link) return 'external-link'
+  const url = (link.url || '').toLowerCase()
+  const text = (link.text || '').toLowerCase()
+  if (url.includes('github') || text.includes('github')) return 'github'
+  if (url.includes('youtu') || text.includes('demo') || text.includes('成果') || text.includes('video')) return 'video'
+  return 'external-link'
+}
+
+const cleanLinkText = (text) => {
+  if (!text) return ''
+  return text.replace(/^[^\w\u4e00-\u9fa5\u3040-\u30ff\u3400-\u4dbf]+/, '').trim()
 }
 </script>

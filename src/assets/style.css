@@ -511,16 +511,63 @@ body[data-theme="light"] .hero-title h1 .highlight-yellow {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-name-kana {
+/* Japanese Ruby Name Alignment */
+.hero-title-ruby {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  overflow: visible;
+}
+
+.hero-name-ruby-wrap {
+  display: inline-flex;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+.name-char-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.name-char-group .hero-name-gradient {
+  display: block;
+  line-height: 1.35;
+  padding-top: 0.06em;
+  padding-bottom: 0.22em;
+  margin-bottom: 0;
+  overflow: visible;
+}
+
+.hero-char-kana {
+  display: block;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.06em;
   color: var(--accent-secondary);
+  line-height: 1.2;
   margin-top: 0.15rem;
-  margin-bottom: 0.85rem;
-  line-height: 1.4;
-  opacity: 0.92;
+  opacity: 0.95;
+  text-align: center;
+  white-space: nowrap;
+}
+
+body[data-theme="light"] .hero-char-kana {
+  color: #0284c7;
+}
+
+.name-space-separator {
+  display: inline-block;
+  width: 0.8em;
+  flex-shrink: 0;
 }
 
 body[data-theme="light"] .hero-name-kana {

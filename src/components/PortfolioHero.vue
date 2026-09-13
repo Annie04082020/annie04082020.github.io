@@ -7,8 +7,20 @@
           <span class="status-text">PORTFOLIO // SYSTEM ACTIVE</span>
         </div>
         
-        <h1 :class="{ 'has-kana': !!data.kana }"><span class="hero-name-gradient">{{ data.name }}</span></h1>
-        <div v-if="data.kana" class="hero-name-kana">{{ data.kana }}</div>
+        <h1 v-if="data.ruby" class="hero-title-ruby">
+          <div class="hero-name-ruby-wrap">
+            <template v-for="(item, idx) in data.ruby" :key="idx">
+              <span v-if="item.separator" class="name-space-separator"></span>
+              <div v-else class="name-char-group">
+                <span class="hero-name-gradient">{{ item.kanji }}</span>
+                <span class="hero-char-kana">{{ item.kana }}</span>
+              </div>
+            </template>
+          </div>
+        </h1>
+        <h1 v-else>
+          <span class="hero-name-gradient">{{ data.name }}</span>
+        </h1>
         
         <div class="hero-subtitles">
           <p v-for="(sub, index) in data.subtitles" :key="index" class="subtitle">

@@ -1190,7 +1190,12 @@ export const portfolioData = {
     },
     hero: {
       name: "黃　安華",
-      kana: "コウ　アン　カ",
+      ruby: [
+        { kanji: "黃", kana: "コウ" },
+        { separator: true },
+        { kanji: "安", kana: "アン" },
+        { kanji: "華", kana: "カ" }
+      ],
       subtitles: [
         "電気工学 | 機械工学 | プログラミング",
         "デザイン | 音楽 | 語学学習 | テコンドー"

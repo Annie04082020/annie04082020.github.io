@@ -5,14 +5,14 @@
       <ul class="education-list">
         <li v-for="(item, index) in data.items" :key="index" class="education-item">
           <div class="education-main-line">
-            <span class="education-school-degree">
-              <b class="highlight-yellow">{{ item.school }}</b>
-              <span v-if="item.degree" class="education-degree"> {{ item.degree }}</span>
-            </span>
+            <b class="highlight-yellow education-school">{{ item.school }}</b>
             <span class="meta-info inline-meta" v-if="item.date">{{ item.date }}</span>
           </div>
+          <div v-if="item.degree" class="education-degree">
+            {{ item.degree }}
+          </div>
           <div v-if="item.note" class="education-note">
-            {{ item.note }}
+            {{ cleanNote(item.note) }}
           </div>
         </li>
       </ul>
@@ -40,5 +40,68 @@ defineProps({
     required: true
   }
 })
+
+const cleanNote = (note) => {
+  if (!note) return ''
+  return note.replace(/^🎓\s*/, '').trim()
+}
 </script>
+
+<style scoped>
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.education-main-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.education-school {
+  font-size: 1.05rem;
+}
+
+.education-degree {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.education-note {
+  color: var(--meta-text);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-top: 0.15rem;
+}
+
+.education-accordion {
+  margin-top: 1.5rem;
+}
+
+.accordion-item {
+  margin-top: 1rem;
+}
+
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+</style>
 

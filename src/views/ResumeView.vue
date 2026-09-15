@@ -72,11 +72,11 @@
         <div class="resume-items">
           <div v-for="(edu, idx) in data.education.items" :key="idx" class="resume-item">
             <div class="item-header">
-              <strong class="item-title">{{ edu.school }}</strong>
+              <strong class="item-title">{{ edu.degree }}</strong>
               <span class="item-date">{{ edu.date }}</span>
             </div>
             <div class="item-sub">
-              <span>{{ edu.degree }}</span>
+              <span>{{ edu.school }}</span>
               <span v-if="edu.note" class="item-note"> — {{ cleanNote(edu.note) }}</span>
             </div>
           </div>

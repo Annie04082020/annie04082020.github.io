@@ -49,8 +49,7 @@
               </label>
               <select 
                 id="log-selector" 
-                class="nav-btn" 
-                style="min-width: 200px; cursor: pointer;"
+                style="min-width: 220px; cursor: pointer;"
                 v-model="selectedLogId"
                 @change="onLogChange"
               >

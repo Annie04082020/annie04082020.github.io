@@ -82,10 +82,10 @@ const cleanNote = (note) => {
 }
 
 .education-note {
-  color: var(--meta-text);
+  color: var(--accent-secondary);
   font-size: 0.88rem;
   line-height: 1.5;
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
 }
 
 .education-accordion {

@@ -85,6 +85,7 @@ export const portfolioData = {
       list: [
         {
           id: "ultimate-bomb",
+          tags: ["hardware", "game-dev"],
           title: "UltimateBomb (VHDL / Digital Logic Design)",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -111,6 +112,7 @@ export const portfolioData = {
         },
         {
           id: "angry-birds",
+          tags: ["game-dev"],
           title: "Angry Birds Replica (C++ / PTSD Engine)",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -139,6 +141,7 @@ export const portfolioData = {
         },
         {
           id: "yolo-v10",
+          tags: ["ai-ml"],
           title: "Performance Analysis of YOLO-Based Models for Contraband Image Identification on the SIXray Dataset: A Case Study on YOLOv10",
           date: "Dec 2025 – Mar 2026",
           links: [
@@ -159,6 +162,7 @@ export const portfolioData = {
         },
         {
           id: "csl-car",
+          tags: ["hardware", "control-systems", "firmware"],
           title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
           date: "Sep.2025 - Jan.2026",
           links: [
@@ -179,6 +183,7 @@ export const portfolioData = {
         },
         {
           id: "behind-brewing",
+          tags: ["hardware", "control-systems"],
           title: "Behind Brewing: The Role of Thermistors and Heaters in Coffee Maker",
           date: "Sep.2024 - Jan.2025",
           links: [
@@ -200,6 +205,7 @@ export const portfolioData = {
         },
         {
           id: "linux-odyssey",
+          tags: ["web-dev", "competition"],
           title: "Linux Odyssey: Interactive Terminal Teaching Website",
           date: "Apr.2023 - Now",
           links: [
@@ -222,6 +228,7 @@ export const portfolioData = {
         },
         {
           id: "music-block",
+          tags: ["hardware", "firmware"],
           title: "MIT City Science Lab Spring UROP: Music Block",
           date: "Feb.2023 - Jun.2023",
           links: [
@@ -242,6 +249,7 @@ export const portfolioData = {
         },
         {
           id: "eco-game",
+          tags: ["game-dev"],
           title: "Eco-Friendly Board Game",
           date: "Sep.2021 - Jun.2022",
           links: [
@@ -260,6 +268,7 @@ export const portfolioData = {
         },
         {
           id: "leda",
+          tags: ["ai-ml", "web-dev"],
           title: "Project work with LEDA Technology",
           date: "May.2021 - Jan.2022",
           links: [],
@@ -277,6 +286,7 @@ export const portfolioData = {
         },
         {
           id: "ptech",
+          tags: ["web-dev", "competition"],
           title: "P-TECH Call for Code",
           date: "May.2021 - Jul.2021",
           links: [
@@ -297,6 +307,7 @@ export const portfolioData = {
         },
         {
           id: "python-game",
+          tags: ["game-dev"],
           title: "Python Project of Game",
           date: "Apr.2021 - Jul.2021",
           links: [
@@ -676,6 +687,7 @@ export const portfolioData = {
       list: [
         {
           id: "ultimate-bomb",
+          tags: ["hardware", "game-dev"],
           title: "UltimateBomb 終極密碼拆彈遊戲 (VHDL)",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -702,6 +714,7 @@ export const portfolioData = {
         },
         {
           id: "angry-birds",
+          tags: ["game-dev"],
           title: "Angry Birds 完整復刻版（C++ / PTSD 引擎）",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -730,6 +743,7 @@ export const portfolioData = {
         },
         {
           id: "csl-car",
+          tags: ["hardware", "control-systems", "firmware"],
           title: "CSL Ultrasonic Car (Discrete H-Bridge Control)",
           date: "Sep.2025 - Jan.2026",
           links: [
@@ -750,6 +764,7 @@ export const portfolioData = {
         },
         {
           id: "yolo-v10",
+          tags: ["ai-ml"],
           title: "基於 YOLO 模型的 SIXray 數據集違禁物識別性能分析：以 YOLOv10 為例",
           date: "2025年12月 – 2026年3月 (畢業專題)",
           links: [
@@ -770,6 +785,7 @@ export const portfolioData = {
         },
         {
           id: "linux-odyssey",
+          tags: ["web-dev", "competition"],
           title: "Linux Odyssey: 互動式教學網站",
           date: "Apr.2023 - Now",
           links: [
@@ -792,6 +808,7 @@ export const portfolioData = {
         },
         {
           id: "music-block",
+          tags: ["hardware", "firmware"],
           title: "MIT City Science Lab: Music Block",
           date: "Feb.2023 - Jun.2023",
           links: [
@@ -811,6 +828,7 @@ export const portfolioData = {
         },
         {
           id: "behind-brewing",
+          tags: ["hardware", "control-systems"],
           title: "Behind Brewing: Coffee Maker Circuit Study",
           date: "Sep.2024 - Jan.2025",
           links: [
@@ -830,6 +848,7 @@ export const portfolioData = {
         },
         {
           id: "leda",
+          tags: ["ai-ml", "web-dev"],
           title: "AI/醫療數據處理 (CT 轉檔程式) (與 LEDA Technology 合作)",
           date: "May.2021 - Jan.2022",
           links: [],
@@ -847,6 +866,7 @@ export const portfolioData = {
         },
         {
           id: "ptech",
+          tags: ["web-dev", "competition"],
           title: "P-TECH Call for Code 疫情人力調度系統",
           date: "May.2021 - Jul.2021",
           links: [
@@ -867,6 +887,7 @@ export const portfolioData = {
         },
         {
           id: "eco-game",
+          tags: ["game-dev"],
           title: "Eco-Friendly Board Game 設計與團隊領導",
           date: "Sep.2021 - Jun.2022",
           links: [
@@ -885,6 +906,7 @@ export const portfolioData = {
         },
         {
           id: "python-game",
+          tags: ["game-dev"],
           title: "Python 大富翁遊戲設計",
           date: "Apr.2021 - Jul.2021",
           links: [
@@ -1270,6 +1292,7 @@ export const portfolioData = {
       list: [
         {
           id: "ultimate-bomb",
+          tags: ["hardware", "game-dev"],
           title: "UltimateBomb 爆弾解除ゲーム (VHDL)",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -1296,6 +1319,7 @@ export const portfolioData = {
         },
         {
           id: "angry-birds",
+          tags: ["game-dev"],
           title: "Angry Birds 完全復刻版（C++ / PTSDエンジン）",
           date: "Feb.2026 - Jun.2026",
           links: [
@@ -1324,6 +1348,7 @@ export const portfolioData = {
         },
         {
           id: "yolo-v10",
+          tags: ["ai-ml"],
           title: "YOLOベースモデルを用いたSIXrayデータセットにおける禁制品識別性能の分析：YOLOv10を例として",
           date: "2025年12月 – 2026年3月 (卒業研究)",
           links: [
@@ -1344,6 +1369,7 @@ export const portfolioData = {
         },
         {
           id: "csl-car",
+          tags: ["hardware", "control-systems", "firmware"],
           title: "CSL 超音波自律走行車（ディスクリートHブリッジ制御）",
           date: "Sep.2025 - Jan.2026",
           links: [
@@ -1364,6 +1390,7 @@ export const portfolioData = {
         },
         {
           id: "linux-odyssey",
+          tags: ["web-dev", "competition"],
           title: "Linux Odyssey: 対話型ターミナル学習用ウェブサイト",
           date: "Apr.2023 - Now",
           links: [
@@ -1386,6 +1413,7 @@ export const portfolioData = {
         },
         {
           id: "music-block",
+          tags: ["hardware", "firmware"],
           title: "MIT City Science Lab 春学期 UROP：Music Block",
           date: "Feb.2023 - Jun.2023",
           links: [
@@ -1406,6 +1434,7 @@ export const portfolioData = {
         },
         {
           id: "behind-brewing",
+          tags: ["hardware", "control-systems"],
           title: "Behind Brewing：コーヒーメーカーにおけるサーミスタとヒーターの役割",
           date: "Sep.2024 - Jan.2025",
           links: [
@@ -1427,6 +1456,7 @@ export const portfolioData = {
         },
         {
           id: "leda",
+          tags: ["ai-ml", "web-dev"],
           title: "LEDA Technology との共同プロジェクト",
           date: "May.2021 - Jan.2022",
           links: [],
@@ -1444,6 +1474,7 @@ export const portfolioData = {
         },
         {
           id: "ptech",
+          tags: ["web-dev", "competition"],
           title: "P-TECH Call for Code",
           date: "May.2021 - Jul.2021",
           links: [
@@ -1464,6 +1495,7 @@ export const portfolioData = {
         },
         {
           id: "eco-game",
+          tags: ["game-dev"],
           title: "環境に優しいボードゲーム (Eco-Friendly Board Game)",
           date: "Sep.2021 - Jun.2022",
           links: [
@@ -1482,6 +1514,7 @@ export const portfolioData = {
         },
         {
           id: "python-game",
+          tags: ["game-dev"],
           title: "Pythonによるゲームプロジェクト",
           date: "Apr.2021 - Jul.2021",
           links: [
